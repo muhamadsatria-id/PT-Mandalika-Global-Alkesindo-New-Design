@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../js';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Token desain PT. Mandalika Global Alkesindo.
+ * Warna aksen utama: #f2470c. Semua komponen memakai kelas semantik
+ * (bg-primary, text-muted-foreground, border-border) agar mode gelap
+ * dan perubahan tema cukup dilakukan di satu tempat.
+ */
+@theme inline {
+    --font-sans:
+        -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, -system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary-strong: var(--primary-strong);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --radius-sm: calc(var(--radius) - 0.65rem);
+    --radius-md: calc(var(--radius) - 0.45rem);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 0.4rem);
+    --radius-2xl: calc(var(--radius) + 0.9rem);
+}
+
+:root {
+    --background: #fbfaf7;
+    --foreground: #191613;
+
+    --card: #ffffff;
+    --card-foreground: #191613;
+
+    --primary: #f2470c;
+    --primary-foreground: #210a02;
+    --primary-strong: #b93815;
+
+    --secondary: #f0ede6;
+    --secondary-foreground: #2a2620;
+
+    --muted: #f0ede6;
+    --muted-foreground: #625d55;
+
+    --accent: #fceadf;
+    --accent-foreground: #a33506;
+
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+
+    --success: #0f6b32;
+    --warning: #a35a06;
+    --border: #e5dfd4;
+    --input: #d9d2c5;
+    --ring: #f2470c;
+
+    --radius: 1.4rem;
+}
+
+.dark {
+    --background: #0c0d0e;
+    --foreground: #f5f2ec;
+
+    --card: #151718;
+    --card-foreground: #f5f2ec;
+
+    --primary: #ff7a45;
+    --primary-foreground: #1d0d05;
+    --primary-strong: #ff9a6b;
+
+    --secondary: #1d2022;
+    --secondary-foreground: #f5f2ec;
+
+    --muted: #1d2022;
+    --muted-foreground: #a9a49b;
+
+    --accent: #2b1a11;
+    --accent-foreground: #ffb693;
+
+    --destructive: #f97066;
+    --destructive-foreground: #1d0d05;
+
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --border: #2a2d30;
+    --input: #363a3e;
+    --ring: #ff7a45;
+}
+
+@layer base {
+    *,
+    ::after,
+    ::before {
+        border-color: var(--border);
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--ring);
+        outline-offset: 2px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-wrap: balance;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    @keyframes marquee-right {
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        ::before,
+        ::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+
+        .\[\[animation\:marquee-right_28s_linear_infinite\]\] {
+            animation: none !important;
+        }
+    }
+}

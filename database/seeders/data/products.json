@@ -1,0 +1,1391 @@
+{
+    "categories": [
+        {
+            "name": "Alat Diagnostik",
+            "slug": "alat-diagnostik",
+            "description": "Peralatan pemeriksaan awal untuk klinik, puskesmas, dan praktik dokter.",
+            "icon": "stethoscope"
+        },
+        {
+            "name": "Alat Monitoring Pasien",
+            "slug": "alat-monitoring-pasien",
+            "description": "Monitor tanda vital, telemetri, dan pemantauan pasien berkelanjutan.",
+            "icon": "activity"
+        },
+        {
+            "name": "Alat Terapi & Rehabilitasi",
+            "slug": "alat-terapi-rehabilitasi",
+            "description": "Perangkat terapi, rehabilitasi, dan perawatan pendukung di fasilitas kesehatan.",
+            "icon": "heart-pulse"
+        },
+        {
+            "name": "Alat Bedah & Sterilisasi",
+            "slug": "alat-bedah-sterilisasi",
+            "description": "Instrumen bedah, meja operasi, dan peralatan sterilisasi.",
+            "icon": "scissors"
+        },
+        {
+            "name": "Emergency & ICU",
+            "slug": "emergency-icu",
+            "description": "Peralatan resusitasi, ventilator, defibrilator, dan kebutuhan kritis.",
+            "icon": "siren"
+        },
+        {
+            "name": "Furniture Rumah Sakit",
+            "slug": "furniture-rumah-sakit",
+            "description": "Tempat tidur pasien, lemari, meja periksa, dan furnitur ruang perawatan.",
+            "icon": "bed"
+        },
+        {
+            "name": "Alat Laboratorium",
+            "slug": "alat-laboratorium",
+            "description": "Instrumen laboratorium klinik untuk analisis dan pemeriksaan sampel.",
+            "icon": "flask-conical"
+        },
+        {
+            "name": "Perlengkapan Medis Habis Pakai",
+            "slug": "perlengkapan-medis-habis-pakai",
+            "description": "Bahan dan alat medis sekali pakai untuk kebutuhan harian fasilitas kesehatan.",
+            "icon": "package"
+        }
+    ],
+    "brands": [
+        {
+            "name": "Mindray",
+            "slug": "mindray",
+            "description": "Monitor pasien, ventilator, dan instrumen laboratorium."
+        },
+        {
+            "name": "Philips Healthcare",
+            "slug": "philips-healthcare",
+            "description": "Perangkat pemantauan dan resusitasi jantung."
+        },
+        {
+            "name": "GE HealthCare",
+            "slug": "ge-healthcare",
+            "description": "EKG, pencitraan diagnostik, dan pemantauan pasien."
+        },
+        {
+            "name": "Dräger",
+            "slug": "drager",
+            "description": "Ventilator dan teknologi pernapasan."
+        },
+        {
+            "name": "Nihon Kohden",
+            "slug": "nihon-kohden",
+            "description": "Monitoring pasien dan sistem telemetri."
+        },
+        {
+            "name": "Omron",
+            "slug": "omron",
+            "description": "Tensimeter, nebulizer, dan perangkat kesehatan rumahan."
+        },
+        {
+            "name": "Yuwell",
+            "slug": "yuwell",
+            "description": "Nebulizer, kursi roda, dan alat kesehatan pendukung."
+        },
+        {
+            "name": "B. Braun",
+            "slug": "b-braun",
+            "description": "Infusion pump, akses vaskular, dan instrumen bedah."
+        },
+        {
+            "name": "Getinge",
+            "slug": "getinge",
+            "description": "Meja operasi, lampu bedah, dan sterilisasi."
+        },
+        {
+            "name": "Hill-Rom",
+            "slug": "hill-rom",
+            "description": "Tempat tidur pasien dan solusi ruang perawatan."
+        },
+        {
+            "name": "Riester",
+            "slug": "riester",
+            "description": "Stetoskop dan instrumen diagnostik."
+        },
+        {
+            "name": "Contec",
+            "slug": "contec",
+            "description": "Oksimeter, fetal doppler, dan perangkat monitoring."
+        },
+        {
+            "name": "Ambu",
+            "slug": "ambu",
+            "description": "Resusitator dan perlengkapan jalan napas."
+        },
+        {
+            "name": "Olympus",
+            "slug": "olympus",
+            "description": "Mikroskop dan instrumen laboratorium."
+        },
+        {
+            "name": "MGA Select",
+            "slug": "mga-select",
+            "description": "Lini perlengkapan pilihan yang dikurasi tim PT. Mandalika Global Alkesindo."
+        }
+    ],
+    "products": [
+        {
+            "name": "Stetoskop Dewasa",
+            "model": "Duplex 2.0",
+            "brand": "Riester",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Stetoskop akustik dewasa dengan diafragma dan bell ganda.",
+            "description": "Stetoskop diagnostik untuk auskultasi jantung dan paru. Dilengkapi diafragma dan bell dengan kualitas suara jernih untuk pemeriksaan rutin.",
+            "specs": [
+                { "label": "Pengguna", "value": "Dewasa" },
+                { "label": "Tipe", "value": "Diafragma dan bell" },
+                { "label": "Panjang selang", "value": "55 cm" }
+            ]
+        },
+        {
+            "name": "Tensimeter Digital Lengan",
+            "model": "HEM-7156",
+            "brand": "Omron",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-002",
+            "price": 425000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Pengukur tekanan darah otomatis dengan manset nyaman.",
+            "description": "Tensimeter digital lengan atas dengan deteksi detak tidak teratur dan memori pengukuran. Cocok untuk klinik, posyandu, dan pemantauan mandiri.",
+            "specs": [
+                { "label": "Metode", "value": "Oscillometric" },
+                { "label": "Rentang tekanan", "value": "0 - 299 mmHg" },
+                { "label": "Memori", "value": "60 pengukuran" }
+            ]
+        },
+        {
+            "name": "Tensimeter Digital Pergelangan",
+            "model": "HEM-6161",
+            "brand": "Omron",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-003",
+            "price": 375000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Tensimeter pergelangan tangan ringkas untuk pemantauan harian.",
+            "description": "Alat ukur tekanan darah pergelangan tangan yang mudah dibawa. Layar besar dan indikator tekanan darah tinggi memudahkan pembacaan.",
+            "specs": [
+                { "label": "Lokasi pengukuran", "value": "Pergelangan tangan" },
+                { "label": "Layar", "value": "Digital" },
+                { "label": "Daya", "value": "2 baterai AAA" }
+            ]
+        },
+        {
+            "name": "Termometer Infrared Dahi",
+            "model": "YT-1",
+            "brand": "Yuwell",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-004",
+            "price": 285000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Termometer tanpa kontak dengan pembacaan cepat.",
+            "description": "Termometer infrared dahi untuk skrining suhu tubuh tanpa kontak. Hasil muncul dalam hitungan detik dengan indikator warna.",
+            "specs": [
+                { "label": "Jarak ukur", "value": "3 - 5 cm" },
+                { "label": "Waktu ukur", "value": "1 detik" },
+                { "label": "Memori", "value": "32 pengukuran" }
+            ]
+        },
+        {
+            "name": "Oksimeter Pulse",
+            "model": "CMS50D",
+            "brand": "Contec",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-005",
+            "price": 195000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pemantau saturasi oksigen dan denyut nadi portabel.",
+            "description": "Pulse oximeter fingertip untuk memantau SpO2 dan denyut nadi. Layar OLED menampilkan grafik dan nilai secara bersamaan.",
+            "specs": [
+                { "label": "Rentang SpO2", "value": "70 - 100%" },
+                { "label": "Rentang nadi", "value": "30 - 250 bpm" },
+                { "label": "Daya", "value": "2 baterai AAA" }
+            ]
+        },
+        {
+            "name": "Timbangan Badan Digital",
+            "model": "HN-289",
+            "brand": "Omron",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-006",
+            "price": 350000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Timbangan digital dengan indikator BMI dan memori.",
+            "description": "Timbangan badan digital untuk klinik dan rumah. Menampilkan berat, indeks massa tubuh, dan menyimpan riwayat pengukuran.",
+            "specs": [
+                { "label": "Kapasitas", "value": "150 kg" },
+                { "label": "Resolusi", "value": "100 g" },
+                { "label": "Fungsi", "value": "Berat dan BMI" }
+            ]
+        },
+        {
+            "name": "Otoskop Diagnostik",
+            "model": "e-scope",
+            "brand": "Riester",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Otoskop LED untuk pemeriksaan telinga.",
+            "description": "Otoskop dengan sumber cahaya LED dan lensa pembesar. Dilengkapi spekulum sekali pakai untuk menjaga kebersihan antar pasien.",
+            "specs": [
+                { "label": "Sumber cahaya", "value": "LED" },
+                { "label": "Pembesaran", "value": "3x" },
+                { "label": "Spekulum", "value": "2,5 - 4 mm" }
+            ]
+        },
+        {
+            "name": "EKG 12 Channel",
+            "model": "MAC 2000",
+            "brand": "GE HealthCare",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-008",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": true,
+            "short_description": "Elektrokardiograf 12 sadapan dengan interpretasi otomatis.",
+            "description": "EKG 12 channel untuk pemeriksaan jantung di rumah sakit dan klinik. Mendukung pencetakan laporan dan penyimpanan data pasien.",
+            "specs": [
+                { "label": "Sadapan", "value": "12 channel" },
+                { "label": "Layar", "value": "LCD warna" },
+                { "label": "Pencetakan", "value": "Printer termal" }
+            ]
+        },
+        {
+            "name": "USG Portable",
+            "model": "M9",
+            "brand": "Mindray",
+            "category": "Alat Diagnostik",
+            "sku": "MGA-DIA-009",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Ultrasonografi portabel untuk pemeriksaan umum.",
+            "description": "Sistem USG portabel dengan kualitas gambar diagnostik dan antarmuka sederhana. Cocok untuk klinik, bidan, dan layanan mobile.",
+            "specs": [
+                { "label": "Mode", "value": "B, M, Color Doppler" },
+                { "label": "Layar", "value": "15 inci" },
+                { "label": "Probe", "value": "Convex" }
+            ]
+        },
+        {
+            "name": "Patient Monitor 12 Inci",
+            "model": "uMEC 12",
+            "brand": "Mindray",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Monitor tanda vital dengan layar 12 inci.",
+            "description": "Monitor pasien untuk pemantauan ECG, SpO2, NIBP, respirasi, dan suhu. Desain ringkas dengan alarm yang dapat diatur.",
+            "specs": [
+                { "label": "Layar", "value": "12,1 inci" },
+                { "label": "Parameter", "value": "ECG, SpO2, NIBP, RESP, TEMP" },
+                { "label": "Baterai", "value": "Hingga 4 jam" }
+            ]
+        },
+        {
+            "name": "Patient Monitor Modular",
+            "model": "BSM-6000",
+            "brand": "Nihon Kohden",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-002",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Monitor modular untuk kebutuhan ICU dan OK.",
+            "description": "Monitor pasien modular yang dapat dikonfigurasi sesuai kebutuhan ruang perawatan kritis. Mendukung integrasi central station.",
+            "specs": [
+                { "label": "Konfigurasi", "value": "Modular" },
+                { "label": "Layar", "value": "15 inci" },
+                { "label": "Jaringan", "value": "LAN" }
+            ]
+        },
+        {
+            "name": "Vital Signs Monitor",
+            "model": "VS-900",
+            "brand": "Mindray",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Monitor tanda vital untuk poli dan ruang periksa.",
+            "description": "Monitor tanda vital ringkas untuk poli rawat jalan. Mengukur tekanan darah, SpO2, suhu, dan denyut nadi dalam satu perangkat.",
+            "specs": [
+                { "label": "Layar", "value": "10,4 inci" },
+                { "label": "Parameter", "value": "NIBP, SpO2, TEMP, PR" },
+                { "label": "Mode", "value": "Spot check" }
+            ]
+        },
+        {
+            "name": "Central Monitoring Station",
+            "model": "BeneVision",
+            "brand": "Mindray",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Pusat pemantauan untuk menghubungkan banyak monitor pasien.",
+            "description": "Central station untuk memantau beberapa bed sekaligus. Menampilkan kurva real-time, alarm terpusat, dan penyimpanan data.",
+            "specs": [
+                { "label": "Kapasitas", "value": "Hingga 64 bed" },
+                { "label": "Layar", "value": "24 inci" },
+                { "label": "Penyimpanan", "value": "Data historis pasien" }
+            ]
+        },
+        {
+            "name": "Fetal Doppler",
+            "model": "SD3",
+            "brand": "Contec",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pemantau detak jantung janin portabel.",
+            "description": "Fetal doppler untuk pemeriksaan detak jantung janin di klinik dan bidan praktik. Dilengkapi speaker dan output earphone.",
+            "specs": [
+                { "label": "Frekuensi probe", "value": "2 MHz" },
+                { "label": "Layar", "value": "LCD" },
+                { "label": "Daya", "value": "Baterai isi ulang" }
+            ]
+        },
+        {
+            "name": "Modul EtCO2",
+            "model": "BeneVision EtCO2",
+            "brand": "Mindray",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Modul pemantauan karbon dioksida akhir ekspirasi.",
+            "description": "Modul EtCO2 untuk melengkapi monitor pasien pada tindakan sedasi dan perawatan kritis.",
+            "specs": [
+                { "label": "Teknologi", "value": "Mainstream" },
+                { "label": "Parameter", "value": "EtCO2, FiCO2" },
+                { "label": "Kompatibilitas", "value": "Monitor Mindray" }
+            ]
+        },
+        {
+            "name": "Holter Monitor",
+            "model": "Seer 12",
+            "brand": "GE HealthCare",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Perekam EKG 12 sadapan untuk pemantauan 24 jam.",
+            "description": "Holter monitor untuk merekam aktivitas listrik jantung selama 24 jam. Dilengkapi perangkat lunak analisis aritmia.",
+            "specs": [
+                { "label": "Sadapan", "value": "12 channel" },
+                { "label": "Durasi rekam", "value": "24 jam" },
+                { "label": "Memori", "value": "Flash memory" }
+            ]
+        },
+        {
+            "name": "Telemetry System",
+            "model": "ZM-540",
+            "brand": "Nihon Kohden",
+            "category": "Alat Monitoring Pasien",
+            "sku": "MGA-MON-008",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Pemantauan pasien bergerak tanpa kabel.",
+            "description": "Sistem telemetri untuk memantau pasien yang tetap dapat bergerak. Terintegrasi dengan central monitoring.",
+            "specs": [
+                { "label": "Transmisi", "value": "Wireless" },
+                { "label": "Parameter", "value": "ECG, SpO2" },
+                { "label": "Jaringan", "value": "LAN" }
+            ]
+        },
+        {
+            "name": "Nebulizer Kompresor",
+            "model": "NE-C28",
+            "brand": "Omron",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-001",
+            "price": 675000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Nebulizer kompresor untuk terapi pernapasan.",
+            "description": "Nebulizer kompresor yang menghasilkan partikel halus untuk terapi asma dan gangguan pernapasan. Cocok untuk klinik dan rumah.",
+            "specs": [
+                { "label": "Tipe", "value": "Kompresor" },
+                { "label": "Kapasitas", "value": "5 ml" },
+                { "label": "Aksesori", "value": "Masker dewasa dan anak" }
+            ]
+        },
+        {
+            "name": "Nebulizer Portable",
+            "model": "403M",
+            "brand": "Yuwell",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-002",
+            "price": 425000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Nebulizer ringkas dengan sumber daya baterai.",
+            "description": "Nebulizer portable untuk penggunaan di perjalanan. Ringan, mudah dibersihkan, dan mendukung adaptor maupun baterai.",
+            "specs": [
+                { "label": "Tipe", "value": "Portable" },
+                { "label": "Daya", "value": "Baterai dan adaptor" },
+                { "label": "Berat", "value": "300 g" }
+            ]
+        },
+        {
+            "name": "Alat Terapi TENS",
+            "model": "HV-F128",
+            "brand": "Omron",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Stimulator listrik untuk terapi nyeri otot.",
+            "description": "Perangkat TENS untuk membantu meredakan nyeri otot. Memiliki beberapa mode terapi dan intensitas yang dapat diatur.",
+            "specs": [
+                { "label": "Mode", "value": "5 mode terapi" },
+                { "label": "Elektroda", "value": "2 pasang" },
+                { "label": "Daya", "value": "Baterai" }
+            ]
+        },
+        {
+            "name": "Infusion Pump",
+            "model": "Infusomat Space",
+            "brand": "B. Braun",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Pompa infus volumetrik dengan pengaturan laju presisi.",
+            "description": "Infusion pump untuk pemberian cairan dengan laju terkontrol. Dilengkapi alarm oklusi, udara dalam selang, dan baterai cadangan.",
+            "specs": [
+                { "label": "Laju", "value": "0,1 - 1.200 ml/jam" },
+                { "label": "Mode", "value": "Volume dan drip" },
+                { "label": "Baterai", "value": "Hingga 6 jam" }
+            ]
+        },
+        {
+            "name": "Syringe Pump",
+            "model": "Perfusor Space",
+            "brand": "B. Braun",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pompa syringe untuk pemberian obat presisi.",
+            "description": "Syringe pump untuk obat dengan volume kecil dan laju lambat. Cocok untuk ICU, NICU, dan ruang rawat intensif.",
+            "specs": [
+                { "label": "Ukuran syringe", "value": "5 - 50 ml" },
+                { "label": "Laju", "value": "0,1 - 1.500 ml/jam" },
+                { "label": "Alarm", "value": "Oklusi dan mendekati habis" }
+            ]
+        },
+        {
+            "name": "Penghangat Cairan Infus",
+            "model": "Infusotherm",
+            "brand": "B. Braun",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Pemanas cairan infus untuk kenyamanan pasien.",
+            "description": "Penghangat cairan infus yang menjaga suhu cairan mendekati suhu tubuh. Membantu mengurangi hipotermia saat transfusi.",
+            "specs": [
+                { "label": "Suhu", "value": "Hingga 41 derajat Celsius" },
+                { "label": "Aliran", "value": "Hingga 100 ml/menit" },
+                { "label": "Keamanan", "value": "Sensor suhu" }
+            ]
+        },
+        {
+            "name": "UV Sterilizer Box",
+            "model": "UV-12L",
+            "brand": "Yuwell",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-007",
+            "price": 1250000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kotak sterilisasi UV untuk perlengkapan kecil.",
+            "description": "Sterilizer UV untuk perlengkapan medis kecil dan alat makan pasien. Proses otomatis dengan pengatur waktu.",
+            "specs": [
+                { "label": "Kapasitas", "value": "12 liter" },
+                { "label": "Lampu", "value": "UV-C" },
+                { "label": "Timer", "value": "Otomatis" }
+            ]
+        },
+        {
+            "name": "Traksi Servikal",
+            "model": "MGA-CT01",
+            "brand": "MGA Select",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-008",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Perangkat traksi leher untuk terapi rehabilitasi.",
+            "description": "Alat traksi servikal untuk terapi nyeri leher di klinik fisioterapi. Rangka kokoh dengan beban yang dapat diatur.",
+            "specs": [
+                { "label": "Aplikasi", "value": "Servikal" },
+                { "label": "Beban", "value": "Dapat diatur" },
+                { "label": "Rangka", "value": "Baja finishing powder coating" }
+            ]
+        },
+        {
+            "name": "Kursi Roda Lipat",
+            "model": "H062",
+            "brand": "Yuwell",
+            "category": "Alat Terapi & Rehabilitasi",
+            "sku": "MGA-TER-009",
+            "price": 2350000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Kursi roda lipat ringan dengan rem manual.",
+            "description": "Kursi roda lipat untuk kebutuhan mobilitas pasien. Rangka ringan, sandaran nyaman, dan mudah dilipat untuk penyimpanan.",
+            "specs": [
+                { "label": "Kapasitas", "value": "100 kg" },
+                { "label": "Rangka", "value": "Aluminium" },
+                { "label": "Berat", "value": "12 kg" }
+            ]
+        },
+        {
+            "name": "Autoklaf Vertikal 23 Liter",
+            "model": "MGA-AU23",
+            "brand": "Getinge",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Sterilisator uap kapasitas 23 liter.",
+            "description": "Autoklaf vertikal untuk sterilisasi instrumen dan bahan medis. Dilengkapi kontrol suhu, tekanan, dan timer otomatis.",
+            "specs": [
+                { "label": "Kapasitas", "value": "23 liter" },
+                { "label": "Suhu", "value": "121 - 134 derajat Celsius" },
+                { "label": "Kontrol", "value": "Digital" }
+            ]
+        },
+        {
+            "name": "Autoklaf Vertikal 50 Liter",
+            "model": "MGA-AU50",
+            "brand": "Getinge",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-002",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Sterilisator uap kapasitas besar untuk rumah sakit.",
+            "description": "Autoklaf vertikal 50 liter untuk kebutuhan sterilisasi sentral. Siklus cepat dan ruang muat lebih besar.",
+            "specs": [
+                { "label": "Kapasitas", "value": "50 liter" },
+                { "label": "Suhu", "value": "121 - 134 derajat Celsius" },
+                { "label": "Keamanan", "value": "Interlock pintu" }
+            ]
+        },
+        {
+            "name": "Meja Operasi",
+            "model": "Maquet Alphamaxx",
+            "brand": "Getinge",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Meja operasi modular dengan posisi yang dapat diatur.",
+            "description": "Meja operasi untuk berbagai tindakan bedah. Posisi tinggi, trenelenburg, dan lateral dapat diatur secara elektrik.",
+            "specs": [
+                { "label": "Kapasitas", "value": "Hingga 350 kg" },
+                { "label": "Gerakan", "value": "Elektrohidraulik" },
+                { "label": "Aksesori", "value": "Modular" }
+            ]
+        },
+        {
+            "name": "Lampu Operasi LED",
+            "model": "Maquet PowerLED",
+            "brand": "Getinge",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Lampu bedah LED dengan intensitas tinggi.",
+            "description": "Lampu operasi LED untuk penerangan area bedah. Suhu warna dapat diatur dan intensitas cahaya merata.",
+            "specs": [
+                { "label": "Intensitas", "value": "Hingga 160.000 lux" },
+                { "label": "Suhu warna", "value": "3.500 - 5.000 K" },
+                { "label": "Lampu", "value": "LED" }
+            ]
+        },
+        {
+            "name": "Elektrokauter",
+            "model": "Aesculap Acculan",
+            "brand": "B. Braun",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Unit elektrokauter untuk pemotongan dan koagulasi.",
+            "description": "Elektrokauter bedah dengan mode potong dan koagulasi. Dilengkapi pedal dan berbagai pilihan elektroda.",
+            "specs": [
+                { "label": "Mode", "value": "Cut dan Coag" },
+                { "label": "Daya", "value": "Hingga 300 W" },
+                { "label": "Aksesori", "value": "Pedal dan elektroda" }
+            ]
+        },
+        {
+            "name": "Suction Pump Bedah",
+            "model": "MGA-SP02",
+            "brand": "MGA Select",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pompa hisap untuk kebutuhan tindakan dan perawatan.",
+            "description": "Suction pump dengan dua botol penampung dan pengatur tekanan. Cocok untuk ruang tindakan, IGD, dan rawat inap.",
+            "specs": [
+                { "label": "Kapasitas botol", "value": "2 x 2.500 ml" },
+                { "label": "Tekanan", "value": "Dapat diatur" },
+                { "label": "Daya", "value": "220 V" }
+            ]
+        },
+        {
+            "name": "Set Instrumen Bedah Minor",
+            "model": "MGA-IB01",
+            "brand": "MGA Select",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Set instrumen stainless steel untuk tindakan minor.",
+            "description": "Set instrumen bedah minor berisi gunting, pinset, needle holder, dan scalpel handle. Dikemas dalam wadah sterilisasi.",
+            "specs": [
+                { "label": "Material", "value": "Stainless steel 304" },
+                { "label": "Isi", "value": "12 item" },
+                { "label": "Wadah", "value": "Sterilisasi tray" }
+            ]
+        },
+        {
+            "name": "Sterilisator UV Kabinet",
+            "model": "MGA-UV02",
+            "brand": "MGA Select",
+            "category": "Alat Bedah & Sterilisasi",
+            "sku": "MGA-BED-008",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kabinet UV untuk penyimpanan alat steril.",
+            "description": "Kabinet sterilisasi UV untuk menyimpan instrumen dan perlengkapan agar tetap higienis. Dilengkapi rak dan timer.",
+            "specs": [
+                { "label": "Lampu", "value": "UV-C" },
+                { "label": "Rak", "value": "2 tingkat" },
+                { "label": "Timer", "value": "Digital" }
+            ]
+        },
+        {
+            "name": "Defibrilator Bifasik",
+            "model": "BeneHeart D3",
+            "brand": "Mindray",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Defibrilator dengan mode manual dan AED.",
+            "description": "Defibrilator bifasik untuk IGD dan ambulans. Mendukung mode manual, AED, dan pemantauan ECG.",
+            "specs": [
+                { "label": "Energi", "value": "1 - 360 Joule" },
+                { "label": "Mode", "value": "Manual dan AED" },
+                { "label": "Layar", "value": "8 inci" }
+            ]
+        },
+        {
+            "name": "AED Portable",
+            "model": "HeartStart HS1",
+            "brand": "Philips Healthcare",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-002",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Defibrilator otomatis dengan panduan suara.",
+            "description": "AED portabel yang memandu pengguna langkah demi langkah. Dirancang untuk area publik, kantor, dan fasilitas kesehatan.",
+            "specs": [
+                { "label": "Mode", "value": "Otomatis" },
+                { "label": "Panduan", "value": "Suara dan visual" },
+                { "label": "Baterai", "value": "Hingga 4 tahun" }
+            ]
+        },
+        {
+            "name": "Ventilator ICU",
+            "model": "Savina 300",
+            "brand": "Dräger",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Ventilator untuk perawatan kritis dewasa dan anak.",
+            "description": "Ventilator ICU dengan berbagai mode ventilasi invasif dan non-invasif. Layar besar dan alarm yang informatif.",
+            "specs": [
+                { "label": "Mode", "value": "Invasif dan non-invasif" },
+                { "label": "Pasien", "value": "Dewasa dan anak" },
+                { "label": "Layar", "value": "12 inci" }
+            ]
+        },
+        {
+            "name": "Ventilator Transport",
+            "model": "Oxylog 3000 Plus",
+            "brand": "Dräger",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Ventilator ringkas untuk ambulans dan transport pasien.",
+            "description": "Ventilator transport yang tahan guncangan dengan baterai tahan lama. Cocok untuk ambulans dan transfer antar ruang.",
+            "specs": [
+                { "label": "Berat", "value": "Sekitar 6 kg" },
+                { "label": "Baterai", "value": "Hingga 5 jam" },
+                { "label": "Mode", "value": "Volume dan tekanan" }
+            ]
+        },
+        {
+            "name": "Syringe Pump ICU",
+            "model": "Perfusor Compact",
+            "brand": "B. Braun",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pompa syringe ringkas untuk ruang kritis.",
+            "description": "Syringe pump untuk pemberian obat vasoaktif dan sedasi dengan laju presisi. Alarm jelas dan mudah dibersihkan.",
+            "specs": [
+                { "label": "Ukuran syringe", "value": "5 - 50 ml" },
+                { "label": "Laju", "value": "0,1 - 1.500 ml/jam" },
+                { "label": "Baterai", "value": "Hingga 4 jam" }
+            ]
+        },
+        {
+            "name": "Infusion Warmer",
+            "model": "Infusotherm ICU",
+            "brand": "B. Braun",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Pemanas infus untuk tindakan resusitasi.",
+            "description": "Infusion warmer untuk menghangatkan cairan dan darah saat resusitasi. Membantu menjaga suhu tubuh pasien kritis.",
+            "specs": [
+                { "label": "Suhu", "value": "Hingga 41 derajat Celsius" },
+                { "label": "Aliran", "value": "Hingga 100 ml/menit" },
+                { "label": "Peringatan", "value": "Overheat" }
+            ]
+        },
+        {
+            "name": "Emergency Cart",
+            "model": "MGA-EC01",
+            "brand": "MGA Select",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Troli emergensi dengan laci dan papan defibrilator.",
+            "description": "Troli emergensi untuk menyimpan obat dan alat resusitasi. Roda dengan rem, laci terkunci, dan permukaan mudah dibersihkan.",
+            "specs": [
+                { "label": "Laci", "value": "5 laci" },
+                { "label": "Roda", "value": "4 roda dengan rem" },
+                { "label": "Material", "value": "ABS dan baja" }
+            ]
+        },
+        {
+            "name": "Resusitator Ambu Bag",
+            "model": "SPUR II",
+            "brand": "Ambu",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-008",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Resusitator manual dengan masker dan reservoir.",
+            "description": "Ambu bag untuk bantuan napas manual pada situasi darurat. Tersedia ukuran dewasa dan anak dengan koneksi standar.",
+            "specs": [
+                { "label": "Ukuran", "value": "Dewasa" },
+                { "label": "Isi", "value": "Bag, masker, reservoir" },
+                { "label": "Material", "value": "Latex free" }
+            ]
+        },
+        {
+            "name": "Regulator Oksigen",
+            "model": "MGA-REG01",
+            "brand": "MGA Select",
+            "category": "Emergency & ICU",
+            "sku": "MGA-EME-009",
+            "price": 750000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Regulator oksigen dengan flowmeter dan humidifier.",
+            "description": "Regulator oksigen untuk tabung medis. Dilengkapi flowmeter dan koneksi humidifier untuk terapi oksigen.",
+            "specs": [
+                { "label": "Rentang aliran", "value": "0 - 15 L/menit" },
+                { "label": "Koneksi", "value": "Standar tabung" },
+                { "label": "Aksesori", "value": "Humidifier" }
+            ]
+        },
+        {
+            "name": "Tempat Tidur Pasien 2 Engkol",
+            "model": "MGA-BD02",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Bed pasien manual dengan pengaturan kepala dan kaki.",
+            "description": "Tempat tidur pasien dua engkol untuk ruang rawat inap. Rangka kokoh, rel samping, dan roda dengan rem.",
+            "specs": [
+                { "label": "Engkol", "value": "2 fungsi" },
+                { "label": "Rangka", "value": "Baja powder coating" },
+                { "label": "Roda", "value": "4 roda dengan rem" }
+            ]
+        },
+        {
+            "name": "Tempat Tidur Elektrik 3 Motor",
+            "model": "Centrella",
+            "brand": "Hill-Rom",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-002",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Bed elektrik dengan pengaturan posisi dan tinggi.",
+            "description": "Tempat tidur elektrik tiga motor untuk kenyamanan pasien dan memudahkan perawatan. Dilengkapi remote dan fitur keselamatan.",
+            "specs": [
+                { "label": "Motor", "value": "3 motor" },
+                { "label": "Fungsi", "value": "Tinggi, kepala, kaki" },
+                { "label": "Kapasitas", "value": "Hingga 180 kg" }
+            ]
+        },
+        {
+            "name": "Lemari Obat",
+            "model": "MGA-LO01",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Lemari obat dengan pintu kaca dan kunci.",
+            "description": "Lemari penyimpanan obat untuk ruang perawat dan klinik. Pintu kaca memudahkan pemantauan stok, dilengkapi kunci.",
+            "specs": [
+                { "label": "Material", "value": "Baja" },
+                { "label": "Rak", "value": "3 tingkat" },
+                { "label": "Keamanan", "value": "Kunci" }
+            ]
+        },
+        {
+            "name": "Meja Periksa",
+            "model": "MGA-MP01",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Meja periksa pasien dengan bantalan empuk.",
+            "description": "Meja pemeriksaan untuk poli dan klinik. Bantalan empuk, mudah dibersihkan, dan rangka stabil.",
+            "specs": [
+                { "label": "Panjang", "value": "180 cm" },
+                { "label": "Bantalan", "value": "Vinyl medis" },
+                { "label": "Rangka", "value": "Baja" }
+            ]
+        },
+        {
+            "name": "Kursi Roda Elektrik",
+            "model": "D130",
+            "brand": "Yuwell",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Kursi roda elektrik dengan kontrol joystick.",
+            "description": "Kursi roda elektrik untuk mobilitas pasien dengan keterbatasan gerak. Baterai isi ulang dan kontrol joystick.",
+            "specs": [
+                { "label": "Motor", "value": "Elektrik" },
+                { "label": "Baterai", "value": "Lithium isi ulang" },
+                { "label": "Kapasitas", "value": "100 kg" }
+            ]
+        },
+        {
+            "name": "Bedside Cabinet",
+            "model": "MGA-BC01",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Lemari samping tempat tidur pasien.",
+            "description": "Kabinet samping bed untuk menyimpan barang pribadi pasien. Dilengkapi laci, pintu, dan roda.",
+            "specs": [
+                { "label": "Material", "value": "ABS" },
+                { "label": "Laci", "value": "1 laci" },
+                { "label": "Roda", "value": "4 roda" }
+            ]
+        },
+        {
+            "name": "Kursi Tunggu Pasien",
+            "model": "MGA-KT03",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kursi tunggu tiga dudukan untuk ruang publik.",
+            "description": "Kursi tunggu untuk lobi dan ruang tunggu fasilitas kesehatan. Rangka kokoh dengan dudukan yang mudah dibersihkan.",
+            "specs": [
+                { "label": "Dudukan", "value": "3 kursi" },
+                { "label": "Rangka", "value": "Baja" },
+                { "label": "Material", "value": "Vinyl" }
+            ]
+        },
+        {
+            "name": "Standar Infus",
+            "model": "MGA-SI01",
+            "brand": "MGA Select",
+            "category": "Furniture Rumah Sakit",
+            "sku": "MGA-FUR-008",
+            "price": 325000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Tiang infus stainless steel dengan roda.",
+            "description": "Standar infus dengan tinggi dapat diatur dan lima kaki beroda. Material stainless steel mudah dibersihkan.",
+            "specs": [
+                { "label": "Material", "value": "Stainless steel" },
+                { "label": "Tinggi", "value": "110 - 200 cm" },
+                { "label": "Kaki", "value": "5 roda" }
+            ]
+        },
+        {
+            "name": "Mikroskop Binokuler",
+            "model": "CX23",
+            "brand": "Olympus",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-001",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": true,
+            "short_description": "Mikroskop binokuler untuk pemeriksaan laboratorium.",
+            "description": "Mikroskop binokuler dengan optik jernih untuk pemeriksaan sampel rutin. Dilengkapi lampu LED dan meja preparat mekanik.",
+            "specs": [
+                { "label": "Kepala", "value": "Binokuler" },
+                { "label": "Pembesaran", "value": "40x - 1.000x" },
+                { "label": "Iluminasi", "value": "LED" }
+            ]
+        },
+        {
+            "name": "Centrifuge Laboratorium",
+            "model": "MGA-CF12",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-002",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Sentrifus 12 tabung untuk pemisahan sampel.",
+            "description": "Centrifuge laboratorium dengan kecepatan dan waktu yang dapat diatur. Dilengkapi pengaman tutup otomatis.",
+            "specs": [
+                { "label": "Kapasitas", "value": "12 tabung" },
+                { "label": "Kecepatan", "value": "Hingga 4.000 rpm" },
+                { "label": "Timer", "value": "Digital" }
+            ]
+        },
+        {
+            "name": "Hematology Analyzer",
+            "model": "BC-20s",
+            "brand": "Mindray",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-003",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Analisis darah rutin otomatis.",
+            "description": "Hematology analyzer untuk pemeriksaan darah lengkap dengan hasil cepat. Layar sentuh dan penyimpanan data pasien.",
+            "specs": [
+                { "label": "Parameter", "value": "20 parameter" },
+                { "label": "Sampel", "value": "Whole blood" },
+                { "label": "Layar", "value": "Touchscreen" }
+            ]
+        },
+        {
+            "name": "Chemistry Analyzer",
+            "model": "BS-240",
+            "brand": "Mindray",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-004",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Indent",
+            "is_featured": false,
+            "short_description": "Analisis kimia klinik semi-otomatis.",
+            "description": "Chemistry analyzer untuk pemeriksaan kimia darah dan urin. Mendukung berbagai reagen dan pencetakan hasil.",
+            "specs": [
+                { "label": "Throughput", "value": "Hingga 240 tes/jam" },
+                { "label": "Metode", "value": "Fotometri" },
+                { "label": "Layar", "value": "LCD" }
+            ]
+        },
+        {
+            "name": "Inkubator Laboratorium",
+            "model": "MGA-IN50",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-005",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Inkubator suhu terkontrol untuk kultur.",
+            "description": "Inkubator laboratorium dengan kontrol suhu digital dan ruang muat 50 liter. Cocok untuk kultur mikrobiologi.",
+            "specs": [
+                { "label": "Kapasitas", "value": "50 liter" },
+                { "label": "Suhu", "value": "5 - 60 derajat Celsius" },
+                { "label": "Kontrol", "value": "Digital" }
+            ]
+        },
+        {
+            "name": "Water Bath Laboratorium",
+            "model": "MGA-WB06",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-006",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Penangas air dengan suhu stabil.",
+            "description": "Water bath untuk pemanasan sampel dan reagen. Suhu dapat diatur dan ditampilkan secara digital.",
+            "specs": [
+                { "label": "Kapasitas", "value": "6 liter" },
+                { "label": "Suhu", "value": "Hingga 100 derajat Celsius" },
+                { "label": "Kontrol", "value": "Digital" }
+            ]
+        },
+        {
+            "name": "pH Meter",
+            "model": "MGA-PH01",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-007",
+            "price": null,
+            "price_mode": "contact",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pengukur pH digital untuk laboratorium.",
+            "description": "pH meter digital dengan elektroda yang dapat diganti. Kalibrasi mudah dan layar jelas.",
+            "specs": [
+                { "label": "Rentang", "value": "0 - 14 pH" },
+                { "label": "Resolusi", "value": "0,01 pH" },
+                { "label": "Kalibrasi", "value": "Otomatis" }
+            ]
+        },
+        {
+            "name": "Tabung Reaksi Set",
+            "model": "MGA-TR24",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-008",
+            "price": 180000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Set tabung reaksi kaca dengan rak.",
+            "description": "Set tabung reaksi kaca borosilikat untuk kebutuhan laboratorium. Dilengkapi rak penyimpanan.",
+            "specs": [
+                { "label": "Isi", "value": "24 tabung" },
+                { "label": "Material", "value": "Borosilikat" },
+                { "label": "Rak", "value": "Termasuk" }
+            ]
+        },
+        {
+            "name": "Pipet Mikro",
+            "model": "MGA-PM100",
+            "brand": "MGA Select",
+            "category": "Alat Laboratorium",
+            "sku": "MGA-LAB-009",
+            "price": 450000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Pipet mikro yang dapat diatur volumenya.",
+            "description": "Pipet mikro untuk pemindahan cairan dengan akurasi tinggi. Volume dapat diatur dan ujung pipet dapat diganti.",
+            "specs": [
+                { "label": "Volume", "value": "100 - 1.000 mikroliter" },
+                { "label": "Akurasi", "value": "Tinggi" },
+                { "label": "Ujung", "value": "Dapat diganti" }
+            ]
+        },
+        {
+            "name": "Masker Medis 3 Ply",
+            "model": "50 pcs",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-001",
+            "price": 35000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Masker medis tiga lapis untuk penggunaan harian.",
+            "description": "Masker medis tiga lapis dengan earloop. Nyaman dipakai dan membantu mengurangi penyebaran droplet.",
+            "specs": [
+                { "label": "Isi", "value": "50 pcs" },
+                { "label": "Lapisan", "value": "3 ply" },
+                { "label": "Tipe", "value": "Earloop" }
+            ]
+        },
+        {
+            "name": "Sarung Tangan Steril",
+            "model": "50 pasang",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-002",
+            "price": 95000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Sarung tangan lateks steril sekali pakai.",
+            "description": "Sarung tangan steril untuk tindakan medis. Dikemas per pasang dan tersedia berbagai ukuran.",
+            "specs": [
+                { "label": "Isi", "value": "50 pasang" },
+                { "label": "Material", "value": "Lateks" },
+                { "label": "Steril", "value": "Ya" }
+            ]
+        },
+        {
+            "name": "Kapas Alkohol",
+            "model": "100 pcs",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-003",
+            "price": 25000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kapas alkohol siap pakai untuk antiseptik.",
+            "description": "Kapas alkohol dalam kemasan praktis untuk membersihkan area sebelum tindakan. Sekali pakai.",
+            "specs": [
+                { "label": "Isi", "value": "100 pcs" },
+                { "label": "Kandungan", "value": "Alkohol 70%" },
+                { "label": "Kemasan", "value": "Sachet" }
+            ]
+        },
+        {
+            "name": "Infus Set Dewasa",
+            "model": "20 tetes/ml",
+            "brand": "B. Braun",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-004",
+            "price": 15000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Set infus steril untuk pemberian cairan.",
+            "description": "Infus set dewasa dengan tetesan 20 tetes per ml. Steril dan siap pakai.",
+            "specs": [
+                { "label": "Tetesan", "value": "20 tetes/ml" },
+                { "label": "Selang", "value": "150 cm" },
+                { "label": "Steril", "value": "Ya" }
+            ]
+        },
+        {
+            "name": "Spuit 3 ml",
+            "model": "100 pcs",
+            "brand": "B. Braun",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-005",
+            "price": 75000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Spuit sekali pakai volume 3 ml.",
+            "description": "Spuit steril 3 ml dengan jarum. Dikemas 100 pcs per box untuk kebutuhan rutin.",
+            "specs": [
+                { "label": "Volume", "value": "3 ml" },
+                { "label": "Isi", "value": "100 pcs" },
+                { "label": "Steril", "value": "Ya" }
+            ]
+        },
+        {
+            "name": "Kateter Urine Foley",
+            "model": "16 Fr",
+            "brand": "B. Braun",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-006",
+            "price": 45000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kateter Foley steril untuk kateterisasi urine.",
+            "description": "Kateter Foley dua arah steril dengan balon. Tersedia berbagai ukuran sesuai kebutuhan.",
+            "specs": [
+                { "label": "Ukuran", "value": "16 Fr" },
+                { "label": "Tipe", "value": "Dua arah" },
+                { "label": "Steril", "value": "Ya" }
+            ]
+        },
+        {
+            "name": "Nasal Cannula",
+            "model": "Dewasa",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-007",
+            "price": 12000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kanul hidung untuk terapi oksigen.",
+            "description": "Nasal cannula dewasa untuk pemberian oksigen aliran rendah. Selang fleksibel dan nyaman.",
+            "specs": [
+                { "label": "Ukuran", "value": "Dewasa" },
+                { "label": "Selang", "value": "200 cm" },
+                { "label": "Material", "value": "PVC medis" }
+            ]
+        },
+        {
+            "name": "Underpad 60x90",
+            "model": "10 pcs",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-008",
+            "price": 55000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Alas tahan air untuk perlindungan tempat tidur.",
+            "description": "Underpad sekali pakai berukuran 60x90 cm. Lapisan atas lembut dan lapisan bawah tahan air.",
+            "specs": [
+                { "label": "Ukuran", "value": "60 x 90 cm" },
+                { "label": "Isi", "value": "10 pcs" },
+                { "label": "Lapisan", "value": "Tahan air" }
+            ]
+        },
+        {
+            "name": "Kasa Steril 16x16",
+            "model": "25 pcs",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-009",
+            "price": 30000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Kasa steril untuk perawatan luka.",
+            "description": "Kasa steril 16x16 cm untuk membersihkan dan menutup luka. Dikemas 25 pcs.",
+            "specs": [
+                { "label": "Ukuran", "value": "16 x 16 cm" },
+                { "label": "Isi", "value": "25 pcs" },
+                { "label": "Steril", "value": "Ya" }
+            ]
+        },
+        {
+            "name": "Alkohol Swab",
+            "model": "100 pcs",
+            "brand": "MGA Select",
+            "category": "Perlengkapan Medis Habis Pakai",
+            "sku": "MGA-HAB-010",
+            "price": 22000,
+            "price_mode": "show",
+            "stock_status": "Ready",
+            "is_featured": false,
+            "short_description": "Swab alkohol sekali pakai untuk antiseptik kulit.",
+            "description": "Alkohol swab praktis untuk membersihkan kulit sebelum injeksi atau pengambilan sampel.",
+            "specs": [
+                { "label": "Isi", "value": "100 pcs" },
+                { "label": "Kandungan", "value": "Isopropyl alcohol 70%" },
+                { "label": "Kemasan", "value": "Sachet" }
+            ]
+        }
+    ]
+}
