@@ -55,12 +55,12 @@ export default function QuoteSent({
                             />
                         </span>
                         <div>
-                            <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+                            <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                                 Penawaran Anda sedang disiapkan.
                             </h1>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                                 Kode permintaan{' '}
-                                <span className="font-mono font-medium text-foreground">
+                                <span className="font-medium text-foreground">
                                     {inquiry.code}
                                 </span>
                                 . Simpan kode ini untuk memudahkan tindak
@@ -81,18 +81,18 @@ export default function QuoteSent({
                         </div>
                         <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
                             <div>
-                                <dt className="font-mono text-xs text-muted-foreground">
+                                <dt className="text-xs text-muted-foreground">
                                     Pemohon
                                 </dt>
-                                <dd className="font-mono text-sm font-medium">
+                                <dd className="text-sm font-medium">
                                     {inquiry.customer_name}
                                 </dd>
                             </div>
                             <div>
-                                <dt className="font-mono text-xs text-muted-foreground">
+                                <dt className="text-xs text-muted-foreground">
                                     Instansi
                                 </dt>
-                                <dd className="font-mono text-sm font-medium">
+                                <dd className="text-sm font-medium">
                                     {inquiry.institution ?? '-'}
                                 </dd>
                             </div>
@@ -108,11 +108,11 @@ export default function QuoteSent({
                                         <p className="font-semibold">
                                             {item.name}
                                         </p>
-                                        <p className="font-mono text-xs text-muted-foreground">
+                                        <p className="text-xs text-muted-foreground">
                                             {item.brand ?? '-'}
                                         </p>
                                     </div>
-                                    <span className="shrink-0 rounded-sm bg-secondary px-2 py-0.5 font-mono text-xs font-medium">
+                                    <span className="shrink-0 rounded-sm bg-secondary px-2 py-0.5 text-xs font-medium">
                                         {item.qty} unit
                                     </span>
                                 </li>

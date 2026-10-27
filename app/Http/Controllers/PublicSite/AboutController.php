@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\PublicSite;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\CompanyStat;
-use App\Models\PartnerBrand;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
 use Inertia\Inertia;
@@ -14,15 +14,17 @@ class AboutController extends Controller
 {
     public function __invoke(): Response
     {
-        $partnerBrands = PartnerBrand::query()
+        $brands = Brand::query()
             ->where('is_active', true)
             ->orderBy('sort_order')
+            ->orderBy('name')
             ->get()
-            ->map(fn (PartnerBrand $brand): array => [
+            ->map(fn (Brand $brand): array => [
                 'id' => $brand->id,
                 'name' => $brand->name,
+                'slug' => $brand->slug,
                 'logo' => $brand->logo_url,
-                'website' => $brand->website,
+                'status' => $brand->status ?? 'tersedia',
             ])
             ->all();
 
@@ -46,8 +48,8 @@ class AboutController extends Controller
 
         return Inertia::render('public/about', [
             'seo' => [
-                'title' => 'Tentang kami',
-                'description' => 'Profil PT. Mandalika Global Alkesindo - distributor alat kesehatan, pengadaan, instalasi, servis, dan pendampingan teknis untuk rumah sakit, klinik, dan dinas kesehatan di Indonesia.',
+                'title' => 'Tentang PT Mandalika Global Alkesindo',
+                'description' => 'Profil PT. Mandalika Global Alkesindo - distributor alat kesehatan di Mataram, melayani seluruh Indonesia untuk pengadaan, instalasi, servis dan pendampingan teknis.',
                 'canonical' => route('about'),
             ],
             'profile' => [
@@ -59,7 +61,7 @@ class AboutController extends Controller
                 'phone' => Setting::get('whatsapp_number'),
                 'founded_year' => Setting::get('company_founded_year'),
             ],
-            'partnerBrands' => $partnerBrands,
+            'brands' => $brands,
             'companyStats' => $companyStats,
         ]);
     }

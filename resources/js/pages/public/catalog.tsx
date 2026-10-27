@@ -1,6 +1,7 @@
 import { Link, router } from '@inertiajs/react';
 import { PackageSearch, Search, X } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
+import Breadcrumb from '@/components/breadcrumb';
 import Pagination from '@/components/pagination';
 import ProductCard from '@/components/product-card';
 import Seo from '@/components/seo';
@@ -32,7 +33,7 @@ type CatalogProps = {
 type FilterState = CatalogProps['filters'];
 
 const selectClass =
-    'h-10 w-full min-w-0 rounded-md border border-border bg-background px-3 font-mono text-sm text-foreground outline-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring/30';
+    'h-10 w-full min-w-0 rounded-md border border-border bg-background px-3 text-sm text-foreground outline-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring/30';
 
 export default function Catalog({
     products,
@@ -89,26 +90,18 @@ export default function Catalog({
             <Seo seo={seo} />
 
             <section className="border-b border-border bg-secondary/30">
-                <div className="mx-auto w-full max-w-6xl px-4 pt-10 pb-8 sm:px-6 sm:pt-14">
-                    <nav aria-label="Remah roti" className="font-mono text-xs">
-                        <Link
-                            href={home.url()}
-                            className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                        >
-                            Beranda
-                        </Link>
-                        <span
-                            className="mx-2 text-muted-foreground/60"
-                            aria-hidden="true"
-                        >
-                            /
-                        </span>
-                        <span className="font-semibold">Katalog</span>
-                    </nav>
+                <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-8 sm:px-6 lg:px-8 sm:pt-14">
+                    <Breadcrumb
+                        items={[
+                            { label: 'Beranda', href: home.url() },
+                            { label: 'Katalog' },
+                        ]}
+                        className="mb-8"
+                    />
 
                     <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
                         <div>
-                            <h1 className="max-w-xl text-3xl leading-[1.05] font-extrabold tracking-[-0.03em] sm:text-4xl">
+                            <h1 className="max-w-xl text-3xl font-semibold tracking-tight sm:text-4xl">
                                 Pilih alat, kami bantu sesuaikan.
                             </h1>
                             <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">
@@ -119,7 +112,7 @@ export default function Catalog({
                         </div>
 
                         <div className="flex items-baseline gap-2 border-t border-border pt-4 lg:border-t-0 lg:pt-0 lg:pb-1">
-                            <span className="font-mono text-3xl font-extrabold tracking-tight tabular-nums">
+                            <span className="text-2xl font-semibold tracking-tight tabular-nums">
                                 {products.total}
                             </span>
                             <span className="text-sm text-muted-foreground">
@@ -134,7 +127,7 @@ export default function Catalog({
                 aria-label="Filter produk"
                 className="border-b border-border bg-card/60"
             >
-                <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6">
+                <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     <form
                         onSubmit={handleSubmit}
                         aria-label="Filter produk"
@@ -240,7 +233,7 @@ export default function Catalog({
 
                         <button
                             type="submit"
-                            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90"
+                            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                         >
                             Cari
                         </button>
@@ -248,13 +241,13 @@ export default function Catalog({
 
                     {categories.length > 0 && (
                         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-1 border-t border-border pt-4">
-                            <span className="font-mono text-xs text-muted-foreground">
+                            <span className="text-xs font-medium text-muted-foreground">
                                 Kategori
                             </span>
                             <Link
                                 href={queryFor({ kategori: null })}
                                 className={cn(
-                                    'border-b-2 py-1.5 font-mono text-xs transition-colors',
+                                    'border-b-2 py-1.5 text-xs font-medium transition-colors',
                                     state.kategori === null
                                         ? 'border-primary text-foreground'
                                         : 'border-transparent text-muted-foreground hover:border-border hover:text-foreground',
@@ -269,7 +262,7 @@ export default function Catalog({
                                         kategori: category.slug,
                                     })}
                                     className={cn(
-                                        'border-b-2 py-1.5 font-mono text-xs transition-colors',
+                                        'border-b-2 py-1.5 text-xs font-medium transition-colors',
                                         state.kategori === category.slug
                                             ? 'border-primary text-foreground'
                                             : 'border-transparent text-muted-foreground hover:border-border hover:text-foreground',
@@ -283,18 +276,18 @@ export default function Catalog({
                 </div>
             </section>
 
-            <section className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
+            <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <p
                         className="text-sm text-muted-foreground"
                         aria-live="polite"
                     >
                         Menampilkan{' '}
-                        <span className="font-mono text-foreground tabular-nums">
+                        <span className="text-foreground tabular-nums">
                             {products.from ?? 0}–{products.to ?? 0}
                         </span>{' '}
                         dari{' '}
-                        <span className="font-mono text-foreground tabular-nums">
+                        <span className="text-foreground tabular-nums">
                             {products.total}
                         </span>{' '}
                         produk
@@ -314,8 +307,9 @@ export default function Catalog({
                                 onChange={(event) =>
                                     apply({ urutkan: event.target.value })
                                 }
-                                className="h-8 rounded-md border border-border bg-background px-2 font-mono text-xs text-foreground transition-colors outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring/30"
+                                className="h-8 rounded-md border border-border bg-background px-2 text-xs text-foreground transition-colors outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring/30"
                             >
+                                <option value="unggulan">Unggulan</option>
                                 <option value="terbaru">Terbaru</option>
                                 <option value="nama">Nama A–Z</option>
                                 <option value="harga-rendah">
@@ -340,7 +334,7 @@ export default function Catalog({
                 </div>
 
                 {products.data.length > 0 ? (
-                    <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         {products.data.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))}
@@ -351,19 +345,29 @@ export default function Catalog({
                             className="size-8 text-muted-foreground"
                             aria-hidden="true"
                         />
-                        <h2 className="mt-4 text-lg font-bold">
+                        <h2 className="mt-4 text-lg font-semibold">
                             Produk tidak ditemukan
                         </h2>
                         <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                            Coba kata kunci lain, longgarkan filter, atau
-                            hubungi kami untuk kebutuhan khusus.
+                            Coba kata kunci lain, longgarkan filter, atau minta
+                            penawaran langsung ke tim kami.
                         </p>
-                        <Link
-                            href={catalog.index.url()}
-                            className="mt-5 inline-flex h-10 items-center rounded-md border border-border px-4 text-sm font-semibold hover:bg-secondary"
-                        >
-                            Lihat semua produk
-                        </Link>
+                        <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+                            <Link
+                                href={catalog.index.url()}
+                                className="inline-flex h-10 items-center rounded-md border border-border px-4 text-sm font-semibold hover:bg-secondary"
+                            >
+                                Lihat semua produk
+                            </Link>
+                            <a
+                                href="https://wa.me/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex h-10 items-center rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+                            >
+                                Minta penawaran via WhatsApp
+                            </a>
+                        </div>
                     </div>
                 )}
 

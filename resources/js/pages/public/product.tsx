@@ -10,6 +10,7 @@ import {
     Wrench,
 } from 'lucide-react';
 import { useState } from 'react';
+import Breadcrumb from '@/components/breadcrumb';
 import ProductCard from '@/components/product-card';
 import QuoteButton from '@/components/quote-button';
 import Seo from '@/components/seo';
@@ -118,58 +119,27 @@ export default function Product({
         <>
             <Seo seo={seo} />
 
-            <div className="mx-auto w-full max-w-6xl px-4 pt-8 pb-16 sm:px-6">
-                <nav aria-label="Remah roti" className="font-mono text-xs">
-                    <ol className="flex flex-wrap items-center gap-1.5">
-                        <li>
-                            <Link
-                                href={home.url()}
-                                className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                            >
-                                Beranda
-                            </Link>
-                        </li>
-                        <li aria-hidden="true">
-                            <ChevronRight className="size-3 text-muted-foreground/60" />
-                        </li>
-                        <li>
-                            <Link
-                                href={catalog.index.url()}
-                                className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                            >
-                                Katalog
-                            </Link>
-                        </li>
-                        {product.category_slug && (
-                            <>
-                                <li aria-hidden="true">
-                                    <ChevronRight className="size-3 text-muted-foreground/60" />
-                                </li>
-                                <li>
-                                    <Link
-                                        href={catalog.index.url({
-                                            query: {
-                                                kategori: product.category_slug,
-                                            },
-                                        })}
-                                        className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                                    >
-                                        {product.category}
-                                    </Link>
-                                </li>
-                            </>
-                        )}
-                        <li aria-hidden="true">
-                            <ChevronRight className="size-3 text-muted-foreground/60" />
-                        </li>
-                        <li
-                            className="max-w-[16rem] truncate font-semibold sm:max-w-md"
-                            aria-current="page"
-                        >
-                            {product.name}
-                        </li>
-                    </ol>
-                </nav>
+            <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8">
+                <Breadcrumb
+                    className="mb-8"
+                    items={[
+                        { label: 'Beranda', href: home.url() },
+                        { label: 'Katalog', href: catalog.index.url() },
+                        ...(product.category_slug && product.category
+                            ? [
+                                  {
+                                      label: product.category,
+                                      href: catalog.index.url({
+                                          query: {
+                                              kategori: product.category_slug,
+                                          },
+                                      }),
+                                  },
+                              ]
+                            : []),
+                        { label: product.name },
+                    ]}
+                />
 
                 <div className="mt-6 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
                     <div>
@@ -221,7 +191,7 @@ export default function Product({
                     </div>
 
                     <div className="lg:py-1">
-                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 font-mono text-xs">
+                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-xs">
                             <p className="font-medium text-primary-strong">
                                 {product.brand ?? 'MGA Select'}
                             </p>
@@ -232,11 +202,11 @@ export default function Product({
                             )}
                         </div>
 
-                        <h1 className="mt-3 text-3xl leading-[1.05] font-extrabold tracking-[-0.03em] sm:text-4xl">
+                        <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
                             {product.name}
                         </h1>
 
-                        <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-xs text-muted-foreground">
+                        <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-xs text-muted-foreground">
                             {product.model && (
                                 <span>Model {product.model}</span>
                             )}
@@ -255,7 +225,7 @@ export default function Product({
                                     <p className="text-xs font-medium text-muted-foreground">
                                         Harga
                                     </p>
-                                    <p className="mt-1 font-mono text-2xl font-extrabold tracking-tight tabular-nums">
+                                    <p className="mt-1 text-2xl font-semibold tracking-tight tabular-nums">
                                         {product.price ?? 'Hubungi kami'}
                                     </p>
                                     <p className="mt-1 text-xs text-muted-foreground">
@@ -266,7 +236,7 @@ export default function Product({
 
                                 <span
                                     className={cn(
-                                        'rounded-sm border px-2.5 py-1 font-mono text-xs font-medium',
+                                        'rounded-sm border px-2.5 py-1 text-xs font-medium',
                                         stockClass(product.stock_status),
                                     )}
                                 >
@@ -280,7 +250,7 @@ export default function Product({
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90 sm:flex-1"
+                                        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:flex-1"
                                     >
                                         <MessageCircle
                                             className="size-4"
@@ -342,7 +312,7 @@ export default function Product({
                     <section aria-labelledby="deskripsi-produk">
                         <h2
                             id="deskripsi-produk"
-                            className="text-lg font-extrabold tracking-tight"
+                            className="text-lg font-semibold tracking-tight"
                         >
                             Deskripsi
                         </h2>
@@ -378,7 +348,7 @@ export default function Product({
                                                     aria-hidden="true"
                                                 />
                                                 <span>{document.title}</span>
-                                                <span className="font-mono text-xs font-medium text-muted-foreground">
+                                                <span className="text-xs font-medium text-muted-foreground">
                                                     {document.type}
                                                 </span>
                                             </a>
@@ -392,7 +362,7 @@ export default function Product({
                     <section aria-labelledby="spesifikasi-produk">
                         <h2
                             id="spesifikasi-produk"
-                            className="text-lg font-extrabold tracking-tight"
+                            className="text-lg font-semibold tracking-tight"
                         >
                             Spesifikasi
                         </h2>
@@ -403,10 +373,10 @@ export default function Product({
                                         key={`${spec.label ?? 'spesifikasi'}-${index}`}
                                         className="grid gap-1 px-4 py-3 sm:grid-cols-[0.9fr_1.1fr] sm:gap-4"
                                     >
-                                        <dt className="font-mono text-xs font-medium text-muted-foreground">
+                                        <dt className="text-xs font-medium text-muted-foreground">
                                             {spec.label ?? 'Spesifikasi'}
                                         </dt>
-                                        <dd className="font-mono text-sm font-medium whitespace-pre-line">
+                                        <dd className="text-sm font-medium whitespace-pre-line">
                                             {spec.value}
                                         </dd>
                                     </div>
@@ -428,7 +398,7 @@ export default function Product({
                             <div>
                                 <h2
                                     id="produk-terkait"
-                                    className="text-lg font-extrabold tracking-tight"
+                                    className="text-lg font-semibold tracking-tight"
                                 >
                                     Produk terkait
                                 </h2>

@@ -230,7 +230,7 @@ export default function Service({ seo, preferences }: ServicePageProps) {
                 }}
             />
 
-            <div className="mx-auto w-full max-w-6xl px-4 pt-8 pb-16 sm:px-6">
+            <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8">
                 <nav aria-label="Remah roti" className="font-mono text-xs">
                     <Link
                         href={home.url()}

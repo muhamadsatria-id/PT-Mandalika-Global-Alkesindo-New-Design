@@ -22,7 +22,7 @@ class CatalogController extends Controller
         $categorySlug = (string) $request->query('kategori', '');
         $brandSlug = (string) $request->query('brand', '');
         $stock = (string) $request->query('stok', '');
-        $sort = (string) $request->query('urutkan', 'terbaru');
+        $sort = (string) $request->query('urutkan', 'unggulan');
 
         $selectedCategory = $categorySlug !== ''
             ? Category::query()->where('slug', $categorySlug)->where('is_active', true)->first()
@@ -59,9 +59,10 @@ class CatalogController extends Controller
             ->when($sort === 'nama', fn (Builder $query) => $query->orderBy('name'))
             ->when($sort === 'harga-rendah', fn (Builder $query) => $query->orderByRaw('price is null')->orderBy('price'))
             ->when($sort === 'harga-tinggi', fn (Builder $query) => $query->orderByRaw('price is null')->orderByDesc('price'))
+            ->when($sort === 'unggulan', fn (Builder $query) => $query->orderByDesc('is_featured')->orderByRaw('price is not null desc')->orderByDesc('id'))
             ->when(
-                ! in_array($sort, ['nama', 'harga-rendah', 'harga-tinggi'], true),
-                fn (Builder $query) => $query->latest(),
+                ! in_array($sort, ['nama', 'harga-rendah', 'harga-tinggi', 'unggulan'], true),
+                fn (Builder $query) => $query->orderByDesc('is_featured')->orderByRaw('price is not null desc')->orderByDesc('id'),
             )
             ->paginate(12)
             ->withQueryString();

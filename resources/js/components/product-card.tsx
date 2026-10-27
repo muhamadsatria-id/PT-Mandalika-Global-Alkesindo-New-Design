@@ -64,12 +64,12 @@ export default function ProductCard({ product, className }: ProductCardProps) {
                 <span className="sr-only">Lihat detail {product.name}</span>
             </Link>
 
-            <div className="flex flex-1 flex-col p-4 sm:p-5">
-                <p className="text-xs font-medium text-muted-foreground">
+            <div className="flex flex-1 flex-col p-3 sm:p-4 lg:p-5">
+                <p className="text-[11px] font-medium text-muted-foreground sm:text-xs">
                     {product.brand ?? 'MGA Select'}
                 </p>
 
-                <h3 className="mt-2 text-base leading-snug font-bold tracking-tight">
+                <h3 className="mt-1.5 text-sm leading-snug font-semibold tracking-tight sm:mt-2 sm:text-base">
                     <Link
                         href={product.url}
                         className="underline-offset-4 hover:underline"
@@ -79,28 +79,28 @@ export default function ProductCard({ product, className }: ProductCardProps) {
                 </h3>
 
                 {product.model && (
-                    <p className="mt-1 text-xs text-muted-foreground">
-                        Model {product.model}
+                    <p className="mt-1 text-[11px] text-muted-foreground sm:text-xs">
+                        Kemasan/Model {product.model}
                     </p>
                 )}
 
-                <div className="mt-auto flex items-end justify-between gap-3 pt-5">
+                <div className="mt-auto flex items-end justify-between gap-2 pt-4 sm:gap-3 sm:pt-5">
                     <div>
-                        <p className="text-xs text-muted-foreground">Harga</p>
-                        <p className="mt-1 text-sm font-extrabold tabular-nums">
+                        <p className="text-[11px] text-muted-foreground sm:text-xs">Harga</p>
+                        <p className="mt-1 text-xs font-semibold tabular-nums sm:text-sm">
                             {product.price ?? 'Hubungi kami'}
                         </p>
                     </div>
 
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1">
                         <QuoteButton product={product} variant="compact" />
                         <Link
                             href={product.url}
-                            className="inline-flex size-8 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary-strong"
+                            className="inline-flex size-7 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary-strong sm:size-8"
                             aria-label={`Lihat detail ${product.name}`}
                         >
                             <ArrowUpRight
-                                className="size-4"
+                                className="size-3.5 sm:size-4"
                                 aria-hidden="true"
                             />
                         </Link>

@@ -21,11 +21,12 @@ import service from '@/routes/service';
 import type { SharedData } from '@/types';
 import type { SeoData } from '@/types/catalog';
 
-type PartnerBrand = {
+type Brand = {
     id: number;
     name: string;
+    slug: string;
     logo: string | null;
-    website: string | null;
+    status: string | null;
 };
 
 type CompanyStat = {
@@ -46,7 +47,8 @@ type AboutProps = {
         phone: string | null;
         founded_year: string | null;
     };
-    partnerBrands: PartnerBrand[];
+    brands?: Brand[];
+    partnerBrands?: Brand[];
     companyStats: CompanyStat[];
 };
 
@@ -94,7 +96,8 @@ const services = [
     },
 ];
 
-export default function About({ seo, profile, partnerBrands, companyStats }: AboutProps) {
+export default function About({ seo, profile, brands, partnerBrands, companyStats }: AboutProps) {
+    const brandList = brands && brands.length > 0 ? brands : (partnerBrands ?? []);
     const { settings } = usePage<SharedData>().props;
     const whatsappNumber = settings.whatsapp_number || profile.phone;
     const quoteLink = whatsappNumber
@@ -286,19 +289,19 @@ export default function About({ seo, profile, partnerBrands, companyStats }: Abo
                 </div>
             </section>
 
-            {partnerBrands.length > 0 && (
+            {brandList.length > 0 && (
                 <section className="border-b border-border">
                     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                         <div className="mb-6 text-center">
                             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
-                                Brand Partner yang Dilayani
+                                Brand yang Didistribusikan
                             </h2>
                             <p className="mt-1 text-sm text-muted-foreground">
-                                Beberapa principal resmi yang kami distribusikan.
+                                Beberapa brand principal dan partner yang kami layani.
                             </p>
                         </div>
                         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                            {partnerBrands.map((brand) => (
+                            {brandList.map((brand) => (
                                 <div
                                     key={brand.id}
                                     className="flex h-10 items-center justify-center"
@@ -397,7 +400,7 @@ export default function About({ seo, profile, partnerBrands, companyStats }: Abo
                             Lokasi & Jangkauan Layanan
                         </h2>
                         <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Berbasis di Mataram, Nusa Tenggara Barat, kami melayani pengiriman, instalasi, dan pendampingan teknis ke rumah sakit, klinik, dan fasilitas kesehatan di seluruh Indonesia.
+                            Kami melayani pengiriman, instalasi, dan pendampingan teknis ke rumah sakit, klinik, dan fasilitas kesehatan di seluruh Indonesia.
                         </p>
                         {profile.address && (
                             <div className="mt-4 flex items-start gap-2.5">
@@ -422,7 +425,7 @@ export default function About({ seo, profile, partnerBrands, companyStats }: Abo
                         <div className="mt-6 overflow-hidden rounded-xl border border-border bg-secondary/40 shadow-sm">
                             <iframe
                                 title="Lokasi PT. Mandalika Global Alkesindo"
-                                src={`https://www.google.com/maps?q=${encodeURIComponent(profile.address ?? 'Mataram, Nusa Tenggara Barat')}&output=embed`}
+                                src={`https://www.google.com/maps?q=${encodeURIComponent(profile.address ?? '')}&output=embed`}
                                 className="aspect-[16/9] w-full"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"

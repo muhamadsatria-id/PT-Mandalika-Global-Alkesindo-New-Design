@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
+import Breadcrumb from '@/components/breadcrumb';
 import Seo from '@/components/seo';
 import { home } from '@/routes';
 import type { SeoData } from '@/types/catalog';
@@ -43,23 +44,18 @@ export default function Gallery({ seo, categories, items }: GalleryProps) {
         <>
             <Seo seo={seo} />
 
-            <div className="mx-auto w-full max-w-6xl px-4 pt-8 pb-16 sm:px-6">
-                <nav aria-label="Remah roti" className="font-mono text-xs">
-                    <Link
-                        href={home.url()}
-                        className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-                    >
-                        Beranda
-                    </Link>
-                    <span className="mx-1.5 text-muted-foreground">/</span>
-                    <span aria-current="page" className="text-foreground">
-                        Galeri
-                    </span>
-                </nav>
+            <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8">
+                <Breadcrumb
+                    items={[
+                        { label: 'Beranda', href: home.url() },
+                        { label: 'Galeri' },
+                    ]}
+                    className="mb-8"
+                />
 
-                <section className="mt-8 grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+                <section className="mt-6 grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
                     <div>
-                        <h1 className="text-4xl leading-[1.05] font-extrabold tracking-tight text-balance sm:text-5xl">
+                        <h1 className="text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl">
                             Dokumentasi kegiatan dan instalasi.
                         </h1>
                         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
@@ -70,7 +66,7 @@ export default function Gallery({ seo, categories, items }: GalleryProps) {
                     </div>
 
                     <div className="border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
-                        <p className="font-bold text-foreground">
+                        <p className="font-semibold text-foreground">
                             Ingin melihat langsung?
                         </p>
                         <p className="mt-2">
@@ -114,11 +110,11 @@ export default function Gallery({ seo, categories, items }: GalleryProps) {
                     <div className="flex items-end justify-between gap-4 border-b border-border pb-4">
                         <h2
                             id="galeri"
-                            className="text-2xl font-extrabold tracking-tight"
+                            className="text-2xl font-semibold tracking-tight"
                         >
                             Dokumentasi
                         </h2>
-                        <p className="font-mono text-xs text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                             {filtered.length} dari {items.length}
                         </p>
                     </div>
@@ -149,7 +145,7 @@ export default function Gallery({ seo, categories, items }: GalleryProps) {
                                             />
                                         )}
                                     </div>
-                                    <h3 className="mt-3 font-mono text-base font-bold">
+                                    <h3 className="mt-3 text-base font-semibold">
                                         {item.title}
                                     </h3>
                                     {item.description && (
@@ -158,7 +154,7 @@ export default function Gallery({ seo, categories, items }: GalleryProps) {
                                         </p>
                                     )}
                                     {item.category && (
-                                        <p className="mt-2 font-mono text-xs text-muted-foreground">
+                                        <p className="mt-2 text-xs text-muted-foreground">
                                             {item.category}
                                         </p>
                                     )}

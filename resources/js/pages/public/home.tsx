@@ -167,11 +167,11 @@ export default function Home({
 
                 <div className="relative mx-auto flex min-h-[calc(100svh-6rem)] w-full max-w-7xl flex-col justify-center px-4 pt-32 pb-16 sm:px-6 lg:px-8 lg:pt-40 lg:pb-24">
                     <div className="mx-auto max-w-4xl text-center">
-                        <div className="mb-6 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-3 py-1.5 ring-1 ring-white/15 backdrop-blur">
+                        <div className="mb-6 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-full bg-white/10 px-2 py-1.5 text-center ring-1 ring-white/15 backdrop-blur sm:px-3">
                             <span className="inline-flex items-center rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-neutral-900">
                                 Distribusi Resmi
                             </span>
-                            <span className="text-sm font-medium text-white/90">
+                            <span className="text-xs font-medium text-white/90 sm:text-sm">
                                 Alat Kesehatan • Servis • Pendampingan Teknis
                             </span>
                         </div>
@@ -542,9 +542,9 @@ export default function Home({
                 id="cara-kerja"
                 className="scroll-mt-24 border-b border-border bg-secondary/30"
             >
-                <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+                <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                     <div className="max-w-2xl">
-                        <h2 className="text-3xl leading-[1.05] font-extrabold tracking-tight sm:text-4xl">
+                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                             Tiga langkah, tanpa proses berbelit.
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -580,7 +580,7 @@ export default function Home({
 
             {testimonials.length > 0 && (
                 <section className="border-b border-border">
-                    <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
+                    <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
                         <div className="max-w-2xl">
                             <h2 className="text-2xl leading-tight font-semibold tracking-tight sm:text-3xl">
                                 Dipercaya fasilitas kesehatan
@@ -627,7 +627,7 @@ export default function Home({
                             <p className="mb-3 text-sm font-semibold text-primary">
                                 FAQ
                             </p>
-                            <h2 className="mb-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                            <h2 className="mb-4 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                                 Pertanyaan yang sering diajukan
                             </h2>
                             <p className="mx-auto max-w-xl text-muted-foreground">
@@ -663,65 +663,10 @@ export default function Home({
                 </section>
             )}
 
-            <section className="border-b border-border">
-                <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
-                    <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-                        <div>
-                            <h2 className="text-2xl leading-tight font-semibold tracking-tight sm:text-3xl">
-                                Lokasi dan jangkauan layanan
-                            </h2>
-                            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                Kami melayani pengiriman, instalasi, dan pendampingan teknis ke rumah sakit, klinik, dan fasilitas kesehatan di seluruh Indonesia.
-                            </p>
-                            {settings.company_address && (
-                                <div className="mt-6">
-                                    <p className="text-sm font-medium text-foreground">
-                                        Alamat kantor/gudang
-                                    </p>
-                                    <p className="mt-1 text-sm text-muted-foreground">
-                                        {settings.company_address}
-                                    </p>
-                                </div>
-                            )}
-                            <div className="mt-6 flex flex-wrap items-center gap-3">
-                                {settings.company_phone && (
-                                    <a
-                                        href={whatsappNumber ? whatsAppLink(whatsappNumber, salesMessage) : `tel:${settings.company_phone}`}
-                                        target={whatsappNumber ? '_blank' : undefined}
-                                        rel={whatsappNumber ? 'noopener noreferrer' : undefined}
-                                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
-                                    >
-                                        Hubungi kami
-                                        <ArrowUpRight className="size-4" aria-hidden="true" />
-                                    </a>
-                                )}
-                                <Link
-                                    href={legal.url()}
-                                    className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
-                                >
-                                    Lihat legalitas
-                                    <ArrowUpRight className="size-4" aria-hidden="true" />
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="overflow-hidden rounded-xl border border-border bg-secondary/40 shadow-sm">
-                            <iframe
-                                title="Lokasi PT. Mandalika Global Alkesindo"
-                                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                                    settings.company_address ??
-                                        'Mataram, Nusa Tenggara Barat',
-                                )}&output=embed`}
-                                className="aspect-[16/9] w-full"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             <section id="kontak" className="scroll-mt-24">
-                <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+                <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                     <div className="relative overflow-hidden rounded-lg bg-primary px-6 py-10 text-primary-foreground sm:px-10">
                         <div
                             className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full border border-primary-foreground/15"
@@ -734,7 +679,7 @@ export default function Home({
 
                         <div className="relative lg:flex lg:items-end lg:justify-between lg:gap-12">
                             <div className="max-w-xl">
-                                <h2 className="text-3xl leading-[1.05] font-extrabold tracking-tight sm:text-4xl">
+                                <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                                     Butuh penawaran atau jadwal servis?
                                 </h2>
                                 <p className="mt-4 text-sm leading-relaxed sm:text-base">

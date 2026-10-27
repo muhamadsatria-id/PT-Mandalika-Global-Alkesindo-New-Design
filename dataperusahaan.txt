@@ -1,0 +1,331 @@
+==================================================
+A. IDENTITAS PERUSAHAAN
+==================================================
+Nama resmi        : PT. Mandalika Global Alkesindo
+Nama singkat      : MGA
+Tagline katalog   : Medical Equipment Sales And Service
+Tagline website   : Distributor alat kesehatan: penjualan, instalasi, dan servis.
+Alamat            : Jalan Mawar 6 No. 4 Unitex, Kel. Sindangrasa, Kec. Bogor Timur, Kota Bogor, Jawa Barat
+Kode pos          : 16145
+Koordinat peta    : -6.633778, 106.8284662
+Telepon / WhatsApp: +62 878-2850-3881
+Link WhatsApp     : https://wa.me/6287828503881
+Email             : info@mga.my.id
+Website           : www.mga.my.id
+Jam operasional   : Senin - Jumat, 08.00 - 17.00 WIB 
+Waktu respons     : maksimal 1 hari kerja
+Brand utama       : BISOND, BOSKA, VINNO
+Tahun berdiri     : 2026
+
+==================================================
+B. HERO BERANDA
+==================================================
+Label        : Distributor Alat Kesehatan · Kota Bogor
+Judul        : Alat medis yang siap dipakai,
+               bukan sekadar dikirim
+Paragraf     : Pengadaan, instalasi, dan servis alat kesehatan untuk rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia.
+Tombol 1     : Lihat katalog
+Tombol 2     : Minta penawaran via WhatsApp
+Trust strip  : Izin Distributor Alkes · CDAKB · NIB · [tambah hanya yang sudah ada dokumennya]
+
+==================================================
+C. TENTANG KAMI
+==================================================
+Judul halaman: Tentang PT Mandalika Global Alkesindo
+
+Ringkasan:
+PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.
+
+Tiga prinsip kerja:
+1. Tepat sebelum cepat. Kami mulai dari kebutuhan ruang, alur kerja tim medis, dan anggaran, bukan dari daftar unit yang paling mudah dijual.
+2. Bicara apa adanya. Spesifikasi, ketersediaan, dan waktu pengiriman disampaikan terbuka agar keputusan pengadaan tidak menimbulkan kejutan.
+3. Hadir setelah unit tiba. Pengenalan fitur dan koordinasi servis tetap kami dampingi setelah alat digunakan.
+
+VISI
+Menjadi mitra pengadaan dan perawatan alat kesehatan yang paling diandalkan oleh fasilitas kesehatan di seluruh Indonesia.
+
+MISI
+1. Menyediakan alat kesehatan berizin edar resmi yang sesuai kebutuhan dan anggaran fasilitas kesehatan.
+2. Mendampingi setiap proyek mulai dari pemilihan unit, pengiriman, instalasi, hingga pelatihan pengguna.
+3. Menjaga performa alat melalui layanan servis dan perawatan berkala yang responsif.
+4. Membangun hubungan jangka panjang dengan klien lewat komunikasi yang jujur dan transparan.
+
+Angka (isi hanya jika benar, kalau kosong jangan ditampilkan):
+Tahun berdiri 2026 | Unit terpasang 1200 | Fasilitas kesehatan dilayani 321 | Jumlah brand: 9 | Jumlah produk: 70
+
+==================================================
+D. LAYANAN
+==================================================
+Cakupan (selaras dengan referensi: Sales, Installation, Training, Maintenance, Spare Part, Service):
+
+1. Pengadaan Alat Kesehatan
+   Rekomendasi unit sesuai kebutuhan ruang, alur kerja, dan anggaran, lengkap dengan penawaran.
+2. Instalasi dan Uji Fungsi
+   Pemasangan dan uji fungsi unit di lokasi fasilitas kesehatan.
+3. Pelatihan Pengguna 
+   Pengenalan fitur dan cara pakai untuk tim medis dan teknisi.
+4. Servis dan Perawatan
+   Pengecekan, perbaikan, dan perawatan berkala alat kesehatan.
+5. Suku Cadang 
+   Penyediaan suku cadang dan aksesori untuk unit yang kami jual.
+6. Konsultasi Teknis
+   Pendampingan memilih spesifikasi dan menyusun penawaran.
+
+Alur 3 langkah:
+01 Ceritakan kebutuhan: sampaikan jenis alat, jumlah unit, dan kondisi lokasi lewat WhatsApp.
+02 Kami siapkan rekomendasi: tim menyusun pilihan unit dan penawaran sesuai kebutuhan.
+03 Tindak lanjut: pengiriman, pemasangan, atau penjadwalan teknisi dibahas langsung dengan tim.
+
+Info yang perlu disiapkan:
+Penawaran: nama instansi, kota, jenis alat, jumlah unit.
+Servis: jenis alat, brand, model, nomor seri, foto/video kendala, foto label alat.
+
+==================================================
+E. BRAND
+==================================================
+Brand utama (sampul katalog)
+BISOND   : ICU, anestesi, lampu operasi, endoskopi, emergency, sterilisasi, USG portabel, dll.
+BOSKA    : patient monitor, ventilator transport, NCPAP, meja operasi, ECG, defibrilator
+VINNO    : ultrasound 2D/4D/5D
+
+Brand lain di katalog
+DENKI    : AED, pendant, flat panel detector
+TAKTVOLL : electrosurgical unit
+DMS      : treadmill ECG
+PROSOND  : USG 2D color doppler
+LIQIAN   : lampu operasi
+MINSTON  : timbangan medis
+Z9 PREMIUM: brand tidak tertulis di katalog [ISI]
+
+Status "Distributor Resmi" per brand: [ISI, hanya jika ada surat penunjukan]
+Hapus brand contoh lama (Mindray, Omron, Olympus, B. Braun, GE, dll.) dari database.
+
+==================================================
+F. KATEGORI (7)
+==================================================
+ICU / PICU / NICU Room  : 22 produk
+Operating Room          : 17 produk
+Ultrasound              : 10 produk
+Emergency               :  7 produk
+CSSD (Sterilisasi)      :  2 produk
+Radiology               :  1 produk
+Alat Kesehatan Lainnya  : 11 produk
+Total                   : 70 produk
+
+==================================================
+G. DATA PRODUK (70)
+Format: No | Nama | Brand | Tipe | Spesifikasi | Harga
+Harga dari Price List 2026. "Hubungi kami" = tidak ada harga di price list.
+==================================================
+
+--- ICU / PICU / NICU ROOM (22) ---
+1 | Pendant 7 Outlet | BISOND | Denki | Double arm mechanical; beban <60 kg; aluminium alloy; 7 outlet gas | Rp 160.000.000
+2 | Pendant 10 Outlet | BISOND | Denki | Double arm mechanical; beban <60 kg; aluminium alloy; 10 outlet gas | Rp 190.000.000
+3 | Syringe Pump | BISOND | BSP-03 | Syringe 5-60 ml; akurasi ±2%; 2,5 kg; baterai hingga 7 jam | Rp 18.000.000
+4 | Infusion Pump | BISOND | IP200 | Flowrate 0,1-10.000 ml; akurasi ±2%; 1,4 kg; baterai hingga 5 jam | Rp 16.000.000
+5 | Patient Monitor 5/7 Parameter | BOSKA | BOS-168 | Layar sentuh 12 inci; SpO2, NIBP, ECG, RESP, TEMP, IBP, ETCO2; baterai cadangan hingga 2 jam | 5 parameter Rp 24.000.000; 7 parameter Rp 30.000.000 [price list kedua menulis Rp 34.000.000, cek]
+6 | Patient Monitor 5/7 Parameter | BISOND | M90 | Layar sentuh 11,6 inci; SpO2, NIBP, ECG, RESP, TEMP, IBP, ETCO2; baterai cadangan hingga 2 jam | Hubungi kami
+7 | Infusion Pump | BISOND | IP-168 | Flow rate 0,1-2300 mL/h; akurasi ±5%; baterai hingga 5 jam | Hubungi kami
+8 | Infusion Pump | BISOND | IP03 | Akurasi ±2%; 2,5 kg; baterai hingga 5 jam | Rp 16.000.000
+9 | Patient Monitor 5 Parameter | BISOND | AMBU 007 | Layar 2,8 inci; SpO2, NIBP, ECG, RESP, TEMP; baterai cadangan hingga 2 jam; mendukung transport | Hubungi kami
+10 | Patient Monitor 5 Parameter | BISOND | AMBU 80 | Layar 8 inci; SpO2, NIBP, ECG, RESP, TEMP; baterai cadangan hingga 2 jam; mendukung transport | Hubungi kami
+11 | 4 in 1 Ventilator | BISOND | BOSKA K9 | Neonate 400 gr hingga dewasa; layar sentuh warna 10,4 inci; teknologi turbin; ICU/transport; bahasa Indonesia | Hubungi kami [cek hubungannya dengan "BS-90 3in1" di price list, Rp 380.000.000]
+12 | Blanket Warmer | BISOND | BS-2000 | Mode aliran High/Med/Low; suhu 32/35/38/43°C dan ambient; kebisingan <52 dB | Rp 90.000.000
+13 | Central Monitoring System | [ISI brand] | - | Hingga 64 bedside monitor; riwayat 10.000 pasien; alarm | Hubungi kami
+14 | Syringe Pump | BISOND | HK-70 | Syringe 10-60 ml; akurasi ±2%; 2,5 kg; baterai hingga 7 jam | Hubungi kami
+15 | Turbine Transport Ventilator | BISOND | BS-95 | Dewasa, pediatrik, neonatus; LCD 10,4 inci; ventilasi invasif dan non-invasif; baterai kapasitas besar | Rp 400.000.000
+16 | Ventilator ICU | BISOND | BS-300 | Pasien mulai 5 kg (bayi, anak, dewasa); layar TFT 10,4 inci; invasif dan non-invasif; dengan kompresor | Rp 310.000.000
+17 | Infusion Pump | BISOND | HK-80 | Dewasa, neonatus; flow rate 0,01-1500 ml/h; akurasi ±3%; 2,5 kg; baterai hingga 5 jam | Hubungi kami
+18 | Syringe Pump | BISOND | BOSKA-01 | Flow rate 0,1-2300 mL/h; akurasi ±1,8%; kompatibel syringe 1 ml | Hubungi kami
+19 | Ventilator | BISOND | VT-700 | Dewasa, pediatrik, neonatus; layar sentuh 15,6 inci; invasif dan non-invasif; 12 mode ventilasi | Hubungi kami
+20 | NCPAP - CPAP | BOSKA | NeoVent | CPAP dengan turbin; untuk bayi prematur, neonatus, dan pediatrik | Rp 270.000.000
+21 | Video Endoscopy (Gastro & Colon) | BISOND | BS ENDO 87 | Video processor; auto AWB; vascular enhancement; lampu LED 35.000 jam; gastroscope 9,6 mm; colonoscope 12,5 mm; FOV 145°; termasuk Endoscopy Reporting System | Rp 1.800.000.000
+22 | All in One Endoscopy | BISOND | - | Hysteroscopy, urology, arthroscopy, laparoscopy, THT | Hubungi kami
+
+--- OPERATING ROOM (17) ---
+23 | Anesthesia Ventilator | BISOND | AN-8000 | Layar sentuh 12 inci; tidal volume 20-1500 ml; 2 vaporizer; 3 gas; dengan heating system | Rp 530.000.000
+24 | Anesthesia Ventilator | BISOND | AN-5000 | Layar TFT 7 inci; tidal volume 20-1500 ml; mode A/C, Standby, SIMV, MAN; 2 vaporizer | Rp 320.000.000
+25 | Laparoscopy | BISOND | BS800 | Full HD camera; waterproof camera head; LED light source | Hubungi kami
+26 | Video Bronchoscope System | BISOND | BS800 | Gambar HD; reusable; ringan dan portabel | Hubungi kami [kode tipe sama dengan nomor 25, cek]
+27 | Operating Lamp Ceiling | BISOND | BS-9090 | 160.000 lux; suhu warna 4000-5000K (adjustable) | Rp 190.000.000
+28 | Operating Lamp Ceiling | BISOND | BS 900/900 | 40.000-180.000 lux; 4000-5000K (adjustable) | Hubungi kami
+29 | Operating Lamp Ceiling (Single) | BISOND | BS-80SC | LED Osram Jerman >50.000 jam; 110.000 lux | Rp 140.000.000
+30 | Operating Lamp Ceiling (Double) | BISOND | BS-8080 | LED Osram Jerman >50.000 jam; 110.000 lux | Rp 150.000.000
+31 | Operating Lamp Ceiling | LIQIAN | LQLED 700/500 | 160.000 lux; 4000-5000K (adjustable) | Hubungi kami
+32 | Operating Lamp Mobile | BISOND | BS-80MB | LED Osram Jerman >50.000 jam; 110.000 lux; dengan baterai | Rp 70.000.000
+33 | Operating Lamp Mobile | BISOND | BS-25 | LED Osram Jerman >50.000 jam; 40.000 lux | Hubungi kami
+34 | Gynaecology Table | BOSKA | OT-87 | Baterai standar mendukung 80 operasi, tahan sekitar satu minggu | Rp 130.000.000
+35 | Electric Operating Table | BOSKA | OT-5000 | 5 fungsi; sliding 30 cm; lumbar/kidney bridge; baterai mendukung 80 operasi | Rp 290.000.000
+36 | Electrosurgical Unit 200W | TAKTVOLL | ES-200PK | Daya potong hingga 200W; 3 cut mode; 3 coag mode; 2 bipolar mode | Rp 130.000.000
+37 | Electrosurgical Unit 300W | TAKTVOLL | ES-300D | Daya potong hingga 300W; 5 cut mode; 3 coag mode; 3 bipolar mode | Rp 170.000.000
+38 | Electrosurgical Unit 300W | BISOND | ECO-300 | Daya potong hingga 300W; 5 cut mode; 4 coag mode | Rp 150.000.000 [price list juga menulis "200W" dengan tipe ECO-300 dan harga sama, cek]
+39 | Electrosurgical Unit 400W | BISOND | ECO-400 | Daya potong hingga 400W; 5 cut mode; 4 coag mode | Hubungi kami
+
+--- ULTRASOUND (10) ---
+40 | USG 4D | VINNO | A5 | Monitor LED 15,6"; Bluetooth, Wi-Fi; 2 konektor probe aktif; live scanning; remote maintenance; hanya 4 kg; DICOM; baterai 2-3 jam | Hubungi kami
+41 | USG 2D Color Doppler | VINNO | A3 | Monitor LED 15,6"; Bluetooth, Wi-Fi; 2 konektor probe aktif; live scanning; remote maintenance; hanya 4 kg; DICOM; baterai 2-3 jam | Hubungi kami
+42 | 2D Premium Mobile Ultrasound | [ISI brand] | Z9 PREMIUM | Layar LED HD medis 21,5 inci; 3 konektor transduser aktif; SSD 128GB; 2D resolusi tinggi | Hubungi kami
+43 | Premium Mobile Ultrasound | BOSKA | PREMIUM | Layar LED HD 21,5 inci; layar sentuh 13,3 inci; 4 konektor transduser aktif; 5D D-Live; SSD 256GB | Hubungi kami
+44 | Handheld Ultrasound | BISOND | BS-1000 | 182 gram; anti-selip; anti-air IP68; baterai lithium dengan wireless charging; 3 in 1 (convex, linear, cardiac) | Hubungi kami
+45 | USG 2D Color Doppler | BISOND | Z50 | Monitor LED 15"; color blood flow, PW, TDI; DICOM 3.0; 2 konektor probe; baterai 2-3 jam | Hubungi kami
+46 | USG 2D Color Doppler (1 probe) | PROSOND | - | Layar LED HD medis 15 inci; 2 konektor probe; SSD 128GB; baterai ≥1,5 jam (opsi 4,5 jam) | Rp 140.000.000
+47 | Premium Portable Ultrasound | BISOND | BS-80 | 6,5 kg; layar LED HD 15,6 inci; SSD 256GB; baterai lithium >3 jam; 2 konektor transduser; 4D D-Live | Rp 440.000.000
+48 | USG 4D | VINNO | G65 | Monitor LED 21,5"; touchscreen 10,4"; Bluetooth, Wi-Fi; TEE support; TVI, TDI; auto PW; strain imaging; live tele scanning; DICOM telemedicine | Hubungi kami
+49 | USG 4D 5D | VINNO | X2 | Monitor LED 21,5"; touchscreen 10,4"; Bluetooth, Wi-Fi; HD Live; auto IMT; TDI; live scanning; scan assistant; SSD; DICOM | Hubungi kami
+
+--- EMERGENCY (7) ---
+50 | Defibrilator Basic/Advance | BOSKA | i9 | 4 in 1; ringan dan portabel; biphasic truncated exponential; impedansi 25-200 Ω; aksesori dasar / dengan ETCO2 | Hubungi kami
+51 | Defibrilator Monitoring | BISOND | D9 | ECG, SpO2, NIBP, CO2, AED; layar 8 inci; dewasa-anak; baterai tahan lama; bahasa Indonesia | Rp 100.000.000
+52 | AED | DENKI | D1 | Biphasic truncated exponential; kejut 200J dewasa, 50J pediatrik; baterai lithium; bahasa Indonesia | Rp 36.000.000
+53 | AED | BISOND | D3 | Biphasic truncated exponential; kejut 100-360J dewasa, 10-100J pediatrik; baterai lithium; bahasa Indonesia | Rp 36.000.000
+54 | Transport Ventilator | BOSKA | A2 | Compact dan ringan; TFT LCD warna; air mixing; mode IPPV, Assist, CPR | Rp 90.000.000
+55 | Transport Ventilator | BISOND | BOSKA 30 | Layar sentuh warna 5,6"; tidal volume 20-2000 ml; dewasa-pediatrik; baterai cadangan 3 jam | Rp 90.000.000
+56 | CPR System | BISOND | CPR 7 | 3,5 kg; kompresi 30:2 dan kontinu; tenaga baterai tanpa gas; kedalaman 30-55 mm | Hubungi kami
+
+--- CSSD (2) ---
+57 | Autoclave 250L | BISOND | WG-250L | Stainless steel; komponen impor Jerman; layar sentuh warna; kapasitas 250 L | Hubungi kami
+58 | Autoclave 200L | BISOND | DK-200L | Touchscreen 7 inci; sterilisasi otomatis; pembangkit uap internal; kapasitas 200 L | Rp 500.000.000
+
+--- RADIOLOGY (1) ---
+59 | Wireless Flat Panel Detector | DENKI | CELV-1717 | Ukuran gambar 17x17 inci; teknologi a-Si; IPX3; gratis 2 baterai | Hubungi kami
+
+--- ALAT KESEHATAN LAINNYA (11) ---
+60 | Handheld Oximeter | BISOND | BS-08 | Layar TFT 1,77"; baterai Li-ion hingga 8 jam; SpO2 dan denyut nadi; alarm audio-visual | Hubungi kami
+61 | Bladder Volume Tester | BISOND | BS-3000 | Layar sentuh 5,7"; scan <4 detik; printer thermal; baterai ±7 jam; USB | Hubungi kami
+62 | ECG 3 Channel | BOSKA | BOS 73 | 3 channel realtime print; 12 lead; baterai lithium; 2,0 kg | Rp 18.000.000
+63 | ECG 12 Channel | BOSKA | BOS 12CH | 12 channel realtime print; 12 lead; baterai lithium; 3,9 kg | Rp 34.000.000
+64 | ECG 12 Channel | BOSKA | BS 12CH | 12 channel realtime print; 12 lead; baterai lithium; 3,9 kg | Hubungi kami
+65 | ECG 6 Channel | BISOND | BS-60CH | Spesifikasi katalog tertulis 12 channel/12 lead [cek, nama 6 channel]; baterai lithium; 3,9 kg | Rp 30.000.000
+66 | Treadmill with Wireless ECG Kit | DMS | TM18 | Motor AC modulated; awet; perawatan minim; software StressTest 4.0 | Rp 340.000.000
+67 | CTG - Fetal Monitor | BISOND | FM07 | Layar LED 7"; probe sensitivitas tinggi; teknologi DSP; pengukuran FHR realtime | Rp 40.000.000
+68 | Video Colposcope | BISOND | BS-800 | Sony HD sensor CCD, kamera 2,1 juta piksel; panel intuitif; software colposcope original; termasuk Colposcope Reporting System | Rp 140.000.000
+69 | Medical Scale | MINSTON | - | 62 x 29,5 x 106 cm; LCD backlight biru; tinggi 60-210 cm; baterai isi ulang; fungsi BMI | Hubungi kami
+70 | Laryngoscope | BISOND | HK-37 | Type C; layar 3,5"; desain ergonomis; kamera HD | Rp 36.000.000
+
+--- DETAIL TAMBAHAN: VENTILATOR ICU BISOND BS-300 (dari brosur) ---
+Fungsi: perawatan intensif di ICU, IGD, dan unit pernapasan; sistem pneumatik dan kontrol elektrik untuk pencampuran udara-oksigen yang efisien.
+Tipe pasien: dewasa, pediatrik, neonatal
+Mode ventilasi: VCV, PCV, SIMV+VCV, SIMV+PCV, PRVC, SIMV+PRVC, CPAP/PSV, BIPAP, APRV, Backup Mode, VCV+Sigh
+Opsi: NIV-CPAP, NIV-PCV, high flow oxygen therapy
+Mode Dewasa: tidal volume 50-2500 mL; frekuensi napas 4-100 bpm (SIMV 1-40); waktu inspirasi 0,1-12 s; PEEP 0-50 cmH2O; pressure support 0-70 cmH2O; pressure control 5-70 cmH2O; oksigen 21-100%; high pressure 5-70 cmH2O; low pressure 0-50 cmH2O; Thigh 0,1-30 s; Tlow 0,5-30 s; pure oxygen 120 s; atomization 0-60 menit
+Mode Anak: tidal volume 20-500 mL; frekuensi napas 4-100 bpm; waktu inspirasi 0,1-12 s; PEEP 0-10 cmH2O; pressure support 0-30 cmH2O; pressure control 5-30 cmH2O; oksigen 21-100%; high pressure 5-30 cmH2O; low pressure 0-10 cmH2O
+
+==================================================
+H. LEGALITAS (isi dari PDF Anda)
+==================================================
+Identitas perusahaan
+Nama badan hukum        : PT. Mandalika Global Alkesindo
+Alamat                  : Jalan Mawar 6 No. 4 Unitex, Kel. Sindangrasa, Kec. Bogor Timur, Kota Bogor
+NIB                     : 1410260025514
+KBLI                    : [Nanti di set, distributor alkes umumnya 46691]
+NPWP                    : [Nanti di set, tampilkan sebagian / beri watermark]
+Penanggung jawab teknis : [Nanti di set nama dan pendidikan, wajib untuk izin distributor]
+
+Kelompok 1: Legalitas Perusahaan (Nanti di set)
+- Akta Pendirian         : nomor [ISI] | tanggal [ISI] | notaris [ISI]
+- SK Kemenkumham         : nomor [ISI] | tanggal [ISI]
+- NIB                    : nomor [ISI] | terbit [ISI] | penerbit OSS
+- NPWP                   : [ISI]
+- SPPKP / status PKP     : [ISI, belum ada filenya]
+
+Kelompok 2: Perizinan Distribusi (Nanti di set)
+- Izin Distributor Alat Kesehatan : nomor [ISI] | berlaku sampai [ISI] | [belum ada filenya]
+- Sertifikat CDAKB                : nomor [ISI] | berlaku sampai [ISI] | [belum ada filenya]
+
+Kelompok 3: Sertifikasi dan Kemitraan
+- Surat penunjukan / dukungan principal (BISOND, BOSKA, VINNO) : [ISI, belum ada filenya]
+- ISO 9001 : [ISI, jika ada]
+- Bukti terdaftar e-Katalog LKPP : [ISI, jika ada]
+- Referensi bank : [ISI, jika ada]
+
+Catatan izin edar:
+Izin edar AKL/AKD melekat pada produk, bukan perusahaan. Tampilkan nomornya per produk: nomor AKL/AKD tiap produk [ISI di halaman detail produk].
+
+Jika belum ada izin distributor dan CDAKB, hapus klaim "CDAKB" dan "Izin Edar AKL" dari trust strip.
+
+==================================================
+I. FAQ
+==================================================
+1. Apakah produk memiliki izin edar Kemenkes RI?
+Izin edar melekat pada setiap produk. Nomor izin edar dapat dilihat di halaman detail produk atau diminta melalui tim kami. Dokumen perusahaan tersedia di halaman Legalitas.
+
+2. Bagaimana cara mengajukan servis alat?
+Hubungi kami lewat WhatsApp dan sebutkan jenis alat, brand, model, nomor seri, serta foto atau video kendala. Tim akan menentukan langkah pengecekan berikutnya.
+
+3. Apakah tersedia pengiriman ke luar pulau?
+Ya, kami melayani pengiriman ke seluruh Indonesia. Biaya dan waktu dibahas saat penawaran. [konfirmasi]
+
+4. Apakah harga sudah termasuk instalasi?
+[ISI kebijakan Anda: termasuk / tidak termasuk / tergantung produk]. Rincian dicantumkan dalam penawaran.
+
+5. Bagaimana cara meminta penawaran?
+Tambahkan produk ke daftar penawaran, lalu kirim lewat formulir atau WhatsApp. Sebutkan nama instansi, kota, dan jumlah unit.
+
+6. Apakah ada pembayaran online?
+Kami tidak memproses pembayaran online. Penawaran dan transaksi disepakati langsung bersama tim kami.
+
+7. Apakah harga di katalog dapat berubah?
+Harga mengikuti price list yang berlaku dan dapat berubah. Harga belum termasuk PPN dan ongkos kirim [konfirmasi].
+
+==================================================
+J. TEKS KONTAK, CTA, FOOTER
+==================================================
+Judul kontak   : Hubungi Kami
+Subjudul       : Untuk penawaran alat, jadwal servis, atau pertanyaan teknis, hubungi kami melalui WhatsApp. Kami balas pada jam kerja.
+Tombol         : WhatsApp Penjualan | WhatsApp Servis
+Pesan WA penjualan : Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.
+Pesan WA servis    : Halo PT. Mandalika Global Alkesindo, saya ingin menanyakan layanan servis alat kesehatan.
+Sebelum menghubungi:
+- Sertakan nama instansi dan kota.
+- Untuk penawaran, sebutkan perkiraan jumlah unit.
+- Untuk servis, sertakan model, nomor seri, serta foto atau video kendala dan label alat.
+CTA akhir      : Butuh penawaran atau jadwal servis? Kirim kebutuhan Anda lewat WhatsApp. Tim kami akan membantu memilih unit, menyiapkan penawaran, atau menjadwalkan teknisi.
+Footer         : PT. Mandalika Global Alkesindo | Distributor alat kesehatan di Kota Bogor, melayani seluruh Indonesia.
+Hak cipta      : © 2026 PT. Mandalika Global Alkesindo.
+
+==================================================
+K. SEO (title ≤60 karakter, description ≤155)
+==================================================
+Beranda
+Title : PT Mandalika Global Alkesindo – Distributor Alkes Bogor
+Desc  : Distributor alat kesehatan di Bogor: ventilator, patient monitor, USG, lampu operasi, defibrilator. Pengadaan, instalasi, dan servis untuk RS dan klinik.
+
+Katalog
+Title : Katalog Alat Kesehatan Rumah Sakit & Klinik – MGA
+Desc  : 70 produk alat kesehatan: ICU/NICU, kamar operasi, ultrasound, emergency, dan sterilisasi. Brand BISOND, BOSKA, VINNO. Minta penawaran via WhatsApp.
+
+Layanan
+Title : Servis & Instalasi Alat Kesehatan – MGA Bogor
+Desc  : Pengadaan, instalasi, servis, dan konsultasi teknis alat kesehatan untuk rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia.
+
+Brand
+Title : Brand Alat Kesehatan: BISOND, BOSKA, VINNO – MGA
+Desc  : Brand alat kesehatan yang tersedia di PT Mandalika Global Alkesindo: BISOND, BOSKA, VINNO, DENKI, TAKTVOLL, dan lainnya.
+
+Tentang
+Title : Tentang PT Mandalika Global Alkesindo
+Desc  : Profil PT Mandalika Global Alkesindo, distributor alat kesehatan di Kota Bogor: visi, misi, prinsip kerja, dan layanan kami.
+
+Legalitas
+Title : Legalitas & Izin Distributor Alkes – MGA
+Desc  : Dokumen legalitas PT Mandalika Global Alkesindo untuk verifikasi tender dan kemitraan: NIB, izin distributor, dan sertifikat.
+
+Kontak
+Title : Kontak & Lokasi – PT Mandalika Global Alkesindo
+Desc  : Hubungi tim penjualan dan servis PT Mandalika Global Alkesindo di Kota Bogor lewat WhatsApp, telepon, atau email.
+
+==================================================
+L. DATA YANG Nanti di set di panel admin yang belum ada
+==================================================
+1. Kode pos, koordinat peta, jam operasional final, waktu respons
+2. Tahun berdiri, jumlah unit terpasang, jumlah faskes (opsional)
+3. Nomor dan tanggal: NIB, NPWP, Akta, SK Kemenkumham
+4. Izin distributor alat kesehatan dan sertifikat CDAKB (file dan nomor)
+5. Surat penunjukan dari BISOND / BOSKA / VINNO
+6. Nomor izin edar AKL/AKD per produk
+7. Brand Central Monitoring System dan Z9 Premium
+8. Kebijakan harga (termasuk instalasi? PPN? ongkir?)
+9. Layanan yang benar-benar tersedia (instalasi, pelatihan, kalibrasi, suku cadang)
+10. Foto kantor/gudang, tim teknisi, dan produk
+11. Testimoni asli (jika ada)
+12. Perbaiki data price list yang janggal (lihat catatan di tabel produk)

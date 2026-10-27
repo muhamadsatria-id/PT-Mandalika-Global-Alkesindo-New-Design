@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\PublicSite;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\CompanyStat;
 use App\Models\Faq;
@@ -10,6 +11,7 @@ use App\Models\PartnerBrand;
 use App\Models\Product;
 use App\Models\Testimonial;
 use App\Support\ProductPresenter;
+use Illuminate\Support\Facades\Schema;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -19,20 +21,25 @@ class HomeController extends Controller
     {
         $featured = Product::query()
             ->published()
-            ->where('is_featured', true)
             ->with(['brand', 'category', 'media'])
-            ->latest()
+            ->orderByDesc('is_featured')
+            ->orderByRaw('price is not null desc')
+            ->orderByDesc('id')
             ->take(10)
             ->get();
 
-        if ($featured->isEmpty()) {
-            $featured = Product::query()
-                ->published()
-                ->with(['brand', 'category', 'media'])
-                ->latest()
-                ->take(10)
-                ->get();
-        }
+        $brands = Brand::query()
+            ->where('is_active', true)
+            ->orderBy('sort_order')
+            ->orderBy('name')
+            ->get()
+            ->map(fn (Brand $brand): array => [
+                'id' => $brand->id,
+                'name' => $brand->name,
+                'slug' => $brand->slug,
+                'logo' => $brand->logo_url,
+            ])
+            ->all();
 
         $partnerBrands = PartnerBrand::query()
             ->where('is_active', true)
@@ -47,9 +54,12 @@ class HomeController extends Controller
             ->all();
 
         $categories = Category::query()
+            ->where('is_active', true)
             ->withCount(['products' => fn ($query) => $query->published()])
             ->having('products_count', '>', 0)
+            ->orderBy('sort_order')
             ->orderBy('name')
+            ->limit(8)
             ->get()
             ->map(fn (Category $category): array => [
                 'id' => $category->id,
@@ -61,9 +71,9 @@ class HomeController extends Controller
 
         $companyStats = CompanyStat::query()
             ->where(function ($query) {
-                if (\Illuminate\Support\Facades\Schema::hasColumn('company_stats', 'is_active')) {
+                if (Schema::hasColumn('company_stats', 'is_active')) {
                     $query->where('is_active', true);
-                } elseif (\Illuminate\Support\Facades\Schema::hasColumn('company_stats', 'is_published')) {
+                } elseif (Schema::hasColumn('company_stats', 'is_published')) {
                     $query->where('is_published', true);
                 }
             })
@@ -77,36 +87,61 @@ class HomeController extends Controller
             ])
             ->all();
 
+        $testimonials = Testimonial::query()
+            ->where('is_published', true)
+            ->where(function ($query) {
+                if (Schema::hasColumn('testimonials', 'is_active')) {
+                    $query->where('is_active', true);
+                }
+            })
+            ->whereNotNull('name')
+            ->where('name', '!=', '')
+            ->orderBy('sort_order')
+            ->get()
+            ->filter(function (Testimonial $testimonial): bool {
+                $name = strtolower((string) $testimonial->name);
+                $institution = strtolower((string) $testimonial->institution);
+
+                return ! str_contains($name, 'mitra') && ! str_contains($institution, 'mitra');
+            })
+            ->values()
+            ->map(fn (Testimonial $testimonial): array => [
+                'id' => $testimonial->id,
+                'name' => $testimonial->name,
+                'role' => $testimonial->role,
+                'institution' => $testimonial->institution,
+                'quote' => $testimonial->quote,
+                'rating' => $testimonial->rating,
+            ])
+            ->all();
+
+        $faqs = Faq::query()
+            ->where('is_published', true)
+            ->orderBy('sort_order')
+            ->get()
+            ->filter(fn (Faq $faq): bool => filled($faq->answer))
+            ->values()
+            ->map(fn (Faq $faq): array => [
+                'id' => $faq->id,
+                'question' => $faq->question,
+                'answer' => $faq->answer,
+            ])
+            ->all();
+
         return Inertia::render('public/home', [
             'featuredProducts' => $featured
                 ->map(fn (Product $product): array => ProductPresenter::card($product))
                 ->all(),
+            'brands' => $brands,
             'partnerBrands' => $partnerBrands,
             'categories' => $categories,
             'companyStats' => $companyStats,
-            'testimonials' => Testimonial::query()
-                ->where('is_published', true)
-                ->orderBy('sort_order')
-                ->get()
-                ->map(fn (Testimonial $testimonial): array => [
-                    'id' => $testimonial->id,
-                    'name' => $testimonial->name,
-                    'role' => $testimonial->role,
-                    'institution' => $testimonial->institution,
-                    'quote' => $testimonial->quote,
-                    'rating' => $testimonial->rating,
-                ])
-                ->all(),
-            'faqs' => Faq::query()
-                ->where('is_published', true)
-                ->orderBy('sort_order')
-                ->get()
-                ->map(fn (Faq $faq): array => [
-                    'id' => $faq->id,
-                    'question' => $faq->question,
-                    'answer' => $faq->answer,
-                ])
-                ->all(),
+            'testimonials' => $testimonials,
+            'faqs' => $faqs,
+            'trustFlags' => [
+                'lkpp' => (bool) config('company.trust.lkpp', false),
+                'distributor_resmi' => (bool) config('company.trust.distributor_resmi', false),
+            ],
         ]);
     }
 }

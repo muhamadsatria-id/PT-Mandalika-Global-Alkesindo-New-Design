@@ -13,6 +13,8 @@ class LegalController extends Controller
     {
         $documents = LegalDocument::query()
             ->where('is_published', true)
+            ->orderByRaw("CASE WHEN `group` IS NULL THEN 1 ELSE 0 END")
+            ->orderBy('group')
             ->orderBy('sort_order')
             ->orderBy('title')
             ->get()
@@ -21,17 +23,22 @@ class LegalController extends Controller
                 'title' => $document->title,
                 'slug' => $document->slug,
                 'description' => $document->description,
+                'notes' => $document->notes,
                 'file' => $document->file,
                 'type' => $document->type,
+                'group' => $document->group,
                 'issued_by' => $document->issued_by,
                 'issued_at' => $document->issued_at?->toDateString(),
+                'expires_at' => $document->expires_at?->toDateString(),
+                'is_expired' => $document->expires_at ? $document->expires_at->isPast() : false,
+                'expires_in_days' => $document->expires_at ? ($document->expires_at->isPast() ? 0 : now()->diffInDays($document->expires_at)) : null,
             ])
             ->all();
 
         return Inertia::render('public/legal', [
             'seo' => [
-                'title' => 'Legalitas perusahaan',
-                'description' => 'Dokumen, sertifikasi, dan legalitas PT. Mandalika Global Alkesindo untuk kebutuhan tender dan kemitraan.',
+                'title' => 'Legalitas',
+                'description' => 'Dokumen legalitas, izin edar, NIB, dan sertifikasi PT. Mandalika Global Alkesindo untuk kebutuhan tender dan verifikasi.',
                 'canonical' => route('legal'),
             ],
             'documents' => $documents,

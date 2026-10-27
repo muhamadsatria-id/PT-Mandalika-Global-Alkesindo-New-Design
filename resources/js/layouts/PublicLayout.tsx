@@ -18,10 +18,11 @@ import { useQuote } from '@/lib/quote';
 import { defaultWhatsAppMessage, whatsAppLink } from '@/lib/whatsapp';
 import {
     about,
-    brands,
+    brand,
     contact,
     gallery,
     home,
+    layanan,
     legal,
     privacy,
 } from '@/routes';
@@ -42,15 +43,12 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
         settings.service_enabled !== 'false' && settings.service_enabled !== false;
     const navigation = [
         { label: 'Beranda', href: home.url(), anchor: false },
+        { label: 'Katalog', href: catalog.index.url(), anchor: false },
+        { label: 'Layanan', href: '/layanan', anchor: false },
+        { label: 'Brand', href: '/brand', anchor: false },
         { label: 'Tentang', href: about.url(), anchor: false },
-        { label: 'E-Catalogue', href: catalog.index.url(), anchor: false },
-        { label: 'Brands', href: brands.url(), anchor: false },
         { label: 'Legalitas', href: legal.url(), anchor: false },
-        { label: 'Galeri', href: gallery.url(), anchor: false },
         { label: 'Kontak', href: contact.url(), anchor: false },
-        ...(serviceEnabled
-            ? [{ label: 'Layanan', href: service.index.url(), anchor: false }]
-            : []),
     ];
 
     const whatsappNumber = settings.whatsapp_number;
@@ -77,7 +75,15 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
     };
 
     return (
-        <div className="flex min-h-screen flex-col bg-background text-foreground">
+        <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background text-foreground">
+            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-30 bg-background" />
+            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-20 bg-dot-pattern opacity-70" />
+            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+                <div className="absolute -left-[15%] -top-[25%] h-[42rem] w-[42rem] rounded-full bg-glow-orbs" />
+                <div className="absolute -right-[20%] top-[5%] h-[38rem] w-[38rem] rounded-full bg-glow-orbs [animation-delay:-12s]" />
+                <div className="absolute left-[15%] -bottom-[30%] h-[40rem] w-[40rem] rounded-full bg-glow-orbs [animation-delay:-24s]" />
+            </div>
+
             <Head>
                 <meta
                     head-key="description"
@@ -305,13 +311,8 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                 </span>
                             </div>
                             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-                                {settings.company_name ??
-                                    'PT. Mandalika Global Alkesindo'}{' '}
-                                adalah distributor alat kesehatan yang berfokus
-                                pada pengadaan, instalasi, servis, dan
-                                pendampingan teknis untuk rumah sakit, klinik,
-                                dan fasilitas kesehatan di seluruh Indonesia
-                                dengan izin edar resmi.
+                                {settings.company_tagline ??
+                                    'Distributor alat kesehatan, pengadaan, instalasi & servis untuk rumah sakit, klinik dan dinas kesehatan.'}
                             </p>
 
                             <div className="mt-5 flex items-center gap-2.5">
@@ -439,10 +440,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                 </li>
                                 <li>
                                     <Link
-                                        href={brands.url()}
+                                        href="/brand"
                                         className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                                     >
-                                        Brand Partner
+                                        Brand
                                     </Link>
                                 </li>
                                 <li>

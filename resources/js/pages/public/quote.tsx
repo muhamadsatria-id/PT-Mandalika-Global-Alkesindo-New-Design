@@ -54,7 +54,7 @@ type InquiryForm = {
 const inputClass =
     'h-11 w-full rounded-md border border-border bg-background px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-ring/30';
 
-const labelClass = 'font-mono text-xs font-medium text-foreground';
+const labelClass = 'text-xs font-medium text-foreground';
 
 const FieldError = ({ message }: { message?: string }) =>
     message ? (
@@ -119,7 +119,7 @@ export default function Quote({ seo }: QuotePageProps) {
         <>
             <Seo seo={seo} />
 
-            <div className="mx-auto w-full max-w-6xl px-4 pt-8 pb-16 sm:px-6">
+            <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8">
                 <nav aria-label="Remah roti" className="text-xs">
                     <Link
                         href={catalog.index.url()}
@@ -137,7 +137,7 @@ export default function Quote({ seo }: QuotePageProps) {
                 </nav>
 
                 <div className="mt-6 max-w-2xl">
-                    <h1 className="text-3xl leading-[1.05] font-extrabold tracking-[-0.03em] sm:text-4xl">
+                    <h1 className="text-3xl leading-[1.05] font-semibold tracking-[-0.03em] sm:text-4xl">
                         Daftar penawaran Anda
                     </h1>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -174,11 +174,11 @@ export default function Quote({ seo }: QuotePageProps) {
                             <div className="flex items-center justify-between gap-3">
                                 <h2
                                     id="produk-dipilih"
-                                    className="text-lg font-extrabold tracking-tight"
+                                    className="text-lg font-semibold tracking-tight"
                                 >
                                     Produk dipilih
                                 </h2>
-                                <p className="font-mono text-xs font-medium text-muted-foreground">
+                                <p className="text-xs font-medium text-muted-foreground">
                                     {items.length} produk · {totalQty} unit
                                 </p>
                             </div>
@@ -200,14 +200,14 @@ export default function Quote({ seo }: QuotePageProps) {
                                                     className="size-full object-cover"
                                                 />
                                             ) : (
-                                                <span className="flex size-full items-center justify-center font-mono text-xs font-medium text-muted-foreground">
+                                                <span className="flex size-full items-center justify-center text-xs font-medium text-muted-foreground">
                                                     {item.brand ?? 'MGA'}
                                                 </span>
                                             )}
                                         </Link>
 
                                         <div className="min-w-0 flex-1">
-                                            <p className="font-mono text-xs font-medium text-muted-foreground">
+                                            <p className="text-xs font-medium text-muted-foreground">
                                                 {item.brand ?? 'MGA Select'}
                                             </p>
                                             <h3 className="mt-1 truncate text-sm font-bold">
@@ -219,7 +219,7 @@ export default function Quote({ seo }: QuotePageProps) {
                                                 </Link>
                                             </h3>
                                             {item.model && (
-                                                <p className="mt-0.5 font-mono text-xs text-muted-foreground">
+                                                <p className="mt-0.5 text-xs text-muted-foreground">
                                                     Model {item.model}
                                                 </p>
                                             )}
@@ -247,7 +247,7 @@ export default function Quote({ seo }: QuotePageProps) {
                                                             aria-hidden="true"
                                                         />
                                                     </button>
-                                                    <span className="min-w-8 text-center font-mono text-sm font-medium tabular-nums">
+                                                    <span className="min-w-8 text-center text-sm font-medium tabular-nums">
                                                         {item.qty}
                                                     </span>
                                                     <button
@@ -277,7 +277,7 @@ export default function Quote({ seo }: QuotePageProps) {
                                                 </div>
 
                                                 <div className="flex items-center gap-3">
-                                                    <span className="font-mono text-xs font-medium">
+                                                    <span className="text-xs font-medium">
                                                         {item.price ??
                                                             'Minta harga'}
                                                     </span>
@@ -351,7 +351,7 @@ export default function Quote({ seo }: QuotePageProps) {
                         >
                             <h2
                                 id="data-pemohon"
-                                className="text-lg font-extrabold tracking-tight"
+                                className="text-lg font-semibold tracking-tight"
                             >
                                 Data pemohon
                             </h2>

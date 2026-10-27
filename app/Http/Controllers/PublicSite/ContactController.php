@@ -11,19 +11,27 @@ class ContactController extends Controller
 {
     public function __invoke(): Response
     {
+        $address = Setting::get('company_address');
+        $phone = Setting::get('whatsapp_number') ?? Setting::get('company_phone');
+        $servicePhone = Setting::get('service_whatsapp_number') ?? $phone;
+
         return Inertia::render('public/contact', [
             'seo' => [
                 'title' => 'Kontak',
-                'description' => 'Hubungi tim PT. Mandalika Global Alkesindo untuk pengadaan alat kesehatan dan layanan servis.',
+                'description' => 'Hubungi tim PT. Mandalika Global Alkesindo untuk pengadaan alat kesehatan, penawaran, dan layanan servis.',
                 'canonical' => route('contact'),
             ],
             'contact' => [
-                'address' => Setting::get('company_address'),
+                'address' => $address,
                 'city' => Setting::get('company_city'),
                 'hours' => Setting::get('company_hours'),
                 'email' => Setting::get('company_email'),
+                'phone' => $phone,
+                'service_phone' => $servicePhone,
                 'instagram' => Setting::get('company_instagram'),
-                'map_url' => $this->mapUrl(Setting::get('company_address')),
+                'emergency_note' => Setting::get('service_emergency_note'),
+                'response_time' => Setting::get('service_response_time'),
+                'map_url' => $this->mapUrl($address),
             ],
         ]);
     }
