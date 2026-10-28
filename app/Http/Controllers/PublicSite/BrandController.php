@@ -30,7 +30,7 @@ class BrandController extends Controller
 
         return Inertia::render('public/brands', [
             'seo' => [
-                'title' => 'Brand',
+                'title' => 'Brand Alat Kesehatan',
                 'description' => 'Daftar brand principal dan partner yang didistribusikan oleh PT. Mandalika Global Alkesindo.',
                 'canonical' => route('brand'),
             ],

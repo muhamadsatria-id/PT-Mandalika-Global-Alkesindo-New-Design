@@ -13,7 +13,7 @@ class LegalController extends Controller
     {
         $documents = LegalDocument::query()
             ->where('is_published', true)
-            ->orderByRaw("CASE WHEN `group` IS NULL THEN 1 ELSE 0 END")
+            ->orderByRaw('CASE WHEN `group` IS NULL THEN 1 ELSE 0 END')
             ->orderBy('group')
             ->orderBy('sort_order')
             ->orderBy('title')
@@ -37,7 +37,7 @@ class LegalController extends Controller
 
         return Inertia::render('public/legal', [
             'seo' => [
-                'title' => 'Legalitas',
+                'title' => 'Legalitas & Izin Alkes',
                 'description' => 'Dokumen legalitas, izin edar, NIB, dan sertifikasi PT. Mandalika Global Alkesindo untuk kebutuhan tender dan verifikasi.',
                 'canonical' => route('legal'),
             ],

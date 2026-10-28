@@ -39,8 +39,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
     const { settings, flash } = usePage<SharedData>().props;
     const quoteItems = useQuote();
     const [menuOpen, setMenuOpen] = useState(false);
-    const serviceEnabled =
-        settings.service_enabled !== 'false' && settings.service_enabled !== false;
+    const serviceEnabled = settings.service_enabled !== 'false';
     const navigation = [
         { label: 'Beranda', href: home.url(), anchor: false },
         { label: 'Tentang', href: about.url(), anchor: false },
@@ -76,12 +75,21 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
 
     return (
         <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background text-foreground">
-            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-30 bg-background" />
-            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-20 bg-dot-pattern opacity-70" />
-            <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-                <div className="absolute -left-[15%] -top-[25%] h-[42rem] w-[42rem] rounded-full bg-glow-orbs" />
-                <div className="absolute -right-[20%] top-[5%] h-[38rem] w-[38rem] rounded-full bg-glow-orbs [animation-delay:-12s]" />
-                <div className="absolute left-[15%] -bottom-[30%] h-[40rem] w-[40rem] rounded-full bg-glow-orbs [animation-delay:-24s]" />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none fixed inset-0 -z-30 bg-background"
+            />
+            <div
+                aria-hidden="true"
+                className="bg-dot-pattern pointer-events-none fixed inset-0 -z-20 opacity-70"
+            />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+            >
+                <div className="bg-glow-orbs absolute -top-[25%] -left-[15%] h-[42rem] w-[42rem] rounded-full" />
+                <div className="bg-glow-orbs absolute top-[5%] -right-[20%] h-[38rem] w-[38rem] rounded-full [animation-delay:-12s]" />
+                <div className="bg-glow-orbs absolute -bottom-[30%] left-[15%] h-[40rem] w-[40rem] rounded-full [animation-delay:-24s]" />
             </div>
 
             <Head>
@@ -104,14 +112,17 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
 
             <header className="fixed inset-x-0 top-0 z-40">
                 <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between gap-4 rounded-full border border-border bg-background px-3 py-2 shadow-none dark:shadow-sm sm:px-4">
+                    <div className="flex items-center justify-between gap-4 rounded-full border border-border bg-background px-3 py-2 shadow-none sm:px-4 dark:shadow-sm">
                         <Link
                             href={home.url()}
                             className="group inline-flex items-center gap-2.5"
                         >
                             <img
                                 src={(settings as any).site_logo || '/mga.svg'}
-                                alt={settings.company_name || 'PT. Mandalika Global Alkesindo'}
+                                alt={
+                                    settings.company_name ||
+                                    'PT. Mandalika Global Alkesindo'
+                                }
                                 className="h-9 w-auto"
                             />
                             <span className="hidden text-sm font-bold tracking-tight sm:inline">
@@ -181,7 +192,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                         aria-hidden="true"
                                     />
                                     WhatsApp
-                                    <ArrowUpRight className="size-4" aria-hidden="true" />
+                                    <ArrowUpRight
+                                        className="size-4"
+                                        aria-hidden="true"
+                                    />
                                 </a>
                             )}
 
@@ -191,12 +205,17 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                 className="inline-flex size-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground md:hidden"
                                 aria-expanded={menuOpen}
                                 aria-controls="menu-publik"
-                                aria-label={menuOpen ? 'Tutup menu' : 'Buka menu'}
+                                aria-label={
+                                    menuOpen ? 'Tutup menu' : 'Buka menu'
+                                }
                             >
                                 {menuOpen ? (
                                     <X className="size-4" aria-hidden="true" />
                                 ) : (
-                                    <Menu className="size-4" aria-hidden="true" />
+                                    <Menu
+                                        className="size-4"
+                                        aria-hidden="true"
+                                    />
                                 )}
                             </button>
                         </div>
@@ -206,7 +225,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                 {menuOpen && (
                     <div
                         id="menu-publik"
-                        className="mx-auto mt-2 max-w-7xl px-4 sm:px-6 lg:px-8 md:hidden"
+                        className="mx-auto mt-2 max-w-7xl px-4 sm:px-6 md:hidden lg:px-8"
                     >
                         <div className="rounded-2xl border border-border bg-background p-3 shadow-lg">
                             <nav
@@ -296,8 +315,14 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                         <div>
                             <div className="flex items-center gap-2.5">
                                 <img
-                                    src={(settings as any).site_logo || '/mga.svg'}
-                                    alt={settings.company_name || 'PT. Mandalika Global Alkesindo'}
+                                    src={
+                                        (settings as any).site_logo ||
+                                        '/mga.svg'
+                                    }
+                                    alt={
+                                        settings.company_name ||
+                                        'PT. Mandalika Global Alkesindo'
+                                    }
                                     className="h-8 w-auto"
                                 />
                                 <span className="text-sm font-bold tracking-tight">
@@ -306,7 +331,9 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                 </span>
                             </div>
                             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-                                PT. Mandalika Global Alkesindo | Distributor alat kesehatan di Kota Bogor, melayani seluruh Indonesia.
+                                PT. Mandalika Global Alkesindo | Distributor
+                                alat kesehatan di Kota Bogor, melayani seluruh
+                                Indonesia.
                             </p>
 
                             <div className="mt-5 flex items-center gap-2.5">
@@ -403,7 +430,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                             </div>
                         </div>
 
-                        <nav aria-label="Navigasi footer" className="lg:justify-self-end">
+                        <nav
+                            aria-label="Navigasi footer"
+                            className="lg:justify-self-end"
+                        >
                             <h2 className="text-sm font-bold text-foreground">
                                 Navigasi
                             </h2>
@@ -493,7 +523,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                             </ul>
                         </nav>
 
-                        <nav aria-label="Produk footer" className="lg:justify-self-end">
+                        <nav
+                            aria-label="Produk footer"
+                            className="lg:justify-self-end"
+                        >
                             <h2 className="text-sm font-bold text-foreground">
                                 Produk & Layanan
                             </h2>
@@ -642,11 +675,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                     </div>
 
                     <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:mt-12">
+                        <p>© 2026 PT. Mandalika Global Alkesindo.</p>
                         <p>
-                            © 2026 PT. Mandalika Global Alkesindo.
-                        </p>
-                        <p>
-                            Penawaran dan pembayaran diproses langsung bersama tim kami.
+                            Penawaran dan pembayaran diproses langsung bersama
+                            tim kami.
                         </p>
                     </div>
 

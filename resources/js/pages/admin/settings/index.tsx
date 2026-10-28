@@ -35,6 +35,14 @@ export default function SettingsIndex({ settings }: Props) {
         default_price_mode: settings.default_price_mode ?? 'show',
         seo_title: settings.seo_title ?? '',
         seo_description: settings.seo_description ?? '',
+        hero_background: settings.hero_background ?? '',
+        site_logo: settings.site_logo ?? '',
+        favicon_32: settings.favicon_32 ?? '',
+        favicon_webp: settings.favicon_webp ?? '',
+        apple_touch_icon: settings.apple_touch_icon ?? '',
+        site_icon: settings.site_icon ?? '',
+        about_image: settings.about_image ?? '',
+        service_enabled: settings.service_enabled ?? 'true',
     });
 
     const submit = (event: FormEvent<HTMLFormElement>): void => {
@@ -356,7 +364,13 @@ export default function SettingsIndex({ settings }: Props) {
                             <input
                                 type="hidden"
                                 name="_token"
-                                value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                value={
+                                    (
+                                        document.querySelector(
+                                            'meta[name="csrf-token"]',
+                                        ) as HTMLMetaElement
+                                    )?.content ?? ''
+                                }
                             />
                             <FormField
                                 label="Upload gambar background hero"
@@ -372,7 +386,9 @@ export default function SettingsIndex({ settings }: Props) {
                                 />
                             </FormField>
                             <p className="text-xs text-muted-foreground">
-                                JPG, PNG, WebP, AVIF maksimal 5MB. Gambar akan otomatis diperkecil ke lebar 1920px dan dikonversi ke WebP agar lebih ringan.
+                                JPG, PNG, WebP, AVIF maksimal 5MB. Gambar akan
+                                otomatis diperkecil ke lebar 1920px dan
+                                dikonversi ke WebP agar lebih ringan.
                             </p>
                             <div className="flex flex-wrap items-center gap-2">
                                 <button
@@ -387,9 +403,13 @@ export default function SettingsIndex({ settings }: Props) {
                                         formAction="/admin/settings/hero-background"
                                         formMethod="post"
                                         onClick={(event) => {
-                                            const formElement = event.currentTarget.form;
+                                            const formElement =
+                                                event.currentTarget.form;
                                             if (formElement) {
-                                                const method = document.createElement('input');
+                                                const method =
+                                                    document.createElement(
+                                                        'input',
+                                                    );
                                                 method.type = 'hidden';
                                                 method.name = '_method';
                                                 method.value = 'delete';
@@ -410,11 +430,13 @@ export default function SettingsIndex({ settings }: Props) {
                     <h2 className="text-sm font-bold">Branding & Ikon</h2>
                     <div className="mt-4 grid gap-6">
                         <div className="grid gap-3">
-                            <h3 className="text-sm font-medium">Logo Situs (Header & Footer)</h3>
-                            {(form.data as any).site_logo ? (
+                            <h3 className="text-sm font-medium">
+                                Logo Situs (Header & Footer)
+                            </h3>
+                            {form.data.site_logo ? (
                                 <div className="overflow-hidden rounded-lg border border-border bg-background p-4">
                                     <img
-                                        src={(form.data as any).site_logo}
+                                        src={form.data.site_logo}
                                         alt="Preview logo situs"
                                         className="h-10 w-auto"
                                     />
@@ -429,9 +451,18 @@ export default function SettingsIndex({ settings }: Props) {
                                 <input
                                     type="hidden"
                                     name="_token"
-                                    value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                    value={
+                                        (
+                                            document.querySelector(
+                                                'meta[name="csrf-token"]',
+                                            ) as HTMLMetaElement
+                                        )?.content ?? ''
+                                    }
                                 />
-                                <FormField label="Upload logo" htmlFor="site_logo_file">
+                                <FormField
+                                    label="Upload logo"
+                                    htmlFor="site_logo_file"
+                                >
                                     <input
                                         id="site_logo_file"
                                         name="site_logo"
@@ -442,7 +473,8 @@ export default function SettingsIndex({ settings }: Props) {
                                     />
                                 </FormField>
                                 <p className="text-xs text-muted-foreground">
-                                    JPG, PNG, WebP, AVIF, atau SVG. Maksimal 5MB.
+                                    JPG, PNG, WebP, AVIF, atau SVG. Maksimal
+                                    5MB.
                                 </p>
                                 <div className="flex flex-wrap items-center gap-2">
                                     <button
@@ -451,19 +483,25 @@ export default function SettingsIndex({ settings }: Props) {
                                     >
                                         Upload Logo
                                     </button>
-                                    {(form.data as any).site_logo ? (
+                                    {form.data.site_logo ? (
                                         <button
                                             type="submit"
                                             formAction="/admin/settings/branding/logo"
                                             formMethod="post"
                                             onClick={(event) => {
-                                                const formElement = event.currentTarget.form;
+                                                const formElement =
+                                                    event.currentTarget.form;
                                                 if (formElement) {
-                                                    const method = document.createElement('input');
+                                                    const method =
+                                                        document.createElement(
+                                                            'input',
+                                                        );
                                                     method.type = 'hidden';
                                                     method.name = '_method';
                                                     method.value = 'delete';
-                                                    formElement.appendChild(method);
+                                                    formElement.appendChild(
+                                                        method,
+                                                    );
                                                 }
                                             }}
                                             className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
@@ -475,24 +513,44 @@ export default function SettingsIndex({ settings }: Props) {
                             </form>
                         </div>
                         <div className="grid gap-3 border-t border-border pt-6">
-                            <h3 className="text-sm font-medium">Favicon, Shortcut Icon & Apple Touch Icon</h3>
+                            <h3 className="text-sm font-medium">
+                                Favicon, Shortcut Icon & Apple Touch Icon
+                            </h3>
                             <div className="flex flex-wrap items-center gap-4">
-                                {(form.data as any).favicon_32 ? (
+                                {form.data.favicon_32 ? (
                                     <div className="flex flex-col items-center gap-1">
-                                        <img src={(form.data as any).favicon_32} alt="Favicon" className="h-8 w-8" />
-                                        <span className="text-xs text-muted-foreground">32x32</span>
+                                        <img
+                                            src={form.data.favicon_32}
+                                            alt="Favicon"
+                                            className="h-8 w-8"
+                                        />
+                                        <span className="text-xs text-muted-foreground">
+                                            32x32
+                                        </span>
                                     </div>
                                 ) : null}
-                                {(form.data as any).apple_touch_icon ? (
+                                {form.data.apple_touch_icon ? (
                                     <div className="flex flex-col items-center gap-1">
-                                        <img src={(form.data as any).apple_touch_icon} alt="Apple Touch Icon" className="h-10 w-10 rounded-lg" />
-                                        <span className="text-xs text-muted-foreground">180x180</span>
+                                        <img
+                                            src={form.data.apple_touch_icon}
+                                            alt="Apple Touch Icon"
+                                            className="h-10 w-10 rounded-lg"
+                                        />
+                                        <span className="text-xs text-muted-foreground">
+                                            180x180
+                                        </span>
                                     </div>
                                 ) : null}
-                                {(form.data as any).site_icon ? (
+                                {form.data.site_icon ? (
                                     <div className="flex flex-col items-center gap-1">
-                                        <img src={(form.data as any).site_icon} alt="Site Icon" className="h-12 w-12" />
-                                        <span className="text-xs text-muted-foreground">512x512</span>
+                                        <img
+                                            src={form.data.site_icon}
+                                            alt="Site Icon"
+                                            className="h-12 w-12"
+                                        />
+                                        <span className="text-xs text-muted-foreground">
+                                            512x512
+                                        </span>
                                     </div>
                                 ) : null}
                             </div>
@@ -505,9 +563,18 @@ export default function SettingsIndex({ settings }: Props) {
                                 <input
                                     type="hidden"
                                     name="_token"
-                                    value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                    value={
+                                        (
+                                            document.querySelector(
+                                                'meta[name="csrf-token"]',
+                                            ) as HTMLMetaElement
+                                        )?.content ?? ''
+                                    }
                                 />
-                                <FormField label="Upload gambar untuk ikon" htmlFor="favicon_file">
+                                <FormField
+                                    label="Upload gambar untuk ikon"
+                                    htmlFor="favicon_file"
+                                >
                                     <input
                                         id="favicon_file"
                                         name="favicon"
@@ -518,7 +585,9 @@ export default function SettingsIndex({ settings }: Props) {
                                     />
                                 </FormField>
                                 <p className="text-xs text-muted-foreground">
-                                    Akan otomatis dibuat untuk favicon (32x32), shortcut icon, Apple Touch Icon (180x180), dan Site Icon (512x512).
+                                    Akan otomatis dibuat untuk favicon (32x32),
+                                    shortcut icon, Apple Touch Icon (180x180),
+                                    dan Site Icon (512x512).
                                 </p>
                                 <div className="flex flex-wrap items-center gap-2">
                                     <button
@@ -527,19 +596,27 @@ export default function SettingsIndex({ settings }: Props) {
                                     >
                                         Upload & Generate Ikon
                                     </button>
-                                    {((form.data as any).favicon_32 || (form.data as any).apple_touch_icon || (form.data as any).site_icon) ? (
+                                    {form.data.favicon_32 ||
+                                    form.data.apple_touch_icon ||
+                                    form.data.site_icon ? (
                                         <button
                                             type="submit"
                                             formAction="/admin/settings/branding/favicon"
                                             formMethod="post"
                                             onClick={(event) => {
-                                                const formElement = event.currentTarget.form;
+                                                const formElement =
+                                                    event.currentTarget.form;
                                                 if (formElement) {
-                                                    const method = document.createElement('input');
+                                                    const method =
+                                                        document.createElement(
+                                                            'input',
+                                                        );
                                                     method.type = 'hidden';
                                                     method.name = '_method';
                                                     method.value = 'delete';
-                                                    formElement.appendChild(method);
+                                                    formElement.appendChild(
+                                                        method,
+                                                    );
                                                 }
                                             }}
                                             className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
@@ -556,10 +633,10 @@ export default function SettingsIndex({ settings }: Props) {
                 <section className="rounded-lg border border-border bg-card p-5">
                     <h2 className="text-sm font-bold">Halaman Tentang Kami</h2>
                     <div className="mt-4 grid gap-4">
-                        {(form.data as any).about_image ? (
+                        {form.data.about_image ? (
                             <div className="overflow-hidden rounded-lg border border-border">
                                 <img
-                                    src={(form.data as any).about_image}
+                                    src={form.data.about_image}
                                     alt="Preview gambar tentang kami"
                                     className="h-48 w-full object-cover"
                                 />
@@ -574,7 +651,13 @@ export default function SettingsIndex({ settings }: Props) {
                             <input
                                 type="hidden"
                                 name="_token"
-                                value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                value={
+                                    (
+                                        document.querySelector(
+                                            'meta[name="csrf-token"]',
+                                        ) as HTMLMetaElement
+                                    )?.content ?? ''
+                                }
                             />
                             <FormField
                                 label="Upload gambar halaman Tentang Kami"
@@ -590,7 +673,8 @@ export default function SettingsIndex({ settings }: Props) {
                                 />
                             </FormField>
                             <p className="text-xs text-muted-foreground">
-                                JPG, PNG, WebP, AVIF maksimal 5MB. Gambar akan otomatis dikonversi ke WebP.
+                                JPG, PNG, WebP, AVIF maksimal 5MB. Gambar akan
+                                otomatis dikonversi ke WebP.
                             </p>
                             <div className="flex flex-wrap items-center gap-2">
                                 <button
@@ -599,15 +683,19 @@ export default function SettingsIndex({ settings }: Props) {
                                 >
                                     Upload gambar
                                 </button>
-                                {(form.data as any).about_image ? (
+                                {form.data.about_image ? (
                                     <button
                                         type="submit"
                                         formAction="/admin/settings/about-image"
                                         formMethod="post"
                                         onClick={(event) => {
-                                            const formElement = event.currentTarget.form;
+                                            const formElement =
+                                                event.currentTarget.form;
                                             if (formElement) {
-                                                const method = document.createElement('input');
+                                                const method =
+                                                    document.createElement(
+                                                        'input',
+                                                    );
                                                 method.type = 'hidden';
                                                 method.name = '_method';
                                                 method.value = 'delete';
@@ -630,11 +718,8 @@ export default function SettingsIndex({ settings }: Props) {
                         <label className="flex items-start gap-3 rounded-lg border border-border p-4">
                             <input
                                 type="checkbox"
-                                className="mt-1 size-4 rounded border-border text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                checked={
-                                    form.data.service_enabled === 'true' ||
-                                    form.data.service_enabled === true
-                                }
+                                className="mt-1 size-4 rounded border-border text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                                checked={form.data.service_enabled === 'true'}
                                 onChange={(event) =>
                                     form.setData(
                                         'service_enabled',
@@ -647,7 +732,9 @@ export default function SettingsIndex({ settings }: Props) {
                                     Aktifkan fitur Layanan Servis
                                 </p>
                                 <p className="text-sm text-muted-foreground">
-                                    Menampilkan menu Layanan, form pengajuan servis, cek status tiket, dan jalur servis di website publik.
+                                    Menampilkan menu Layanan, form pengajuan
+                                    servis, cek status tiket, dan jalur servis
+                                    di website publik.
                                 </p>
                             </div>
                         </label>

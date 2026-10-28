@@ -17,7 +17,7 @@ class ContactController extends Controller
 
         return Inertia::render('public/contact', [
             'seo' => [
-                'title' => 'Kontak',
+                'title' => 'Kontak & Lokasi',
                 'description' => 'Hubungi tim PT. Mandalika Global Alkesindo untuk pengadaan alat kesehatan, penawaran, dan layanan servis.',
                 'canonical' => route('contact'),
             ],

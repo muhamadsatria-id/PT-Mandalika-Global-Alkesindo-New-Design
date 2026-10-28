@@ -1,5 +1,13 @@
 import { Link, usePage } from '@inertiajs/react';
-import { ArrowUpRight, MessageCircle, Play, Wrench, GraduationCap, FileText, Stethoscope } from 'lucide-react';
+import {
+    ArrowUpRight,
+    MessageCircle,
+    Play,
+    Wrench,
+    GraduationCap,
+    FileText,
+    Stethoscope,
+} from 'lucide-react';
 import Seo from '@/components/seo';
 import { whatsAppLink } from '@/lib/whatsapp';
 import { about, home, legal } from '@/routes';
@@ -124,8 +132,7 @@ export default function Home({
     const serviceMessage =
         'Halo PT. Mandalika Global Alkesindo, saya ingin menanyakan layanan servis alat kesehatan.';
 
-    const serviceEnabled =
-        settings.service_enabled !== 'false' && settings.service_enabled !== false;
+    const serviceEnabled = settings.service_enabled !== 'false';
 
     const quoteLink = whatsappNumber
         ? whatsAppLink(whatsappNumber, salesMessage)
@@ -176,14 +183,16 @@ export default function Home({
                             </span>
                         </div>
 
-                        <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                        <h1 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl md:text-6xl lg:text-7xl">
                             Alat medis yang siap dipakai,
                             <br className="hidden sm:block" />
                             bukan sekadar dikirim
                         </h1>
 
                         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-                            Pengadaan, instalasi, dan servis alat kesehatan untuk rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia.
+                            Pengadaan, instalasi, dan servis alat kesehatan
+                            untuk rumah sakit, klinik, dan dinas kesehatan di
+                            seluruh Indonesia.
                         </p>
 
                         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -192,7 +201,10 @@ export default function Home({
                                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-neutral-900 transition-opacity hover:opacity-90"
                             >
                                 Lihat katalog
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4"
+                                    aria-hidden="true"
+                                />
                             </Link>
                             {quoteLink && (
                                 <a
@@ -201,14 +213,20 @@ export default function Home({
                                     rel="noopener noreferrer"
                                     className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white/10 px-7 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur transition-colors hover:bg-white/15"
                                 >
-                                    <MessageCircle className="size-4" aria-hidden="true" />
+                                    <MessageCircle
+                                        className="size-4"
+                                        aria-hidden="true"
+                                    />
                                     Minta penawaran via WhatsApp
                                 </a>
                             )}
                         </div>
 
                         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/70">
-                            <span>Distributor Resmi · E-Catalogue · LKPP · CDAKB </span>
+                            <span>
+                                Distributor Resmi · E-Catalogue · LKPP ·
+                                CDAKB{' '}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -216,16 +234,35 @@ export default function Home({
 
             <section className="border-b border-border bg-[#f2470c]">
                 <div className="relative w-full overflow-hidden">
-                    <div className="flex w-max animate-marquee-right [animation-duration:40s]">
+                    <div className="animate-marquee-right flex w-max [animation-duration:40s]">
                         {[...Array(4)].map((_, idx) => (
-                            <div key={idx} className="flex items-center gap-6 px-6 py-4">
-                                {['BISOND', 'BOSKA', 'VINNO', 'DENKI', 'TAKTVOLL', 'DMS', 'PROSOND', 'LIQIAN', 'MINSTON', 'Z9 PREMIUM'].map((brand, i, arr) => (
-                                    <div key={`${idx}-${brand}`} className="flex items-center gap-6">
-                                        <span className="text-sm font-semibold text-black uppercase tracking-wide whitespace-nowrap">
+                            <div
+                                key={idx}
+                                className="flex items-center gap-6 px-6 py-4"
+                            >
+                                {[
+                                    'BISOND',
+                                    'BOSKA',
+                                    'VINNO',
+                                    'DENKI',
+                                    'TAKTVOLL',
+                                    'DMS',
+                                    'PROSOND',
+                                    'LIQIAN',
+                                    'MINSTON',
+                                    'Z9 PREMIUM',
+                                ].map((brand, i, arr) => (
+                                    <div
+                                        key={`${idx}-${brand}`}
+                                        className="flex items-center gap-6"
+                                    >
+                                        <span className="text-sm font-semibold tracking-wide whitespace-nowrap text-black uppercase">
                                             {brand}
                                         </span>
                                         {i < arr.length - 1 && (
-                                            <span className="text-black">•</span>
+                                            <span className="text-black">
+                                                •
+                                            </span>
                                         )}
                                     </div>
                                 ))}
@@ -244,7 +281,8 @@ export default function Home({
                                     Jelajahi kategori produk
                                 </h2>
                                 <p className="mt-1 text-sm text-muted-foreground sm:text-base">
-                                    Temukan peralatan medis sesuai kebutuhan fasilitas kesehatan Anda.
+                                    Temukan peralatan medis sesuai kebutuhan
+                                    fasilitas kesehatan Anda.
                                 </p>
                             </div>
                             <Link
@@ -252,14 +290,19 @@ export default function Home({
                                 className="hidden items-center gap-1.5 text-sm font-medium hover:underline sm:inline-flex"
                             >
                                 Lihat katalog
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4"
+                                    aria-hidden="true"
+                                />
                             </Link>
                         </div>
                         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                             {categories.map((category) => (
                                 <Link
                                     key={category.id}
-                                    href={catalog.index.url({ query: { category: category.slug } })}
+                                    href={catalog.index.url({
+                                        query: { category: category.slug },
+                                    })}
                                     className="group flex flex-col justify-between rounded-xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:shadow-sm"
                                 >
                                     <div>
@@ -287,7 +330,8 @@ export default function Home({
                                     Produk Pilihan
                                 </h2>
                                 <p className="mt-1 text-sm text-muted-foreground sm:text-base">
-                                    Produk pilihan untuk kebutuhan rumah sakit, klinik, dan fasilitas kesehatan.
+                                    Produk pilihan untuk kebutuhan rumah sakit,
+                                    klinik, dan fasilitas kesehatan.
                                 </p>
                             </div>
                             <Link
@@ -295,7 +339,10 @@ export default function Home({
                                 className="hidden items-center gap-1.5 text-sm font-medium hover:underline sm:inline-flex"
                             >
                                 Lihat semua
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4"
+                                    aria-hidden="true"
+                                />
                             </Link>
                         </div>
 
@@ -303,19 +350,27 @@ export default function Home({
                             <button
                                 type="button"
                                 onClick={() => {
-                                    const container = document.getElementById('featured-products-carousel');
+                                    const container = document.getElementById(
+                                        'featured-products-carousel',
+                                    );
                                     if (container) {
-                                        container.scrollBy({ left: -280, behavior: 'smooth' });
+                                        container.scrollBy({
+                                            left: -280,
+                                            behavior: 'smooth',
+                                        });
                                     }
                                 }}
-                                className="absolute -left-3 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/95 p-2 shadow-sm backdrop-blur transition-colors hover:bg-secondary lg:inline-flex"
+                                className="absolute top-1/2 -left-3 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/95 p-2 shadow-sm backdrop-blur transition-colors hover:bg-secondary lg:inline-flex"
                                 aria-label="Geser ke kiri"
                             >
-                                <ArrowUpRight className="size-4 rotate-[225deg]" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4 rotate-[225deg]"
+                                    aria-hidden="true"
+                                />
                             </button>
                             <div
                                 id="featured-products-carousel"
-                                className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                                className="flex snap-x snap-mandatory [scrollbar-width:none] gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
                             >
                                 {featuredProducts.map((product) => (
                                     <Link
@@ -335,7 +390,7 @@ export default function Home({
                                                     <div className="h-full w-full bg-gradient-to-br from-secondary via-secondary/60 to-background" />
                                                 )}
                                                 {product.brand && (
-                                                    <span className="absolute left-2 top-2 rounded-md bg-background/90 px-1.5 py-0.5 text-xs font-medium text-foreground backdrop-blur">
+                                                    <span className="absolute top-2 left-2 rounded-md bg-background/90 px-1.5 py-0.5 text-xs font-medium text-foreground backdrop-blur">
                                                         {product.brand}
                                                     </span>
                                                 )}
@@ -353,11 +408,15 @@ export default function Home({
                                                 </div>
                                                 <div className="mt-2 flex items-center justify-between text-xs">
                                                     <span className="text-muted-foreground">
-                                                        {product.priceLabel ?? 'Hubungi kami'}
+                                                        {product.price ??
+                                                            'Hubungi kami'}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1 text-muted-foreground transition-colors group-hover:text-foreground">
                                                         Lihat detail
-                                                        <ArrowUpRight className="size-3" aria-hidden="true" />
+                                                        <ArrowUpRight
+                                                            className="size-3"
+                                                            aria-hidden="true"
+                                                        />
                                                     </span>
                                                 </div>
                                             </div>
@@ -368,15 +427,23 @@ export default function Home({
                             <button
                                 type="button"
                                 onClick={() => {
-                                    const container = document.getElementById('featured-products-carousel');
+                                    const container = document.getElementById(
+                                        'featured-products-carousel',
+                                    );
                                     if (container) {
-                                        container.scrollBy({ left: 280, behavior: 'smooth' });
+                                        container.scrollBy({
+                                            left: 280,
+                                            behavior: 'smooth',
+                                        });
                                     }
                                 }}
-                                className="absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/95 p-2 shadow-sm backdrop-blur transition-colors hover:bg-secondary lg:inline-flex"
+                                className="absolute top-1/2 -right-3 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/95 p-2 shadow-sm backdrop-blur transition-colors hover:bg-secondary lg:inline-flex"
                                 aria-label="Geser ke kanan"
                             >
-                                <ArrowUpRight className="size-4 rotate-45" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4 rotate-45"
+                                    aria-hidden="true"
+                                />
                             </button>
                         </div>
 
@@ -386,7 +453,10 @@ export default function Home({
                                 className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
                             >
                                 Lihat semua produk
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                                <ArrowUpRight
+                                    className="size-4"
+                                    aria-hidden="true"
+                                />
                             </Link>
                         </div>
                     </div>
@@ -405,7 +475,9 @@ export default function Home({
                                     Layanan Kami
                                 </h2>
                                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    Bukan sekadar distributor. Kami mendampingi pengadaan, instalasi, servis, dan konsultasi teknis untuk memastikan alat siap dipakai.
+                                    Bukan sekadar distributor. Kami mendampingi
+                                    pengadaan, instalasi, servis, dan konsultasi
+                                    teknis untuk memastikan alat siap dipakai.
                                 </p>
                             </div>
                             <div className="flex flex-wrap items-center gap-3">
@@ -414,7 +486,10 @@ export default function Home({
                                     className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
                                 >
                                     Lihat alur layanan servis
-                                    <ArrowUpRight className="size-4" aria-hidden="true" />
+                                    <ArrowUpRight
+                                        className="size-4"
+                                        aria-hidden="true"
+                                    />
                                 </Link>
                                 {serviceLink && (
                                     <a
@@ -424,7 +499,10 @@ export default function Home({
                                         className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
                                     >
                                         Ajukan servis lewat WhatsApp
-                                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                                        <ArrowUpRight
+                                            className="size-4"
+                                            aria-hidden="true"
+                                        />
                                     </a>
                                 )}
                             </div>
@@ -440,7 +518,10 @@ export default function Home({
                                         className="group relative flex h-full flex-col rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
                                     >
                                         <div className="mb-4 inline-flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                            <Icon className="size-5" aria-hidden="true" />
+                                            <Icon
+                                                className="size-5"
+                                                aria-hidden="true"
+                                            />
                                         </div>
                                         <h3 className="text-lg font-semibold tracking-tight">
                                             {item.title}
@@ -465,7 +546,15 @@ export default function Home({
                                     Tentang PT. Mandalika Global Alkesindo
                                 </h2>
                                 <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.
+                                    PT. Mandalika Global Alkesindo adalah
+                                    distributor alat kesehatan yang berlokasi di
+                                    Kota Bogor. Kami menyediakan peralatan medis
+                                    untuk ruang ICU/PICU/NICU, kamar operasi,
+                                    emergency, ultrasound, dan sterilisasi bagi
+                                    rumah sakit, klinik, dan dinas kesehatan di
+                                    seluruh Indonesia. Selain penjualan, kami
+                                    mendampingi pelanggan dari pemilihan unit
+                                    sampai alat siap digunakan.
                                 </p>
                                 <div className="mt-6 flex flex-wrap items-center gap-3">
                                     <Link
@@ -473,14 +562,20 @@ export default function Home({
                                         className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
                                     >
                                         Selengkapnya tentang kami
-                                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                                        <ArrowUpRight
+                                            className="size-4"
+                                            aria-hidden="true"
+                                        />
                                     </Link>
                                     <Link
                                         href={legal.url()}
                                         className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
                                     >
                                         Lihat dokumen legalitas
-                                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                                        <ArrowUpRight
+                                            className="size-4"
+                                            aria-hidden="true"
+                                        />
                                     </Link>
                                 </div>
                             </div>
@@ -517,7 +612,8 @@ export default function Home({
                             Tiga langkah, tanpa proses berbelit.
                         </h2>
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Sejak pesan pertama sampai unit siap dipakai, semuanya dibahas dengan tim yang sama.
+                            Sejak pesan pertama sampai unit siap dipakai,
+                            semuanya dibahas dengan tim yang sama.
                         </p>
                     </div>
 
@@ -554,7 +650,8 @@ export default function Home({
                                 Dipercaya fasilitas kesehatan
                             </h2>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                Pengalaman dari mitra yang telah menggunakan layanan pengadaan dan servis kami.
+                                Pengalaman dari mitra yang telah menggunakan
+                                layanan pengadaan dan servis kami.
                             </p>
                         </div>
                         <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -570,9 +667,13 @@ export default function Home({
                                         <div className="font-medium text-foreground">
                                             {testimonial.name}
                                         </div>
-                                        {(testimonial.role || testimonial.institution) && (
+                                        {(testimonial.role ||
+                                            testimonial.institution) && (
                                             <div className="mt-1 text-muted-foreground">
-                                                {[testimonial.role, testimonial.institution]
+                                                {[
+                                                    testimonial.role,
+                                                    testimonial.institution,
+                                                ]
                                                     .filter(Boolean)
                                                     .join(' · ')}
                                             </div>
@@ -631,8 +732,6 @@ export default function Home({
                 </section>
             )}
 
-
-
             <section id="kontak" className="scroll-mt-24">
                 <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                     <div className="relative overflow-hidden rounded-lg bg-primary px-6 py-10 text-primary-foreground sm:px-10">
@@ -651,7 +750,9 @@ export default function Home({
                                     Butuh penawaran atau jadwal servis?
                                 </h2>
                                 <p className="mt-4 text-sm leading-relaxed sm:text-base">
-                                    Kirim kebutuhan Anda lewat WhatsApp. Tim kami akan membantu memilih unit, menyiapkan penawaran, atau menjadwalkan teknisi.
+                                    Kirim kebutuhan Anda lewat WhatsApp. Tim
+                                    kami akan membantu memilih unit, menyiapkan
+                                    penawaran, atau menjadwalkan teknisi.
                                 </p>
                             </div>
 

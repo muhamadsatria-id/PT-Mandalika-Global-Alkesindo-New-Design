@@ -23,11 +23,11 @@ class BrandingController extends Controller
         ]);
 
         $file = $validated['favicon'];
-        $manager = new ImageManager(new Driver());
+        $manager = new ImageManager(new Driver);
 
         // Generate favicon.ico (multi-size fallback) and PNG versions
         $image = $manager->decode(file_get_contents($file->getRealPath()));
-        
+
         // Create favicon.ico equivalent as PNG 32x32 for simplicity
         $favicon32 = clone $image;
         if (method_exists($favicon32, 'cover')) {
@@ -36,7 +36,7 @@ class BrandingController extends Controller
             $favicon32 = $favicon32->resize(32, 32);
         }
         $favicon32Path = 'branding/favicon-32.png';
-        Storage::disk('public')->put($favicon32Path, (string) $favicon32->encode(new PngEncoder()));
+        Storage::disk('public')->put($favicon32Path, (string) $favicon32->encode(new PngEncoder));
         Setting::set('favicon_32', '/storage/'.$favicon32Path, 'branding', 'string');
 
         // Apple touch icon 180x180
@@ -47,7 +47,7 @@ class BrandingController extends Controller
             $apple = $apple->resize(180, 180);
         }
         $applePath = 'branding/apple-touch-icon.png';
-        Storage::disk('public')->put($applePath, (string) $apple->encode(new PngEncoder()));
+        Storage::disk('public')->put($applePath, (string) $apple->encode(new PngEncoder));
         Setting::set('apple_touch_icon', '/storage/'.$applePath, 'branding', 'string');
 
         // Site icon / general 512x512
@@ -58,7 +58,7 @@ class BrandingController extends Controller
             $siteIcon = $siteIcon->resize(512, 512);
         }
         $siteIconPath = 'branding/site-icon-512.png';
-        Storage::disk('public')->put($siteIconPath, (string) $siteIcon->encode(new PngEncoder()));
+        Storage::disk('public')->put($siteIconPath, (string) $siteIcon->encode(new PngEncoder));
         Setting::set('site_icon', '/storage/'.$siteIconPath, 'branding', 'string');
 
         // Also save as webp for modern browsers
@@ -99,7 +99,7 @@ class BrandingController extends Controller
             Storage::disk('public')->put($path, $contents);
             Setting::set('site_logo', '/storage/'.$path, 'branding', 'string');
         } else {
-            $manager = new ImageManager(new Driver());
+            $manager = new ImageManager(new Driver);
             $image = $manager->decode(file_get_contents($file->getRealPath()));
             if (method_exists($image, 'scaleDown')) {
                 $image = $image->scaleDown(width: 512);

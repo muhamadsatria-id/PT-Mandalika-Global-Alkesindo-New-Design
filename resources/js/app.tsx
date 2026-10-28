@@ -9,6 +9,18 @@ captureTracking();
 const appName =
     import.meta.env.VITE_APP_NAME || 'PT. Mandalika Global Alkesindo';
 
+function buildPageTitle(title: string): string {
+    if (!title) {
+        return appName;
+    }
+
+    const candidate = `${title} — ${appName}`;
+
+    return title.includes('Mandalika') || candidate.length > 62
+        ? title
+        : candidate;
+}
+
 const AdminLayout = lazy(() => import('./layouts/AdminLayout'));
 
 function AdminLayoutBoundary({ children }: { children: ReactNode }) {
@@ -20,7 +32,7 @@ function AdminLayoutBoundary({ children }: { children: ReactNode }) {
 }
 
 void createInertiaApp({
-    title: (title) => (title ? `${title} — ${appName}` : appName),
+    title: (title) => buildPageTitle(title),
     layout: (name) => {
         if (name.startsWith('admin/')) {
             return AdminLayoutBoundary;

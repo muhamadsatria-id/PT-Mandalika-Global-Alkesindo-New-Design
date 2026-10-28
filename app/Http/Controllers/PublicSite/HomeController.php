@@ -9,6 +9,7 @@ use App\Models\CompanyStat;
 use App\Models\Faq;
 use App\Models\PartnerBrand;
 use App\Models\Product;
+use App\Models\Setting;
 use App\Models\Testimonial;
 use App\Support\ProductPresenter;
 use Illuminate\Support\Facades\Schema;
@@ -22,11 +23,21 @@ class HomeController extends Controller
         $featured = Product::query()
             ->published()
             ->with(['brand', 'category', 'media'])
-            ->orderByDesc('is_featured')
+            ->where('is_featured', true)
             ->orderByRaw('price is not null desc')
             ->orderByDesc('id')
             ->take(10)
             ->get();
+
+        if ($featured->isEmpty()) {
+            $featured = Product::query()
+                ->published()
+                ->with(['brand', 'category', 'media'])
+                ->orderByRaw('price is not null desc')
+                ->orderByDesc('id')
+                ->take(10)
+                ->get();
+        }
 
         $brands = Brand::query()
             ->where('is_active', true)
@@ -55,8 +66,8 @@ class HomeController extends Controller
 
         $categories = Category::query()
             ->where('is_active', true)
+            ->whereHas('products', fn ($query) => $query->published())
             ->withCount(['products' => fn ($query) => $query->published()])
-            ->having('products_count', '>', 0)
             ->orderBy('sort_order')
             ->orderBy('name')
             ->limit(8)
@@ -129,6 +140,11 @@ class HomeController extends Controller
             ->all();
 
         return Inertia::render('public/home', [
+            'seo' => [
+                'title' => 'Alat kesehatan & layanan servis',
+                'description' => Setting::get('seo_description') ?? 'Pengadaan alat kesehatan, layanan servis, dan pendampingan teknis untuk rumah sakit, klinik, dan dinas kesehatan di Indonesia.',
+                'canonical' => route('home'),
+            ],
             'featuredProducts' => $featured
                 ->map(fn (Product $product): array => ProductPresenter::card($product))
                 ->all(),

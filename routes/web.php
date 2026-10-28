@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutImageController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\BrandingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyStatController;
 use App\Http\Controllers\Admin\CustomerController;
@@ -8,8 +10,6 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryCategoryController;
 use App\Http\Controllers\Admin\GalleryItemController;
-use App\Http\Controllers\Admin\AboutImageController;
-use App\Http\Controllers\Admin\BrandingController;
 use App\Http\Controllers\Admin\HeroBackgroundController;
 use App\Http\Controllers\Admin\InquiryController;
 use App\Http\Controllers\Admin\LegalDocumentController;

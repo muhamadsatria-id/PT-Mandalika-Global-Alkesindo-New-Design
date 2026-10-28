@@ -22,7 +22,7 @@ class HeroBackgroundController extends Controller
         ]);
 
         $file = $validated['hero_background'];
-        $manager = new ImageManager(new Driver());
+        $manager = new ImageManager(new Driver);
         $image = $manager->decode(file_get_contents($file->getRealPath()));
         if (method_exists($image, 'scaleDown')) {
             $image = $image->scaleDown(width: 1920);

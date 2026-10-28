@@ -22,7 +22,7 @@ class AboutImageController extends Controller
         ]);
 
         $file = $validated['about_image'];
-        $manager = new ImageManager(new Driver());
+        $manager = new ImageManager(new Driver);
         $image = $manager->decode(file_get_contents($file->getRealPath()));
         if (method_exists($image, 'scaleDown')) {
             $image = $image->scaleDown(width: 1600);

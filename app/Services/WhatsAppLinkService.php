@@ -73,7 +73,7 @@ class WhatsAppLinkService
     public function inquiryMessage(array $data): string
     {
         $lines = [
-            'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.'
+            'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.',
             'Kode: '.$data['code'],
             'Nama: '.$data['nama'].' | Instansi: '.$data['instansi'].' | Kota: '.$data['kota'],
             'Produk:',
