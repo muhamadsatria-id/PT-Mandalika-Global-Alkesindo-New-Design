@@ -101,7 +101,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
     const { settings } = usePage<SharedData>().props;
     const whatsappNumber = settings.whatsapp_number || profile.phone;
     const quoteLink = whatsappNumber
-        ? whatsAppLink(whatsappNumber, 'Halo PT. Mandalika Global Alkesindo, saya ingin berkonsultasi terkait pengadaan alat kesehatan.')
+        ? whatsAppLink(whatsappNumber, 'Halo PT. Mandalika Global Alkesindo, saya ingin berkonsultasi/permintaan penawaran alat kesehatan.')
         : null;
     return (
         <>
@@ -119,7 +119,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                         </h1>
                         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                             {profile.tagline ??
-                                'PT. Mandalika Global Alkesindo bergerak di pengadaan alat kesehatan, instalasi, servis, dan pendampingan teknis untuk membantu fasilitas kesehatan bekerja lebih andal.'}
+                                'PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.'}
                         </p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                             <Link
@@ -162,7 +162,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                             </h2>
                             <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                                 <p>
-                                    PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berfokus pada pengadaan, instalasi, servis, dan pendampingan teknis untuk rumah sakit, klinik, dan dinas kesehatan di Indonesia.
+                                    PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.
                                 </p>
                                 <p>
                                     Kami hadir untuk membantu fasilitas kesehatan memilih peralatan yang tepat, memastikan instalasi berjalan lancar, serta menjaga performa alat lewat layanan servis dan pendampingan teknis berkelanjutan.

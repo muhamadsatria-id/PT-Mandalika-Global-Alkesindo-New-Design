@@ -311,8 +311,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                                 </span>
                             </div>
                             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-                                {settings.company_tagline ??
-                                    'Distributor alat kesehatan, pengadaan, instalasi & servis untuk rumah sakit, klinik dan dinas kesehatan.'}
+                                PT. Mandalika Global Alkesindo | Distributor alat kesehatan di Kota Bogor, melayani seluruh Indonesia.
                             </p>
 
                             <div className="mt-5 flex items-center gap-2.5">
@@ -649,17 +648,10 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
 
                     <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:mt-12">
                         <p>
-                            ©{' '}
-                            <span className="tabular-nums">
-                                {new Date().getFullYear()}
-                            </span>{' '}
-                            {settings.company_name ??
-                                'PT. Mandalika Global Alkesindo'}
-                            .
+                            © 2026 PT. Mandalika Global Alkesindo.
                         </p>
                         <p>
-                            Penawaran dan pembayaran diproses langsung bersama
-                            tim kami.
+                            Penawaran dan pembayaran diproses langsung bersama tim kami.
                         </p>
                     </div>
 

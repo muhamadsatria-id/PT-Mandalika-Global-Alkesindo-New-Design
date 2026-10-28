@@ -26,7 +26,7 @@ Judul        : Alat medis yang siap dipakai,
 Paragraf     : Pengadaan, instalasi, dan servis alat kesehatan untuk rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia.
 Tombol 1     : Lihat katalog
 Tombol 2     : Minta penawaran via WhatsApp
-Trust strip  : Izin Distributor Alkes · CDAKB · NIB · [tambah hanya yang sudah ada dokumennya]
+Trust strip  : Izin Distributor Alkes · CDAKB · NIB ·
 
 ==================================================
 C. TENTANG KAMI

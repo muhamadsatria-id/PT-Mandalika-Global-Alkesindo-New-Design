@@ -122,7 +122,7 @@ export default function Home({
     const salesMessage =
         'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.';
     const serviceMessage =
-        'Halo PT. Mandalika Global Alkesindo, saya ingin menjadwalkan servis alat kesehatan.';
+        'Halo PT. Mandalika Global Alkesindo, saya ingin menanyakan layanan servis alat kesehatan.';
 
     const serviceEnabled =
         settings.service_enabled !== 'false' && settings.service_enabled !== false;
@@ -176,17 +176,14 @@ export default function Home({
                             </span>
                         </div>
 
-                        <h1 className="text-balance text-4xl font-extrabold tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                        <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                             Alat medis yang siap dipakai,
                             <br className="hidden sm:block" />
                             bukan sekadar dikirim
                         </h1>
 
                         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-                            Kami membantu rumah sakit, klinik, dan dinas kesehatan
-                            memilih peralatan yang tepat, memasangnya, serta menjaga
-                            performanya lewat layanan servis dan pendampingan teknis
-                            terkurasi dengan izin edar resmi.
+                            Pengadaan, instalasi, dan servis alat kesehatan untuk rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia.
                         </p>
 
                         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -194,7 +191,7 @@ export default function Home({
                                 href={catalog.index.url()}
                                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-neutral-900 transition-opacity hover:opacity-90"
                             >
-                                Jelajahi katalog
+                                Lihat katalog
                                 <ArrowUpRight className="size-4" aria-hidden="true" />
                             </Link>
                             {quoteLink && (
@@ -205,30 +202,13 @@ export default function Home({
                                     className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white/10 px-7 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur transition-colors hover:bg-white/15"
                                 >
                                     <MessageCircle className="size-4" aria-hidden="true" />
-                                    Minta penawaran
-                                </a>
-                            )}
-                            {serviceEnabled && serviceLink && (
-                                <a
-                                    href={serviceLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold text-white/90 transition-colors hover:text-white"
-                                >
-                                    <Play className="size-4" aria-hidden="true" />
-                                    Ajukan servis
+                                    Minta penawaran via WhatsApp
                                 </a>
                             )}
                         </div>
 
                         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/70">
-                            <span>Izin Edar AKL</span>
-                            <span className="hidden sm:inline">•</span>
-                            <span>E-Katalog LKPP</span>
-                            <span className="hidden sm:inline">•</span>
-                            <span>CDAKB</span>
-                            <span className="hidden sm:inline">•</span>
-                            <span>Distributor Resmi</span>
+                            <span>Distributor Resmi · E-Catalogue · LKPP · CDAKB </span>
                         </div>
                     </div>
                 </div>
@@ -496,7 +476,7 @@ export default function Home({
                                     Tentang PT. Mandalika Global Alkesindo
                                 </h2>
                                 <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berfokus pada pengadaan, instalasi, servis, dan pendampingan teknis untuk rumah sakit, klinik, dan dinas kesehatan di Indonesia. Kami mengutamakan unit bersertifikasi, proses pengadaan yang transparan, serta dukungan teknis berkelanjutan.
+                                    PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.
                                 </p>
                                 <div className="mt-6 flex flex-wrap items-center gap-3">
                                     <Link
@@ -547,9 +527,8 @@ export default function Home({
                         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                             Tiga langkah, tanpa proses berbelit.
                         </h2>
-                        <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Sejak pesan pertama sampai unit siap dipakai,
-                            semuanya dibahas dengan tim yang sama.
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                            Sejak pesan pertama sampai unit siap dipakai, semuanya dibahas dengan tim yang sama.
                         </p>
                     </div>
 
@@ -563,10 +542,10 @@ export default function Home({
                                         : 'border-t-2 border-border pt-5'
                                 }
                             >
-                                <span className="text-3xl font-extrabold tracking-tight text-primary-strong tabular-nums">
+                                <span className="text-3xl font-semibold tracking-tight text-primary tabular-nums">
                                     {step.number}
                                 </span>
-                                <h3 className="mt-4 text-lg font-bold tracking-tight">
+                                <h3 className="mt-4 text-lg font-semibold tracking-tight">
                                     {step.title}
                                 </h3>
                                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -683,9 +662,7 @@ export default function Home({
                                     Butuh penawaran atau jadwal servis?
                                 </h2>
                                 <p className="mt-4 text-sm leading-relaxed sm:text-base">
-                                    Kirim kebutuhan Anda lewat WhatsApp. Tim
-                                    kami akan membantu memilih unit, menyiapkan
-                                    penawaran, atau menjadwalkan teknisi.
+                                    Kirim kebutuhan Anda lewat WhatsApp. Tim kami akan membantu memilih unit, menyiapkan penawaran, atau menjadwalkan teknisi.
                                 </p>
                             </div>
 

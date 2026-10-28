@@ -1,18 +1,20 @@
 <?php
 
-namespace Database\Seeders;
+namespace DatabaseSeeders;
 
-use App\Models\CompanyStat;
-use Illuminate\Database\Seeder;
+use AppModelsCompanyStat;
+use IlluminateDatabaseSeeder;
 
 class CompanyStatSeeder extends Seeder
 {
     public function run(): void
     {
         $items = [
-            ['label' => 'Produk katalog', 'value' => '50+', 'is_published' => true, 'sort_order' => 10],
-            ['label' => 'Rumah sakit & klinik mitra', 'value' => '100+', 'is_published' => true, 'sort_order' => 20],
-            ['label' => 'Layanan servis', 'value' => '24/7', 'is_published' => true, 'sort_order' => 30],
+            ['label' => 'Tahun Berdiri', 'value' => '2026', 'sort_order' => 1, 'is_active' => true],
+            ['label' => 'Unit Terpasang', 'value' => '1200', 'sort_order' => 2, 'is_active' => true],
+            ['label' => 'Fasilitas Kesehatan Dilayani', 'value' => '321', 'sort_order' => 3, 'is_active' => true],
+            ['label' => 'Jumlah Brand', 'value' => '9', 'sort_order' => 4, 'is_active' => true],
+            ['label' => 'Jumlah Produk', 'value' => '70', 'sort_order' => 5, 'is_active' => true],
         ];
 
         foreach ($items as $item) {

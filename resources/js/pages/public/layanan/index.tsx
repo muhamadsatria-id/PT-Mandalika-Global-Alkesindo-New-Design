@@ -71,8 +71,8 @@ const prepList = [
 ];
 
 export default function LayananIndex({ seo, company }: LayananProps) {
-    const salesMessage = 'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran terkait pengadaan alat kesehatan.';
-    const serviceMessage = 'Halo PT. Mandalika Global Alkesindo, saya ingin mengajukan servis/perawatan alat kesehatan.';
+    const salesMessage = 'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.';
+    const serviceMessage = 'Halo PT. Mandalika Global Alkesindo, saya ingin menanyakan layanan servis alat kesehatan.';
 
     const quoteLink = company.whatsapp_sales ? whatsAppLink(company.whatsapp_sales, salesMessage) : null;
     const serviceLink = company.whatsapp_servis ? whatsAppLink(company.whatsapp_servis, serviceMessage) : null;

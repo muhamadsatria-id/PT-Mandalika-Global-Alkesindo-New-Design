@@ -38,7 +38,7 @@ export default function Contact({ seo, contact }: ContactProps) {
     const salesLink = whatsappNumber
         ? whatsAppLink(
               whatsappNumber,
-              'Halo PT. Mandalika Global Alkesindo, saya ingin berkonsultasi/permintaan penawaran alat kesehatan.',
+              'Halo PT. Mandalika Global Alkesindo, saya ingin meminta penawaran alat kesehatan.'
           )
         : null;
     const serviceLink = serviceNumber
