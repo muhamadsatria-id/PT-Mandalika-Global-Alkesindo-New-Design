@@ -214,37 +214,26 @@ export default function Home({
                 </div>
             </section>
 
-            {partnerBrands.length > 0 && (
-                <section className="border-b border-border">
-                    <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-                            <p className="text-sm font-medium text-muted-foreground">
-                                Brand partner resmi
-                            </p>
-                            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-                                {partnerBrands.map((brand) => (
-                                    <div
-                                        key={brand.id}
-                                        className="flex h-10 items-center justify-center"
-                                    >
-                                        {brand.logo ? (
-                                            <img
-                                                src={brand.logo}
-                                                alt={brand.name}
-                                                className="h-8 max-w-[140px] object-contain opacity-70 grayscale transition-opacity hover:opacity-100 hover:grayscale-0"
-                                            />
-                                        ) : (
-                                            <span className="text-sm font-semibold text-muted-foreground">
-                                                {brand.name}
-                                            </span>
+            <section className="border-b border-border bg-[#f2470c]">
+                <div className="relative w-full overflow-hidden">
+                    <div className="flex w-max animate-marquee-right [animation-duration:40s]">
+                        {[...Array(4)].map((_, idx) => (
+                            <div key={idx} className="flex items-center gap-6 px-6 py-4">
+                                {['BISOND', 'BOSKA', 'VINNO', 'DENKI', 'TAKTVOLL', 'DMS', 'PROSOND', 'LIQIAN', 'MINSTON', 'Z9 PREMIUM'].map((brand, i, arr) => (
+                                    <div key={`${idx}-${brand}`} className="flex items-center gap-6">
+                                        <span className="text-sm font-semibold text-black uppercase tracking-wide whitespace-nowrap">
+                                            {brand}
+                                        </span>
+                                        {i < arr.length - 1 && (
+                                            <span className="text-black">•</span>
                                         )}
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        ))}
                     </div>
-                </section>
-            )}
+                </div>
+            </section>
 
             {categories.length > 0 && (
                 <section className="border-b border-border">

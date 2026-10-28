@@ -108,57 +108,11 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
             <Seo seo={seo} />
 
             <section className="border-b border-border">
-                <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-16 lg:pb-16">
-                    <div>
-                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">
-                            <BadgeCheck className="size-3.5 text-primary" aria-hidden="true" />
-                            Izin Edar Resmi • Distributor Alat Kesehatan
-                        </div>
-                        <h1 className="max-w-3xl text-4xl leading-[1.02] font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                            Distributor Alat Kesehatan untuk Rumah Sakit, Klinik & Dinas Kesehatan
-                        </h1>
-                        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            {profile.tagline ??
-                                'PT. Mandalika Global Alkesindo adalah distributor alat kesehatan yang berlokasi di Kota Bogor. Kami menyediakan peralatan medis untuk ruang ICU/PICU/NICU, kamar operasi, emergency, ultrasound, dan sterilisasi bagi rumah sakit, klinik, dan dinas kesehatan di seluruh Indonesia. Selain penjualan, kami mendampingi pelanggan dari pemilihan unit sampai alat siap digunakan.'}
-                        </p>
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                            <Link
-                                href={catalog.index.url()}
-                                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                            >
-                                Lihat katalog
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
-                            </Link>
-                            {quoteLink && (
-                                <a
-                                    href={quoteLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border px-7 text-sm font-semibold transition-colors hover:bg-secondary"
-                                >
-                                    <MessageCircle className="size-4" aria-hidden="true" />
-                                    Chat via WhatsApp
-                                </a>
-                            )}
-                        </div>
-                    </div>
-
-                    <div className="relative overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-sm">
-                        <img
-                            src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop"
-                            alt="Tim atau fasilitas medis"
-                            className="aspect-[4/3] w-full object-cover"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section className="border-b border-border">
                 <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                    <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+                    <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                         <div>
                             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                                Cerita Perusahaan
+                                Tentang Kami
                             </h2>
                             <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                                 <p>
@@ -188,28 +142,79 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                                 )}
                             </div>
                         </div>
-                        {companyStats.length > 0 && (
-                            <div className="grid grid-cols-2 gap-4">
-                                {companyStats.map((stat) => (
-                                    <div
-                                        key={stat.id}
-                                        className="rounded-xl border border-border bg-card p-5 text-center shadow-sm"
-                                    >
-                                        <div className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                                            {stat.value}
-                                            {stat.suffix ?? ''}
-                                        </div>
-                                        <p className="mt-1 text-sm text-muted-foreground">
-                                            {stat.label}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                        <div className="relative overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-sm">
+                            <img
+                                src={(settings as any).about_image || 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop'}
+                                alt="Tentang PT. Mandalika Global Alkesindo"
+                                className="aspect-[4/3] w-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
-
+                        <section className="border-b border-border">
+                <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:px-8 lg:py-16">
+                    <div>
+                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                            Visi & Misi
+                        </h2>
+                        <div className="mt-4 space-y-4">
+                            <div>
+                                <h3 className="text-lg font-medium">Visi</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                                    Menjadi mitra terpercaya fasilitas kesehatan Indonesia dalam pengadaan, instalasi, servis, dan pendampingan teknis alat kesehatan yang andal.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-medium">Misi</h3>
+                                <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                                    <li>Menyediakan alat kesehatan bersertifikasi sesuai kebutuhan dan anggaran.</li>
+                                    <li>Mendampingi instalasi, pelatihan, dan tindak lanjut teknis.</li>
+                                    <li>Menjaga performa alat melalui layanan servis dan perawatan berkala.</li>
+                                    <li>Menjaga komunikasi terbuka dan transparan dengan setiap mitra.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                            Lokasi & Jangkauan Layanan
+                        </h2>
+                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                            Kami melayani pengiriman, instalasi, dan pendampingan teknis ke rumah sakit, klinik, dan fasilitas kesehatan di seluruh Indonesia.
+                        </p>
+                        {profile.address && (
+                            <div className="mt-4 flex items-start gap-2.5">
+                                <MapPin className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                                <span className="text-sm text-muted-foreground">{profile.address}</span>
+                            </div>
+                        )}
+                        {profile.email && (
+                            <div className="mt-2 flex items-start gap-2.5">
+                                <Mail className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                                <a href={`mailto:${profile.email}`} className="text-sm text-muted-foreground hover:underline">
+                                    {profile.email}
+                                </a>
+                            </div>
+                        )}
+                        {whatsappNumber && (
+                            <div className="mt-2 flex items-start gap-2.5">
+                                <Phone className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                                <span className="text-sm text-muted-foreground">WhatsApp: +{whatsappNumber}</span>
+                            </div>
+                        )}
+                        <div className="mt-6 overflow-hidden rounded-xl border border-border bg-secondary/40 shadow-sm">
+                            <iframe
+                                title="Lokasi PT. Mandalika Global Alkesindo"
+                                src={`https://www.google.com/maps?q=${encodeURIComponent(profile.address ?? '')}&output=embed`}
+                                className="aspect-[16/9] w-full"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="border-b border-border">
                 <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                     <div className="mb-8 max-w-2xl">
@@ -289,6 +294,38 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                 </div>
             </section>
 
+            <section className="border-b border-border">
+                <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-8 lg:py-16">
+                    <div>
+                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                            Legalitas Ringkas
+                        </h2>
+                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                            PT. Mandalika Global Alkesindo memiliki legalitas perusahaan dan dokumen pendukung untuk mendukung pengadaan alat kesehatan bagi instansi pemerintah maupun swasta.
+                        </p>
+                        <div className="mt-6 flex flex-wrap items-center gap-3">
+                            <Link
+                                href={legal.url()}
+                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                            >
+                                Lihat Dokumen Legalitas
+                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                            </Link>
+                            {quoteLink && (
+                                <a
+                                    href={quoteLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-6 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
+                                >
+                                    <MessageCircle className="size-4" aria-hidden="true" />
+                                    Konsultasi Legalitas
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </section>
             {brandList.length > 0 && (
                 <section className="border-b border-border">
                     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -323,119 +360,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                     </div>
                 </section>
             )}
-
-            <section className="border-b border-border">
-                <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-8 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                            Legalitas Ringkas
-                        </h2>
-                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            PT. Mandalika Global Alkesindo memiliki legalitas perusahaan dan dokumen pendukung untuk mendukung pengadaan alat kesehatan bagi instansi pemerintah maupun swasta.
-                        </p>
-                        <div className="mt-6 flex flex-wrap items-center gap-3">
-                            <Link
-                                href={legal.url()}
-                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                            >
-                                Lihat Dokumen Legalitas
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
-                            </Link>
-                            {quoteLink && (
-                                <a
-                                    href={quoteLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-6 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
-                                >
-                                    <MessageCircle className="size-4" aria-hidden="true" />
-                                    Konsultasi Legalitas
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                        <div className="rounded-xl border border-border bg-card p-5 text-center shadow-sm">
-                            <p className="text-sm font-medium">NIB</p>
-                            <p className="mt-1 text-xs text-muted-foreground">Terdaftar</p>
-                        </div>
-                        <div className="rounded-xl border border-border bg-card p-5 text-center shadow-sm">
-                            <p className="text-sm font-medium">PAK/IDAK</p>
-                            <p className="mt-1 text-xs text-muted-foreground">Tersedia</p>
-                        </div>
-                        <div className="rounded-xl border border-border bg-card p-5 text-center shadow-sm">
-                            <p className="text-sm font-medium">Izin Edar</p>
-                            <p className="mt-1 text-xs text-muted-foreground">Sesuai kebutuhan</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="border-b border-border">
-                <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:px-8 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                            Visi & Misi
-                        </h2>
-                        <div className="mt-4 space-y-4">
-                            <div>
-                                <h3 className="text-lg font-medium">Visi</h3>
-                                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    Menjadi mitra terpercaya fasilitas kesehatan Indonesia dalam pengadaan, instalasi, servis, dan pendampingan teknis alat kesehatan yang andal.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-medium">Misi</h3>
-                                <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                    <li>Menyediakan alat kesehatan bersertifikasi sesuai kebutuhan dan anggaran.</li>
-                                    <li>Mendampingi instalasi, pelatihan, dan tindak lanjut teknis.</li>
-                                    <li>Menjaga performa alat melalui layanan servis dan perawatan berkala.</li>
-                                    <li>Menjaga komunikasi terbuka dan transparan dengan setiap mitra.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                            Lokasi & Jangkauan Layanan
-                        </h2>
-                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Kami melayani pengiriman, instalasi, dan pendampingan teknis ke rumah sakit, klinik, dan fasilitas kesehatan di seluruh Indonesia.
-                        </p>
-                        {profile.address && (
-                            <div className="mt-4 flex items-start gap-2.5">
-                                <MapPin className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                                <span className="text-sm text-muted-foreground">{profile.address}</span>
-                            </div>
-                        )}
-                        {profile.email && (
-                            <div className="mt-2 flex items-start gap-2.5">
-                                <Mail className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                                <a href={`mailto:${profile.email}`} className="text-sm text-muted-foreground hover:underline">
-                                    {profile.email}
-                                </a>
-                            </div>
-                        )}
-                        {whatsappNumber && (
-                            <div className="mt-2 flex items-start gap-2.5">
-                                <Phone className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                                <span className="text-sm text-muted-foreground">WhatsApp: +{whatsappNumber}</span>
-                            </div>
-                        )}
-                        <div className="mt-6 overflow-hidden rounded-xl border border-border bg-secondary/40 shadow-sm">
-                            <iframe
-                                title="Lokasi PT. Mandalika Global Alkesindo"
-                                src={`https://www.google.com/maps?q=${encodeURIComponent(profile.address ?? '')}&output=embed`}
-                                className="aspect-[16/9] w-full"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="kontak">
+            {/* <section id="kontak">
                 <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                     <div className="relative overflow-hidden rounded-2xl bg-primary px-6 py-10 text-primary-foreground sm:px-10">
                         <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -470,7 +395,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }

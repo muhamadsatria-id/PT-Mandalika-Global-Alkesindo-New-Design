@@ -407,6 +407,77 @@ export default function SettingsIndex({ settings }: Props) {
                 </section>
 
                 <section className="rounded-lg border border-border bg-card p-5">
+                    <h2 className="text-sm font-bold">Halaman Tentang Kami</h2>
+                    <div className="mt-4 grid gap-4">
+                        {(form.data as any).about_image ? (
+                            <div className="overflow-hidden rounded-lg border border-border">
+                                <img
+                                    src={(form.data as any).about_image}
+                                    alt="Preview gambar tentang kami"
+                                    className="h-48 w-full object-cover"
+                                />
+                            </div>
+                        ) : null}
+                        <form
+                            action="/admin/settings/about-image"
+                            method="post"
+                            encType="multipart/form-data"
+                            className="grid gap-3"
+                        >
+                            <input
+                                type="hidden"
+                                name="_token"
+                                value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                            />
+                            <FormField
+                                label="Upload gambar halaman Tentang Kami"
+                                htmlFor="about_image_file"
+                            >
+                                <input
+                                    id="about_image_file"
+                                    name="about_image"
+                                    type="file"
+                                    accept="image/*"
+                                    className="block w-full text-sm text-muted-foreground file:mr-4 file:rounded-md file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-sm file:font-medium file:text-foreground hover:file:bg-secondary/80"
+                                    required
+                                />
+                            </FormField>
+                            <p className="text-xs text-muted-foreground">
+                                JPG, PNG, WebP, AVIF maksimal 5MB. Gambar akan otomatis dikonversi ke WebP.
+                            </p>
+                            <div className="flex flex-wrap items-center gap-2">
+                                <button
+                                    type="submit"
+                                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                                >
+                                    Upload gambar
+                                </button>
+                                {(form.data as any).about_image ? (
+                                    <button
+                                        type="submit"
+                                        formAction="/admin/settings/about-image"
+                                        formMethod="post"
+                                        onClick={(event) => {
+                                            const formElement = event.currentTarget.form;
+                                            if (formElement) {
+                                                const method = document.createElement('input');
+                                                method.type = 'hidden';
+                                                method.name = '_method';
+                                                method.value = 'delete';
+                                                formElement.appendChild(method);
+                                            }
+                                        }}
+                                        className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+                                    >
+                                        Hapus gambar
+                                    </button>
+                                ) : null}
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section className="rounded-lg border border-border bg-card p-5">
                     <h2 className="text-sm font-bold">Fitur</h2>
                     <div className="mt-4 grid gap-4">
                         <label className="flex items-start gap-3 rounded-lg border border-border p-4">

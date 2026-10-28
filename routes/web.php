@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryCategoryController;
 use App\Http\Controllers\Admin\GalleryItemController;
+use App\Http\Controllers\Admin\AboutImageController;
 use App\Http\Controllers\Admin\HeroBackgroundController;
 use App\Http\Controllers\Admin\InquiryController;
 use App\Http\Controllers\Admin\LegalDocumentController;
@@ -148,5 +149,9 @@ Route::middleware(['auth', 'role:'.implode('|', Roles::all())])
                 ->name('settings.hero-background.upload');
             Route::delete('settings/hero-background', [HeroBackgroundController::class, 'reset'])
                 ->name('settings.hero-background.reset');
+            Route::post('settings/about-image', [AboutImageController::class, 'upload'])
+                ->name('settings.about-image.upload');
+            Route::delete('settings/about-image', [AboutImageController::class, 'reset'])
+                ->name('settings.about-image.reset');
         });
     });
