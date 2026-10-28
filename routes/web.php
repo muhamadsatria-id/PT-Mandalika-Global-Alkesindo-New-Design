@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryCategoryController;
 use App\Http\Controllers\Admin\GalleryItemController;
 use App\Http\Controllers\Admin\AboutImageController;
+use App\Http\Controllers\Admin\BrandingController;
 use App\Http\Controllers\Admin\HeroBackgroundController;
 use App\Http\Controllers\Admin\InquiryController;
 use App\Http\Controllers\Admin\LegalDocumentController;
@@ -153,5 +154,13 @@ Route::middleware(['auth', 'role:'.implode('|', Roles::all())])
                 ->name('settings.about-image.upload');
             Route::delete('settings/about-image', [AboutImageController::class, 'reset'])
                 ->name('settings.about-image.reset');
+            Route::post('settings/branding/favicon', [BrandingController::class, 'uploadFavicon'])
+                ->name('settings.branding.favicon.upload');
+            Route::delete('settings/branding/favicon', [BrandingController::class, 'resetFavicon'])
+                ->name('settings.branding.favicon.reset');
+            Route::post('settings/branding/logo', [BrandingController::class, 'uploadLogo'])
+                ->name('settings.branding.logo.upload');
+            Route::delete('settings/branding/logo', [BrandingController::class, 'resetLogo'])
+                ->name('settings.branding.logo.reset');
         });
     });

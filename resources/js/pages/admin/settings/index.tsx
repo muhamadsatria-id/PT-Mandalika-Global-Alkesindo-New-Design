@@ -407,6 +407,153 @@ export default function SettingsIndex({ settings }: Props) {
                 </section>
 
                 <section className="rounded-lg border border-border bg-card p-5">
+                    <h2 className="text-sm font-bold">Branding & Ikon</h2>
+                    <div className="mt-4 grid gap-6">
+                        <div className="grid gap-3">
+                            <h3 className="text-sm font-medium">Logo Situs (Header & Footer)</h3>
+                            {(form.data as any).site_logo ? (
+                                <div className="overflow-hidden rounded-lg border border-border bg-background p-4">
+                                    <img
+                                        src={(form.data as any).site_logo}
+                                        alt="Preview logo situs"
+                                        className="h-10 w-auto"
+                                    />
+                                </div>
+                            ) : null}
+                            <form
+                                action="/admin/settings/branding/logo"
+                                method="post"
+                                encType="multipart/form-data"
+                                className="grid gap-3"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="_token"
+                                    value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                />
+                                <FormField label="Upload logo" htmlFor="site_logo_file">
+                                    <input
+                                        id="site_logo_file"
+                                        name="site_logo"
+                                        type="file"
+                                        accept="image/*,.svg"
+                                        className="block w-full text-sm text-muted-foreground file:mr-4 file:rounded-md file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-sm file:font-medium file:text-foreground hover:file:bg-secondary/80"
+                                        required
+                                    />
+                                </FormField>
+                                <p className="text-xs text-muted-foreground">
+                                    JPG, PNG, WebP, AVIF, atau SVG. Maksimal 5MB.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <button
+                                        type="submit"
+                                        className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                                    >
+                                        Upload Logo
+                                    </button>
+                                    {(form.data as any).site_logo ? (
+                                        <button
+                                            type="submit"
+                                            formAction="/admin/settings/branding/logo"
+                                            formMethod="post"
+                                            onClick={(event) => {
+                                                const formElement = event.currentTarget.form;
+                                                if (formElement) {
+                                                    const method = document.createElement('input');
+                                                    method.type = 'hidden';
+                                                    method.name = '_method';
+                                                    method.value = 'delete';
+                                                    formElement.appendChild(method);
+                                                }
+                                            }}
+                                            className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+                                        >
+                                            Kembalikan ke default
+                                        </button>
+                                    ) : null}
+                                </div>
+                            </form>
+                        </div>
+                        <div className="grid gap-3 border-t border-border pt-6">
+                            <h3 className="text-sm font-medium">Favicon, Shortcut Icon & Apple Touch Icon</h3>
+                            <div className="flex flex-wrap items-center gap-4">
+                                {(form.data as any).favicon_32 ? (
+                                    <div className="flex flex-col items-center gap-1">
+                                        <img src={(form.data as any).favicon_32} alt="Favicon" className="h-8 w-8" />
+                                        <span className="text-xs text-muted-foreground">32x32</span>
+                                    </div>
+                                ) : null}
+                                {(form.data as any).apple_touch_icon ? (
+                                    <div className="flex flex-col items-center gap-1">
+                                        <img src={(form.data as any).apple_touch_icon} alt="Apple Touch Icon" className="h-10 w-10 rounded-lg" />
+                                        <span className="text-xs text-muted-foreground">180x180</span>
+                                    </div>
+                                ) : null}
+                                {(form.data as any).site_icon ? (
+                                    <div className="flex flex-col items-center gap-1">
+                                        <img src={(form.data as any).site_icon} alt="Site Icon" className="h-12 w-12" />
+                                        <span className="text-xs text-muted-foreground">512x512</span>
+                                    </div>
+                                ) : null}
+                            </div>
+                            <form
+                                action="/admin/settings/branding/favicon"
+                                method="post"
+                                encType="multipart/form-data"
+                                className="grid gap-3"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="_token"
+                                    value={(document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content ?? ''}
+                                />
+                                <FormField label="Upload gambar untuk ikon" htmlFor="favicon_file">
+                                    <input
+                                        id="favicon_file"
+                                        name="favicon"
+                                        type="file"
+                                        accept="image/*,.ico"
+                                        className="block w-full text-sm text-muted-foreground file:mr-4 file:rounded-md file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-sm file:font-medium file:text-foreground hover:file:bg-secondary/80"
+                                        required
+                                    />
+                                </FormField>
+                                <p className="text-xs text-muted-foreground">
+                                    Akan otomatis dibuat untuk favicon (32x32), shortcut icon, Apple Touch Icon (180x180), dan Site Icon (512x512).
+                                </p>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <button
+                                        type="submit"
+                                        className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                                    >
+                                        Upload & Generate Ikon
+                                    </button>
+                                    {((form.data as any).favicon_32 || (form.data as any).apple_touch_icon || (form.data as any).site_icon) ? (
+                                        <button
+                                            type="submit"
+                                            formAction="/admin/settings/branding/favicon"
+                                            formMethod="post"
+                                            onClick={(event) => {
+                                                const formElement = event.currentTarget.form;
+                                                if (formElement) {
+                                                    const method = document.createElement('input');
+                                                    method.type = 'hidden';
+                                                    method.name = '_method';
+                                                    method.value = 'delete';
+                                                    formElement.appendChild(method);
+                                                }
+                                            }}
+                                            className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+                                        >
+                                            Kembalikan ke default
+                                        </button>
+                                    ) : null}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="rounded-lg border border-border bg-card p-5">
                     <h2 className="text-sm font-bold">Halaman Tentang Kami</h2>
                     <div className="mt-4 grid gap-4">
                         {(form.data as any).about_image ? (

@@ -43,11 +43,11 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
         settings.service_enabled !== 'false' && settings.service_enabled !== false;
     const navigation = [
         { label: 'Beranda', href: home.url(), anchor: false },
-        { label: 'Katalog', href: catalog.index.url(), anchor: false },
-        { label: 'Layanan', href: '/layanan', anchor: false },
-        { label: 'Brand', href: '/brand', anchor: false },
         { label: 'Tentang', href: about.url(), anchor: false },
+        { label: 'Katalog', href: catalog.index.url(), anchor: false },
+        { label: 'Brand', href: '/brand', anchor: false },
         { label: 'Legalitas', href: legal.url(), anchor: false },
+        { label: 'Layanan', href: '/layanan', anchor: false },
         { label: 'Kontak', href: contact.url(), anchor: false },
     ];
 
@@ -110,17 +110,12 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                             className="group inline-flex items-center gap-2.5"
                         >
                             <img
-                                src="/mga.svg"
-                                alt="PT. Mandalika Global Alkesindo"
+                                src={(settings as any).site_logo || '/mga.svg'}
+                                alt={settings.company_name || 'PT. Mandalika Global Alkesindo'}
                                 className="h-9 w-auto"
                             />
-                            <span className="hidden flex-col gap-0.5 leading-none sm:flex">
-                                <span className="text-sm font-extrabold tracking-tight">
-                                    Mandalika Global
-                                </span>
-                                <span className="text-[0.7rem] font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                                    Alkesindo
-                                </span>
+                            <span className="hidden text-sm font-bold tracking-tight sm:inline">
+                                Mandalika Global Alkesindo
                             </span>
                             <span className="sr-only">— beranda</span>
                         </Link>
@@ -301,11 +296,11 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
                         <div>
                             <div className="flex items-center gap-2.5">
                                 <img
-                                    src="/mga.svg"
-                                    alt="PT. Mandalika Global Alkesindo"
+                                    src={(settings as any).site_logo || '/mga.svg'}
+                                    alt={settings.company_name || 'PT. Mandalika Global Alkesindo'}
                                     className="h-8 w-auto"
                                 />
-                                <span className="text-sm font-extrabold tracking-tight">
+                                <span className="text-sm font-bold tracking-tight">
                                     {settings.company_name ??
                                         'PT. Mandalika Global Alkesindo'}
                                 </span>

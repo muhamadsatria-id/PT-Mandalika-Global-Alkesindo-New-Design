@@ -124,7 +124,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                                 <p>
                                     Dengan pendekatan yang terbuka dan praktis, kami menjembatani kebutuhan pengadaan institusi dengan unit bersertifikasi dan dukungan teknis yang bisa diandalkan.
                                 </p>
-                                {(profile.founded_year || profile.address) && (
+                                {/* {(profile.founded_year || profile.address) && (
                                     <div className="flex flex-wrap items-center gap-4 pt-2 text-sm">
                                         {profile.founded_year && (
                                             <div className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1">
@@ -139,7 +139,7 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                                             </div>
                                         )}
                                     </div>
-                                )}
+                                )} */}
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-sm">
@@ -215,117 +215,115 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                     </div>
                 </div>
             </section>
-            <section className="border-b border-border">
+            {/* <section className="border-b border-border">
                 <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                    <div className="mb-8 max-w-2xl">
-                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                            Nilai Kerja
-                        </h2>
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Prinsip yang kami pegang di setiap proyek pengadaan dan layanan teknis.
-                        </p>
-                    </div>
-                    <div className="grid gap-4 md:grid-cols-3">
-                        {values.map((value) => {
-                            const Icon = value.icon;
-
-                            return (
-                                <article
-                                    key={value.title}
-                                    className="rounded-xl border border-border bg-card p-6 shadow-sm"
-                                >
-                                    <div className="mb-4 inline-flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                        <Icon className="size-5" aria-hidden="true" />
-                                    </div>
-                                    <h3 className="text-lg font-semibold tracking-tight">
-                                        {value.title}
-                                    </h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                        {value.description}
-                                    </p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            <section className="border-b border-border">
-                <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                    <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                        <div className="max-w-2xl">
+                    <div className="grid gap-10 lg:grid-cols-2">
+                        <div>
                             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                                Cakupan Layanan
+                                Nilai Kerja
                             </h2>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                Satu tim menangani pengadaan, instalasi, servis, dan pendampingan teknis untuk menghindari peralihan antar vendor.
+                                Prinsip yang kami pegang di setiap proyek pengadaan dan layanan teknis.
                             </p>
+                            <div className="mt-6 space-y-3">
+                                {values.map((value) => {
+                                    const Icon = value.icon;
+                                    return (
+                                        <article
+                                            key={value.title}
+                                            className="flex items-start gap-4 rounded-xl border border-border bg-card p-5"
+                                        >
+                                            <div className="inline-flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                                <Icon className="size-5" aria-hidden="true" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-base font-semibold tracking-tight">
+                                                    {value.title}
+                                                </h3>
+                                                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                                                    {value.description}
+                                                </p>
+                                            </div>
+                                        </article>
+                                    );
+                                })}
+                            </div>
                         </div>
-                        <Link
-                            href={service.index.url()}
-                            className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
-                        >
-                            Lihat alur layanan servis
-                            <ArrowUpRight className="size-4" aria-hidden="true" />
-                        </Link>
-                    </div>
-                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {services.map((item) => {
-                            const Icon = item.icon;
-
-                            return (
-                                <article
-                                    key={item.title}
-                                    className="rounded-xl border border-border bg-card p-6 shadow-sm"
-                                >
-                                    <div className="mb-4 inline-flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                        <Icon className="size-5" aria-hidden="true" />
+                        <div className="flex flex-col gap-10">
+                            <div>
+                                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                                    <div>
+                                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                                            Cakupan Layanan
+                                        </h2>
+                                        <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                                            Satu tim menangani pengadaan, instalasi, servis, dan pendampingan teknis.
+                                        </p>
                                     </div>
-                                    <h3 className="text-lg font-semibold tracking-tight">
-                                        {item.title}
-                                    </h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                        {item.description}
-                                    </p>
-                                </article>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            <section className="border-b border-border">
-                <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-8 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                            Legalitas Ringkas
-                        </h2>
-                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            PT. Mandalika Global Alkesindo memiliki legalitas perusahaan dan dokumen pendukung untuk mendukung pengadaan alat kesehatan bagi instansi pemerintah maupun swasta.
-                        </p>
-                        <div className="mt-6 flex flex-wrap items-center gap-3">
-                            <Link
-                                href={legal.url()}
-                                className="inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                            >
-                                Lihat Dokumen Legalitas
-                                <ArrowUpRight className="size-4" aria-hidden="true" />
-                            </Link>
-                            {quoteLink && (
-                                <a
-                                    href={quoteLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-6 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
-                                >
-                                    <MessageCircle className="size-4" aria-hidden="true" />
-                                    Konsultasi Legalitas
-                                </a>
-                            )}
+                                    <Link
+                                        href={service.index.url()}
+                                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
+                                    >
+                                        Lihat alur layanan servis
+                                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                                    </Link>
+                                </div>
+                                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                                    {services.map((item) => {
+                                        const Icon = item.icon;
+                                        return (
+                                            <article
+                                                key={item.title}
+                                                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4"
+                                            >
+                                                <div className="inline-flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                                    <Icon className="size-4" aria-hidden="true" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-sm font-semibold tracking-tight">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                                                        {item.description}
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                            <div className="rounded-xl border border-border bg-card p-6">
+                                <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                                    Legalitas Ringkas
+                                </h2>
+                                <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                                    PT. Mandalika Global Alkesindo memiliki legalitas perusahaan dan dokumen pendukung untuk pengadaan alat kesehatan bagi instansi pemerintah maupun swasta.
+                                </p>
+                                <div className="mt-5 flex flex-wrap items-center gap-3">
+                                    <Link
+                                        href={legal.url()}
+                                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                                    >
+                                        Lihat Dokumen Legalitas
+                                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                                    </Link>
+                                    {quoteLink && (
+                                        <a
+                                            href={quoteLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+                                        >
+                                            <MessageCircle className="size-4" aria-hidden="true" />
+                                            Konsultasi Legalitas
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {brandList.length > 0 && (
                 <section className="border-b border-border">
                     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -337,25 +335,61 @@ export default function About({ seo, profile, brands, partnerBrands, companyStat
                                 Beberapa brand principal dan partner yang kami layani.
                             </p>
                         </div>
-                        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                            {brandList.map((brand) => (
-                                <div
-                                    key={brand.id}
-                                    className="flex h-10 items-center justify-center"
-                                >
-                                    {brand.logo ? (
-                                        <img
-                                            src={brand.logo}
-                                            alt={brand.name}
-                                            className="h-8 max-w-[150px] object-contain opacity-70 grayscale transition-opacity hover:opacity-100 hover:grayscale-0"
-                                        />
-                                    ) : (
-                                        <span className="text-sm font-semibold text-muted-foreground">
-                                            {brand.name}
-                                        </span>
-                                    )}
-                                </div>
-                            ))}
+                        <div className="space-y-4">
+                            <div className="group flex overflow-hidden [--gap:2.5rem] [gap:var(--gap)] flex-row max-w-full [--duration:36s] [mask-image:linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,1)_10%,rgba(0,0,0,1)_90%,rgba(0,0,0,0))]">
+                                {[...Array(4)].map((_, i) => (
+                                    <div
+                                        className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+                                        key={`row1-${i}`}
+                                    >
+                                        {brandList.map((brand) => (
+                                            <div
+                                                key={`row1-${i}-${brand.id}`}
+                                                className="flex items-center gap-2 opacity-80 grayscale transition-opacity hover:opacity-100 hover:grayscale-0"
+                                            >
+                                                {brand.logo ? (
+                                                    <img
+                                                        src={brand.logo}
+                                                        alt={brand.name}
+                                                        className="h-9 max-w-[160px] object-contain"
+                                                    />
+                                                ) : (
+                                                    <span className="text-base font-semibold">
+                                                        {brand.name}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="group flex overflow-hidden [--gap:2.5rem] [gap:var(--gap)] flex-row max-w-full [--duration:42s] [mask-image:linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,1)_10%,rgba(0,0,0,1)_90%,rgba(0,0,0,0))]">
+                                {[...Array(4)].map((_, i) => (
+                                    <div
+                                        className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-reverse flex-row"
+                                        key={`row2-${i}`}
+                                    >
+                                        {brandList.map((brand) => (
+                                            <div
+                                                key={`row2-${i}-${brand.id}`}
+                                                className="flex items-center gap-2 opacity-80 grayscale transition-opacity hover:opacity-100 hover:grayscale-0"
+                                            >
+                                                {brand.logo ? (
+                                                    <img
+                                                        src={brand.logo}
+                                                        alt={brand.name}
+                                                        className="h-9 max-w-[160px] object-contain"
+                                                    />
+                                                ) : (
+                                                    <span className="text-base font-semibold">
+                                                        {brand.name}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
